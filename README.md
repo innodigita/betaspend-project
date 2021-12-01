@@ -1,0 +1,2 @@
+# betaspend-project
+Betaspend is an ecommerce site owned by BYFN  Online,  (BYFN is an online thought leadership organization that provides advisory, Innovations and Solutions on personal development for family and Nation building founded in 2014). Betaspend, it is designed to link Sellers (vendors) to affiliate marketers and referrers to enable vendors sell physical, Digital, Event based products (such as Training and Seminars) and other unconventional products with more ease to help vendors generate ROI. 
