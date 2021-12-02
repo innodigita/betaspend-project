@@ -1,7 +1,7 @@
 
 
 <body class="home">
-	
+
 <main class="main">
             <div class="container">
                 <div class="intro-wrapper">
@@ -29,7 +29,7 @@
                                             'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1s'
                                         }">Get Free Shipping on all orders over <strong
                                                 class="text-secondary">$99.00</strong></p>
-                                        <a href="shop-banner-sidebar.html"
+                                        <a href="#"
                                             class="btn btn-white btn-link btn-underline btn-icon-right slide-animate"
                                             data-animation-options="{
                                                 'name': 'fadeInUpShorter', 'duration': '1s', 'delay': '1s'
@@ -484,7 +484,7 @@
                 <!-- End of Icon Category Wrapper -->
 
                 <!-- Departmental Tab Starts -->
-              
+
                <div class="container">
                 <h2 class="title justify-content-center ls-normal mb-4 mt-10 pt-1 appear-animate">Popular Departments
                 </h2>
