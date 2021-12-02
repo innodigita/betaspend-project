@@ -22,7 +22,7 @@
                                         <figure class="slide-animate" data-animation-options="{
                                             'name': 'fadeInDownShorter', 'duration': '1s', 'delay': '1s'
                                         }">
-                                            <img src="assets/images/demos/demo5/slides/bicycle.png" alt="Bicycle"
+                                            <img src="{{ asset('assets/images/demos/demo5/slides/bicycle.png') }}" alt="Bicycle"
                                                 width="495" height="307" />
                                         </figure>
                                         <p class="ls-25 slide-animate" data-animation-options="{
@@ -50,7 +50,7 @@
                                             <div class="banner-price-info text-default font-weight-bold mb-6 ls-50">
                                                 Start at <span class="text-secondary">$12.00</span>
                                             </div>
-                                            <a href="shop-banner-sidebar.html" class="btn btn-dark btn-rounded">Shop
+                                            <a href="#" class="btn btn-dark btn-rounded">Shop
                                                 Now</a>
                                         </div>
                                     </div>
@@ -67,7 +67,7 @@
                                             <div class="banner-price-info text-uppercase text-default">
                                                 <strong class="text-dark">Up To 10%</strong> Discount
                                             </div>
-                                            <a href="shop-banner-sidebar.html" class="btn btn-dark btn-rounded">Shop
+                                            <a href="#" class="btn btn-dark btn-rounded">Shop
                                                 Now</a>
                                         </div>
                                     </div>
