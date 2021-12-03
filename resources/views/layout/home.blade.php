@@ -79,7 +79,7 @@
                                 <div class="col-md-12 col-xs-6 mb-4">
                                     <div class="category-banner banner banner-fixed br-sm">
                                         <figure>
-                                            <img src="assets/images/demos/demo5/categories/1-1.jpg" alt="Category"
+                                            <img src=" {{ asset('assets/images/demos/demo5/categories/1-1.jpg') }}" alt="Category"
                                                 width="330" height="239" style="background-color: #605959;" />
                                         </figure>
                                         <div class="banner-content">
@@ -93,7 +93,7 @@
                                 <div class="col-md-12 col-xs-6 mb-4">
                                     <div class="category-banner banner banner-fixed br-sm">
                                         <figure>
-                                            <img src="assets/images/demos/demo5/categories/1-2.jpg" alt="Category"
+                                            <img src=" {{ asset('assets/images/demos/demo5/categories/1-2.jpg') }}" alt="Category"
                                                 width="330" height="239" style="background-color: #eff5f5;" />
                                         </figure>
                                         <div class="banner-content">
@@ -208,10 +208,10 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
-                                    <img src="assets/images/demos/demo5/products/1-1-1.jpg" alt="Product" width="300"
+                                <a href="">
+                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-1-1.jpg') }}" alt="Product" width="300"
                                         height="338">
-                                    <img src="assets/images/demos/demo5/products/1-1-2.jpg" alt="Product" width="300"
+                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-1-2.jpg') }} " alt="Product" width="300"
                                         height="338">
                                 </a>
                                 <div class="product-action-vertical">
@@ -225,13 +225,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Leather Stripe Watch</a></h4>
+                                <h4 class="product-name"><a href="#">Leather Stripe Watch</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 80%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                    <a href="#" class="rating-reviews">(1 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$189.00</ins><del class="old-price">$199.89</del>
@@ -243,8 +243,8 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
-                                    <img src="assets/images/demos/demo5/products/1-2.jpg" alt="Product" width="300"
+                                <a href="#">
+                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-2.jpg') }} " alt="Product" width="300"
                                         height="338">
                                 </a>
                                 <div class="product-action-vertical">
@@ -258,13 +258,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Running Machine</a></h4>
+                                <h4 class="product-name"><a href="#">Running Machine</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 60%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                    <a href="#" class="rating-reviews">(1 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$27.00</ins><del class="old-price">$28.99</del>
@@ -276,8 +276,8 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
-                                    <img src="assets/images/demos/demo5/products/1-3.jpg" alt="Product" width="300"
+                                <a href="#">
+                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-3.jpg') }} " alt="Product" width="300"
                                         height="338">
                                 </a>
                                 <div class="product-action-vertical">
@@ -291,13 +291,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Men's Black Watch</a></h4>
+                                <h4 class="product-name"><a href="#">Men's Black Watch</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 100%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(5 Reviews)</a>
+                                    <a href="#" class="rating-reviews">(5 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$75.00</ins><del class="old-price">$79.00</del>
@@ -309,10 +309,10 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
-                                    <img src="assets/images/demos/demo5/products/1-4-1.jpg" alt="Product" width="300"
+                                <a href="#">
+                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-4-1.jpg') }} " alt="Product" width="300"
                                         height="338">
-                                    <img src="assets/images/demos/demo5/products/1-4-2.jpg" alt="Product" width="300"
+                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-4-2.jpg') }} " width="300"
                                         height="338">
                                 </a>
                                 <div class="product-action-vertical">
@@ -326,13 +326,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Summer Sports Shoes</a></h4>
+                                <h4 class="product-name"><a href="#">Summer Sports Shoes</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 100%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(8 Reviews)</a>
+                                    <a href="#" class="rating-reviews">(8 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$85.99</ins><del class="old-price">$88.00</del>
@@ -344,8 +344,8 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
-                                    <img src="assets/images/demos/demo5/products/1-5.jpg" alt="Product" width="300"
+                                <a href="#">
+                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-5.jpg') }} " alt="Product" width="300"
                                         height="338">
                                 </a>
                                 <div class="product-action-vertical">
@@ -359,13 +359,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Best Pedestrian Bag</a></h4>
+                                <h4 class="product-name"><a href="#">Best Pedestrian Bag</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 80%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(4 Reviews)</a>
+                                    <a href="#" class="rating-reviews">(4 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$48.55</ins><del class="old-price">$49.00</del>
@@ -375,7 +375,7 @@
                     </div>
                     <!-- End of Product Wrap -->
                 </div>
-                <!-- End of Prodcut Deals Wrapper -->
+                <!-- End of Product Deals Wrapper -->
 
                 <div class="owl-carousel owl-theme icon-category-wrapper appear-animate row cols-xl-8 cols-lg-7 cols-md-6 cols-sm-4 cols-xs-3 cols-2 mb-10 pb-2"
                     data-owl-options="{
@@ -401,83 +401,83 @@
                     }
                 }">
                     <div class="category category-icon">
-                        <a href="shop-banner-sidebar.html">
+                        <a href="#">
                             <figure class="category-media">
                                 <i class="w-icon-tshirt"></i>
                             </figure>
                         </a>
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-banner-sidebar.html">Fashion</a></h4>
+                            <h4 class="category-name"><a href="#">Fashion</a></h4>
                         </div>
                     </div>
                     <div class="category category-icon">
-                        <a href="shop-banner-sidebar.html">
+                        <a href="#">
                             <figure class="category-media">
                                 <i class="w-icon-sofa"></i>
                             </figure>
                         </a>
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-banner-sidebar.html">Furniture</a></h4>
+                            <h4 class="category-name"><a href="#">Furniture</a></h4>
                         </div>
                     </div>
                     <div class="category category-icon">
-                        <a href="shop-banner-sidebar.html">
+                        <a href="  ">
                             <figure class="category-media">
                                 <i class="w-icon-basketball"></i>
                             </figure>
                         </a>
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-banner-sidebar.html">Sports</a></h4>
+                            <h4 class="category-name"><a href="">Sports</a></h4>
                         </div>
                     </div>
                     <div class="category category-icon">
-                        <a href="shop-banner-sidebar.html">
+                        <a href="">
                             <figure class="category-media">
                                 <i class="w-icon-bow"></i>
                             </figure>
                         </a>
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-banner-sidebar.html">Toys</a></h4>
+                            <h4 class="category-name"><a href="">Toys</a></h4>
                         </div>
                     </div>
                     <div class="category category-icon">
-                        <a href="shop-banner-sidebar.html">
+                        <a href="">
                             <figure class="category-media">
                                 <i class="w-icon-camera"></i>
                             </figure>
                         </a>
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-banner-sidebar.html">Cameras</a></h4>
+                            <h4 class="category-name"><a href="">Cameras</a></h4>
                         </div>
                     </div>
                     <div class="category category-icon">
-                        <a href="shop-banner-sidebar.html">
+                        <a href="">
                             <figure class="category-media">
                                 <i class="w-icon-gamepad"></i>
                             </figure>
                         </a>
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-banner-sidebar.html">Games</a></h4>
+                            <h4 class="category-name"><a href="">Games</a></h4>
                         </div>
                     </div>
                     <div class="category category-icon">
-                        <a href="shop-banner-sidebar.html">
+                        <a href="">
                             <figure class="category-media">
                                 <i class="w-icon-headphone"></i>
                             </figure>
                         </a>
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-banner-sidebar.html">Headphones</a></h4>
+                            <h4 class="category-name"><a href="">Headphones</a></h4>
                         </div>
                     </div>
                     <div class="category category-icon">
-                        <a href="shop-banner-sidebar.html">
+                        <a href="">
                             <figure class="category-media">
                                 <i class="w-icon-mobile"></i>
                             </figure>
                         </a>
                         <div class="category-content">
-                            <h4 class="category-name"><a href="shop-banner-sidebar.html">Smartphones</a></h4>
+                            <h4 class="category-name"><a href="">Smartphones</a></h4>
                         </div>
                     </div>
                 </div>
@@ -511,10 +511,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-1-1.jpg" alt="Product"
+                                        <a href="#">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-1-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-1-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-1-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -529,13 +529,13 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Classic Hat</a></h4>
+                                        <h4 class="product-name"><a href="#">Classic Hat</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                            <a href="#" class="rating-reviews">(1 Reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$53.00</ins>
@@ -546,8 +546,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-2.jpg" alt="Product"
+                                        <a href="#">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -562,14 +562,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s White
+                                        <h4 class="product-name"><a href="#">Women’s White
                                                 Handbag</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 80%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="#" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$26.62</ins>
@@ -580,8 +580,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-3.jpg" alt="Product"
+                                        <a href="#">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-3.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -599,14 +599,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Multi Funtional Apple
+                                        <h4 class="product-name"><a href="#">Multi Funtional Apple
                                                 iPhone</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
+                                            <a href="#" class="rating-reviews">(5 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">136.26</ins>
@@ -618,10 +618,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-4-1.jpg" alt="Product"
+                                        <a href="#">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-4-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-4-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-4-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -636,14 +636,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Fashion Blue Towel</a>
+                                        <h4 class="product-name"><a href="#">Fashion Blue Towel</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(8 reviews)</a>
+                                            <a href="" class="rating-reviews">(8 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$26.55 - $29.99</ins>
@@ -654,8 +654,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-5.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-5.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -673,14 +673,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Apple Super Notecom</a>
+                                        <h4 class="product-name"><a href="">Apple Super Notecom</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(4 reviews)</a>
+                                            <a href="" class="rating-reviews">(4 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$243.30</ins>
@@ -692,10 +692,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-6-1.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-6-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-6-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-6-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -710,14 +710,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s Comforter</a>
+                                        <h4 class="product-name"><a href="">Women’s Comforter</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(10 reviews)</a>
+                                            <a href="" class="rating-reviews">(10 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$32.00 - $33.26</ins>
@@ -728,8 +728,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-7.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-7.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -744,14 +744,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Multi-colorful Music</a>
+                                        <h4 class="product-name"><a href="">Multi-colorful Music</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$260.59 - $297.83</ins>
@@ -762,10 +762,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-8-1.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-8-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-8-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-8-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -780,14 +780,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Comfortable Backpack</a>
+                                        <h4 class="product-name"><a href="">Comfortable Backpack</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(6 reviews)</a>
+                                            <a href="" class="rating-reviews">(6 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$45.90</ins>
@@ -798,8 +798,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-9.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-9.jpg') }}  " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -814,14 +814,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Data Transformer Tool
+                                        <h4 class="product-name"><a href="">Data Transformer Tool
                                             </a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <span class="price">$64.47</span>
@@ -832,8 +832,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-10.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-10.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -848,13 +848,13 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s hairdye</a></h4>
+                                        <h4 class="product-name"><a href="">Women’s hairdye</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <span class="price">$173.84</span>
@@ -872,10 +872,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-4-1.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-4-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-4-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3--4-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -890,14 +890,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Fashion Blue Towel</a>
+                                        <h4 class="product-name"><a href="">Fashion Blue Towel</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(8 reviews)</a>
+                                            <a href="" class="rating-reviews">(8 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$26.55 - $29.99</ins>
@@ -908,8 +908,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-3.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-3.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -927,14 +927,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Multi Funtional Apple
+                                        <h4 class="product-name"><a href="">Multi Funtional Apple
                                                 iPhone</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
+                                            <a href="" class="rating-reviews">(5 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">136.26</ins>
@@ -946,10 +946,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-8-1.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-8-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-8-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-8-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -964,14 +964,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Comfortable Backpack</a>
+                                        <h4 class="product-name"><a href="">Comfortable Backpack</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(6 reviews)</a>
+                                            <a href="" class="rating-reviews">(6 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$45.90</ins>
@@ -982,8 +982,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-9.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-9.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -998,14 +998,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Data Transformer Tool
+                                        <h4 class="product-name"><a href="">Data Transformer Tool
                                             </a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <span class="price">$64.47</span>
@@ -1016,8 +1016,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-5.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-5.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1035,14 +1035,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Apple Super Notecom</a>
+                                        <h4 class="product-name"><a href="">Apple Super Notecom</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(4 reviews)</a>
+                                            <a href="" class="rating-reviews">(4 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$243.30</ins>
@@ -1054,10 +1054,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-6-1.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-6-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-6-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-6-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1072,14 +1072,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s Comforter</a>
+                                        <h4 class="product-name"><a href="">Women’s Comforter</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(10 reviews)</a>
+                                            <a href="" class="rating-reviews">(10 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$32.00 - $33.26</ins>
@@ -1090,8 +1090,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-7.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-7.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1106,14 +1106,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Multi-colorful Music</a>
+                                        <h4 class="product-name"><a href="">Multi-colorful Music</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$260.59 - $297.83</ins>
@@ -1124,10 +1124,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-1-1.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-1-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-1-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-1-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1142,13 +1142,13 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Classic Hat</a></h4>
+                                        <h4 class="product-name"><a href="">Classic Hat</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                            <a href="" class="rating-reviews">(1 Reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$53.00</ins>
@@ -1159,8 +1159,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-2.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1175,14 +1175,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s White
+                                        <h4 class="product-name"><a href="">Women’s White
                                                 Handbag</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 80%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$26.62</ins>
@@ -1193,8 +1193,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-10.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-10.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1209,13 +1209,13 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s hairdye</a></h4>
+                                        <h4 class="product-name"><a href="">Women’s hairdye</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <span class="price">$173.84</span>
@@ -1231,8 +1231,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-9.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-9.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1247,14 +1247,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Data Transformer Tool
+                                        <h4 class="product-name"><a href="">Data Transformer Tool
                                             </a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <span class="price">$64.47</span>
@@ -1265,10 +1265,10 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-1-1.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-1-1.jpg') }} " alt="Product"
                                                 width="300" height="338" />
-                                            <img src="assets/images/demos/demo1/products/3-1-2.jpg" alt="Product"
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-1-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1283,13 +1283,13 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Classic Hat</a></h4>
+                                        <h4 class="product-name"><a href="">Classic Hat</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                            <a href="" class="rating-reviews">(1 Reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$53.00</ins>
@@ -1300,8 +1300,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-3.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-3.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1319,14 +1319,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Multi Funtional Apple
+                                        <h4 class="product-name"><a href="">Multi Funtional Apple
                                                 iPhone</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
+                                            <a href="" class="rating-reviews">(5 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">136.26</ins>
@@ -1338,8 +1338,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-2.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1354,14 +1354,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s White
+                                        <h4 class="product-name"><a href="">Women’s White
                                                 Handbag</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 80%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$26.62</ins>
@@ -1372,8 +1372,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
-                                            <img src="assets/images/demos/demo1/products/3-10.jpg" alt="Product"
+                                        <a href="">
+                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-10.jpg') }} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -1388,13 +1388,13 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s hairdye</a></h4>
+                                        <h4 class="product-name"><a href="">Women’s hairdye</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <span class="price">$173.84</span>
@@ -1405,7 +1405,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-8-1.jpg" alt="Product"
                                                 width="300" height="338" />
                                             <img src="assets/images/demos/demo1/products/3-8-2.jpg" alt="Product"
@@ -1423,14 +1423,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Comfortable Backpack</a>
+                                        <h4 class="product-name"><a href="">Comfortable Backpack</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(6 reviews)</a>
+                                            <a href="" class="rating-reviews">(6 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$45.90</ins>
@@ -1441,7 +1441,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-5.jpg" alt="Product"
                                                 width="300" height="338" />
                                         </a>
@@ -1460,14 +1460,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Apple Super Notecom</a>
+                                        <h4 class="product-name"><a href="">Apple Super Notecom</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(4 reviews)</a>
+                                            <a href="" class="rating-reviews">(4 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$243.30</ins>
@@ -1479,7 +1479,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-7.jpg" alt="Product"
                                                 width="300" height="338" />
                                         </a>
@@ -1495,14 +1495,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Multi-colorful Music</a>
+                                        <h4 class="product-name"><a href="">Multi-colorful Music</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$260.59 - $297.83</ins>
@@ -1513,7 +1513,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-6-1.jpg" alt="Product"
                                                 width="300" height="338" />
                                             <img src="assets/images/demos/demo1/products/3-6-2.jpg" alt="Product"
@@ -1531,14 +1531,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s Comforter</a>
+                                        <h4 class="product-name"><a href="">Women’s Comforter</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(10 reviews)</a>
+                                            <a href="" class="rating-reviews">(10 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$32.00 - $33.26</ins>
@@ -1549,7 +1549,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-4-1.jpg" alt="Product"
                                                 width="300" height="338" />
                                             <img src="assets/images/demos/demo1/products/3-4-2.jpg" alt="Product"
@@ -1567,14 +1567,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Fashion Blue Towel</a>
+                                        <h4 class="product-name"><a href="">Fashion Blue Towel</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(8 reviews)</a>
+                                            <a href="" class="rating-reviews">(8 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$26.55 - $29.99</ins>
@@ -1590,7 +1590,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-4-1.jpg" alt="Product"
                                                 width="300" height="338" />
                                             <img src="assets/images/demos/demo1/products/3-4-2.jpg" alt="Product"
@@ -1608,14 +1608,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Fashion Blue Towel</a>
+                                        <h4 class="product-name"><a href="">Fashion Blue Towel</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(8 reviews)</a>
+                                            <a href="" class="rating-reviews">(8 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$26.55 - $29.99</ins>
@@ -1626,7 +1626,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-10.jpg" alt="Product"
                                                 width="300" height="338" />
                                         </a>
@@ -1642,13 +1642,13 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s hairdye</a></h4>
+                                        <h4 class="product-name"><a href="">Women’s hairdye</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <span class="price">$173.84</span>
@@ -1659,7 +1659,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-9.jpg" alt="Product"
                                                 width="300" height="338" />
                                         </a>
@@ -1675,14 +1675,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Data Transformer Tool
+                                        <h4 class="product-name"><a href="">Data Transformer Tool
                                             </a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <span class="price">$64.47</span>
@@ -1693,7 +1693,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-8-1.jpg" alt="Product"
                                                 width="300" height="338" />
                                             <img src="assets/images/demos/demo1/products/3-8-2.jpg" alt="Product"
@@ -1711,14 +1711,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Comfortable Backpack</a>
+                                        <h4 class="product-name"><a href="">Comfortable Backpack</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(6 reviews)</a>
+                                            <a href="" class="rating-reviews">(6 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$45.90</ins>
@@ -1729,7 +1729,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-2.jpg" alt="Product"
                                                 width="300" height="338" />
                                         </a>
@@ -1745,14 +1745,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s White
+                                        <h4 class="product-name"><a href="">Women’s White
                                                 Handbag</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 80%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$26.62</ins>
@@ -1763,7 +1763,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-5.jpg" alt="Product"
                                                 width="300" height="338" />
                                         </a>
@@ -1782,14 +1782,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Apple Super Notecom</a>
+                                        <h4 class="product-name"><a href="">Apple Super Notecom</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(4 reviews)</a>
+                                            <a href="" class="rating-reviews">(4 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$243.30</ins>
@@ -1801,7 +1801,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-3.jpg" alt="Product"
                                                 width="300" height="338" />
                                         </a>
@@ -1820,14 +1820,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Multi Funtional Apple
+                                        <h4 class="product-name"><a href="">Multi Funtional Apple
                                                 iPhone</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(5 reviews)</a>
+                                            <a href="" class="rating-reviews">(5 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">136.26</ins>
@@ -1839,7 +1839,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-7.jpg" alt="Product"
                                                 width="300" height="338" />
                                         </a>
@@ -1855,14 +1855,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Multi-colorful Music</a>
+                                        <h4 class="product-name"><a href="">Multi-colorful Music</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                            <a href="" class="rating-reviews">(3 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$260.59 - $297.83</ins>
@@ -1873,7 +1873,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-6-1.jpg" alt="Product"
                                                 width="300" height="338" />
                                             <img src="assets/images/demos/demo1/products/3-6-2.jpg" alt="Product"
@@ -1891,14 +1891,14 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Women’s Comforter</a>
+                                        <h4 class="product-name"><a href="">Women’s Comforter</a>
                                         </h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 100%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(10 reviews)</a>
+                                            <a href="" class="rating-reviews">(10 reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$32.00 - $33.26</ins>
@@ -1909,7 +1909,7 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="product-default.html">
+                                        <a href="">
                                             <img src="assets/images/demos/demo1/products/3-1-1.jpg" alt="Product"
                                                 width="300" height="338" />
                                             <img src="assets/images/demos/demo1/products/3-1-2.jpg" alt="Product"
@@ -1927,13 +1927,13 @@
                                         </div>
                                     </figure>
                                     <div class="product-details">
-                                        <h4 class="product-name"><a href="product-default.html">Classic Hat</a></h4>
+                                        <h4 class="product-name"><a href="">Classic Hat</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings-full">
                                                 <span class="ratings" style="width: 60%;"></span>
                                                 <span class="tooltiptext tooltip-top"></span>
                                             </div>
-                                            <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                            <a href="" class="rating-reviews">(1 Reviews)</a>
                                         </div>
                                         <div class="product-price">
                                             <ins class="new-price">$53.00</ins>
@@ -1951,44 +1951,38 @@
                 <!-- Departmental Tab Ends -->
 
 
-                <div class="category-banner-wrapper appear-animate row mb-5"><!-- Start of Category Banner Wrapper -->
-                    <div class="col-md-6 mb-4">
-                        <div class="banner banner-fixed br-sm">
-                            <figure>
-                                <img src="assets/images/demos/demo5/categories/2-1.jpg" alt="Category Banner"
-                                    width="680" height="180" style="background-color: #EAEAEA;" />
-                            </figure>
-                            <div class="banner-content y-50">
-                                <h5 class="banner-subtitle text-capitalize font-weight-normal ls-25">From Online Store
-                                </h5>
-                                <h3 class="banner-title text-capitalize ls-10">Cosmetic Sale</h3>
-                                <a href="shop-banner-sidebar.html"
-                                    class="btn btn-dark btn-link btn-underline btn-icon-right">
-                                    Discover Now<i class="w-icon-long-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="banner banner-fixed br-sm">
-                            <figure>
-                                <img src="assets/images/demos/demo5/categories/2-2.jpg" alt="Category Banner"
-                                    width="680" height="180" style="background-color: #565960;" />
-                            </figure>
-                            <div class="banner-content y-50">
-                                <h5 class="banner-subtitle text-white text-capitalize font-weight-normal ls-25">Season
-                                    Collection</h5>
-                                <h3 class="banner-title text-white text-capitalize">New Fashion Style</h3>
-                                <a href="shop-banner-sidebar.html"
-                                    class="btn btn-white btn-link btn-underline btn-icon-right">
-                                    Discover Now<i class="w-icon-long-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!-- End of Category Banner Wrapper -->
 
+                   <div class="container mt-10 pt-2">
+                       <div class="banner banner-simple appear-animate br-sm mb-10" style="background-image: url(assets/images/demos/demo5/banners/1.jpg);
+                    background-color: #414548;">
+                           <div class="banner-content align-items-center">
+                               <div class="banner-price-info">
+                                   <div class="discount text-secondary font-weight-bolder ls-25 lh-1">
+                                       40<sup class="font-weight-bold p-relative">%</sup>
+                                       <sub class="font-weight-bold text-uppercase p-relative ls-normal">Off</sub>
+                                   </div>
+                                   <p class="text-white font-weight-bolder text-capitalize mb-0 ls-10">2021 Collection</p>
+                               </div>
+                               <hr class="divider bg-white">
+                               <div class="banner-info mb-0">
+                                   <h3 class="banner-title text-white font-weight-normal ls-25">
+                                       We are the Leading<br>
+                                       <strong>Ski Tool Saler in US</strong>
+                                   </h3>
+                                   <a href=""
+                                      class="btn btn-primary btn-link btn-underline btn-icon-right">
+                                       Discover Now<i class="w-icon-long-arrow-right"></i></a>
+                               </div>
+                           </div>
+                           <figure class="skrollable">
+                               <img src="assets/images/demos/demo5/banners/ski.png" alt="Banner"
+                                    data-bottom-top="transform: translateY(5vh);"
+                                    data-top-bottom="transform: translateY(-5vh);">
+                           </figure>
+                       </div>
+
+                       <!-- End of Banner Simple -->
 
 
 
@@ -2142,7 +2136,7 @@
                                     </div>
                                     <div class="col-md-6 pr-md-4 mt-4 mt-md-0">
                                         <div class="product-details scrollable pl-0">
-                                            <h2 class="product-title mb-1"><a href="product-default.html">Men's Season
+                                            <h2 class="product-title mb-1"><a href="">Men's Season
                                                     Blue Clothes</a></h2>
 
                                             <hr class="product-divider">
@@ -2218,14 +2212,14 @@
                         <div class="grid-item grid-item-widget">
                             <div class="product product-widget">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="">
                                         <img src="assets/images/demos/demo5/products/2-2.jpg" alt="Product" width="300"
                                             height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h4 class="product-name">
-                                        <a href="product-default.html">Top Rating Helmet</a>
+                                        <a href="">Top Rating Helmet</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -2243,14 +2237,14 @@
                         <div class="grid-item grid-item-widget">
                             <div class="product product-widget">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="">
                                         <img src="assets/images/demos/demo5/products/2-3.jpg" alt="Product" width="300"
                                             height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h4 class="product-name">
-                                        <a href="product-default.html">Smartphone Electronic Charger</a>
+                                        <a href="">Smartphone Electronic Charger</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -2268,14 +2262,14 @@
                         <div class="grid-item grid-item-widget">
                             <div class="product product-widget">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="">
                                         <img src="assets/images/demos/demo5/products/2-4.jpg" alt="Product" width="300"
                                             height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h4 class="product-name">
-                                        <a href="product-default.html">Skate Pan</a>
+                                        <a href="">Skate Pan</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -2293,14 +2287,14 @@
                         <div class="grid-item grid-item-widget">
                             <div class="product product-widget">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="">
                                         <img src="assets/images/demos/demo5/products/2-5.jpg" alt="Product" width="300"
                                             height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h4 class="product-name">
-                                        <a href="product-default.html">Blue Ski Boots</a>
+                                        <a href="">Blue Ski Boots</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -2318,14 +2312,14 @@
                         <div class="grid-item grid-item-widget">
                             <div class="product product-widget">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="">
                                         <img src="assets/images/demos/demo5/products/2-6.jpg" alt="Product" width="300"
                                             height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h4 class="product-name">
-                                        <a href="product-default.html">Dumbells</a>
+                                        <a href="">Dumbells</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -2343,14 +2337,14 @@
                         <div class="grid-item grid-item-widget">
                             <div class="product product-widget">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="">
                                         <img src="assets/images/demos/demo5/products/2-7.jpg" alt="Product" width="300"
                                             height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h4 class="product-name">
-                                        <a href="product-default.html">Professional Perfect Camera</a>
+                                        <a href="">Professional Perfect Camera</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -2368,14 +2362,14 @@
                         <div class="grid-item grid-item-widget">
                             <div class="product product-widget">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="">
                                         <img src="assets/images/demos/demo5/products/2-8.jpg" alt="Product" width="300"
                                             height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h4 class="product-name">
-                                        <a href="product-default.html">Soft Sound Marker</a>
+                                        <a href="">Soft Sound Marker</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -2393,14 +2387,14 @@
                         <div class="grid-item grid-item-widget">
                             <div class="product product-widget">
                                 <figure class="product-media">
-                                    <a href="product-default.html">
+                                    <a href="">
                                         <img src="assets/images/demos/demo5/products/2-9.jpg" alt="Product" width="300"
                                             height="338">
                                     </a>
                                 </figure>
                                 <div class="product-details">
                                     <h4 class="product-name">
-                                        <a href="product-default.html">Roller Skates</a>
+                                        <a href="">Roller Skates</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -2421,6 +2415,9 @@
             </section>
             <!-- End of Grey Section -->
 
+
+
+
             <div class="container mt-10 pt-2">
                 <div class="banner banner-simple appear-animate br-sm mb-10" style="background-image: url(assets/images/demos/demo5/banners/1.jpg);
                     background-color: #414548;">
@@ -2438,7 +2435,7 @@
                                 We are the Leading<br>
                                 <strong>Ski Tool Saler in US</strong>
                             </h3>
-                            <a href="shop-banner-sidebar.html"
+                            <a href=""
                                 class="btn btn-primary btn-link btn-underline btn-icon-right">
                                 Discover Now<i class="w-icon-long-arrow-right"></i></a>
                         </div>
@@ -2449,7 +2446,12 @@
                             data-top-bottom="transform: translateY(-5vh);">
                     </figure>
                 </div>
+
                 <!-- End of Banner Simple -->
+
+
+
+
 
                 <div class="title-link-wrapper appear-animate mb-4">
                     <h2 class="title title-link pt-1">Apparels &amp; Clothings</h2>
@@ -2478,7 +2480,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/3-1-1.jpg" alt="Product" width="300"
                                         height="338">
                                     <img src="assets/images/demos/demo5/products/3-1-2.jpg" alt="Product" width="300"
@@ -2495,13 +2497,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Multi Function Watch</a></h4>
+                                <h4 class="product-name"><a href="">Multi Function Watch</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 80%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                    <a href="" class="rating-reviews">(1 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$170.00</ins>
@@ -2513,7 +2515,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/3-2.jpg" alt="Product" width="300"
                                         height="338">
                                 </a>
@@ -2528,13 +2530,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Men's Suede Belt</a></h4>
+                                <h4 class="product-name"><a href="">Men's Suede Belt</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 60%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                    <a href="" class="rating-reviews">(1 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$39.00</ins>
@@ -2546,7 +2548,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/3-3.jpg" alt="Product" width="300"
                                         height="338">
                                 </a>
@@ -2561,13 +2563,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Gold Watch</a></h4>
+                                <h4 class="product-name"><a href="">Gold Watch</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 100%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(5 Reviews)</a>
+                                    <a href="" class="rating-reviews">(5 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$210.00</ins>
@@ -2579,7 +2581,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/3-4-1.jpg" alt="Product" width="300"
                                         height="338">
                                     <img src="assets/images/demos/demo5/products/3-4-2.jpg" alt="Product" width="300"
@@ -2596,13 +2598,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Portable Charger</a></h4>
+                                <h4 class="product-name"><a href="">Portable Charger</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 100%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(8 Reviews)</a>
+                                    <a href="" class="rating-reviews">(8 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$25.00</ins>
@@ -2614,7 +2616,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/3-5.jpg" alt="Product" width="300"
                                         height="338">
                                 </a>
@@ -2629,13 +2631,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Headkerchief</a></h4>
+                                <h4 class="product-name"><a href="">Headkerchief</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 80%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(4 Reviews)</a>
+                                    <a href="" class="rating-reviews">(4 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$28.99</ins>
@@ -2647,63 +2649,38 @@
                 </div>
                 <!-- End of Prodcut Wrapper -->
 
-                <div class="row grid grid-float appear-animate">
-                    <div class="col-lg-6 grid-item height-x2 grid-item-lg">
-                        <div class="banner banner-fixed br-sm">
-                            <figure>
-                                <img src="assets/images/demos/demo5/banners/2-1.jpg" alt="Banner" width="680"
-                                    height="420" style="background-color: #242529;" />
-                            </figure>
-                            <div class="banner-content text-center x-50 w-100 pl-4 pr-4">
-                                <h5 class="banner-subtitle text-uppercase text-secondary font-weight-bold ls-25 mb-1">
-                                    From Samsung</h5>
-                                <h3 class="banner-title text-capitalize text-white mb-0">Introducing Galaxy Note 10</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 grid-item height-x1 grid-item-md">
-                        <div class="banner banner-fixed br-sm">
-                            <figure>
-                                <img src="assets/images/demos/demo5/banners/2-2.jpg" alt="Banner" width="680"
-                                    height="200" style="background-color: #EEEEF0;" />
-                            </figure>
-                            <div class="banner-content y-50">
-                                <h5 class="banner-subtitle font-weight-normal text-uppercase mb-0">New Arrivals</h5>
-                                <h3 class="banner-title text-capitalize ls-25">Gymnastic Apparatus</h3>
-                                <div class="banner-price-info text-default font-weight-normal">
-                                    Up to <strong class="text-primary text-uppercase">25% Off</strong>
+
+
+                <div class="container mt-10 pt-2">
+                    <div class="banner banner-simple appear-animate br-sm mb-10" style="background-image: url(assets/images/demos/demo5/banners/1.jpg);
+                    background-color: #414548;">
+                        <div class="banner-content align-items-center">
+                            <div class="banner-price-info">
+                                <div class="discount text-secondary font-weight-bolder ls-25 lh-1">
+                                    40<sup class="font-weight-bold p-relative">%</sup>
+                                    <sub class="font-weight-bold text-uppercase p-relative ls-normal">Off</sub>
                                 </div>
+                                <p class="text-white font-weight-bolder text-capitalize mb-0 ls-10">2021 Collection</p>
+                            </div>
+                            <hr class="divider bg-white">
+                            <div class="banner-info mb-0">
+                                <h3 class="banner-title text-white font-weight-normal ls-25">
+                                    We are the Leading<br>
+                                    <strong>Ski Tool Saler in US</strong>
+                                </h3>
+                                <a href=""
+                                   class="btn btn-primary btn-link btn-underline btn-icon-right">
+                                    Discover Now<i class="w-icon-long-arrow-right"></i></a>
                             </div>
                         </div>
+                        <figure class="skrollable">
+                            <img src="assets/images/demos/demo5/banners/ski.png" alt="Banner"
+                                 data-bottom-top="transform: translateY(5vh);"
+                                 data-top-bottom="transform: translateY(-5vh);">
+                        </figure>
                     </div>
-                    <div class="col-lg-3 col-sm-6 grid-item height-x1 grid-item-sm">
-                        <div class="banner banner-fixed br-sm">
-                            <figure>
-                                <img src="assets/images/demos/demo5/banners/2-3.jpg" alt="Banner" width="330"
-                                    height="200" style="background-color: #519DD9;" />
-                            </figure>
-                            <div class="banner-content text-center x-50 y-50 w-100">
-                                <h3 class="banner-title text-white text-uppercase mb-1 font-weight-bolder">Hey!</h3>
-                                <p class="text-white mb-0">Spend $60 and get Free US main-land delivery</p>
-                                <p class="text-white mb-0">(Order under $60 only /$4.75)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 grid-item height-x1 grid-item-sm">
-                        <div class="banner banner-fixed br-sm">
-                            <figure>
-                                <img src="assets/images/demos/demo5/banners/2-4.jpg" alt="Banner" width="330"
-                                    height="200" style="background-color: #5F5657;" />
-                            </figure>
-                            <div class="banner-content y-50">
-                                <h3 class="banner-title text-white text-capitalize ls-25">Men's<br>Accessories</h3>
-                                <del class="old-price text-white">$499.99</del>
-                                <div class="new-price text-secondary ls-25">$299.99</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Grid -->
+
+                    <!-- End of Banner Simple -->
 
                 <div class="title-link-wrapper appear-animate mt-10 mb-4">
                     <h2 class="title title-link pt-1">Consumer Electronics</h2>
@@ -2732,7 +2709,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/4-1-1.jpg" alt="Product" width="300"
                                         height="338">
                                     <img src="assets/images/demos/demo5/products/4-1-2.jpg" alt="Product" width="300"
@@ -2749,13 +2726,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Red Cap Sound Marker</a></h4>
+                                <h4 class="product-name"><a href="">Red Cap Sound Marker</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 80%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                    <a href="" class="rating-reviews">(1 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$65.89 - $69.99</ins>
@@ -2767,7 +2744,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/4-2.jpg" alt="Product" width="300"
                                         height="338">
                                 </a>
@@ -2782,13 +2759,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Men's Black Watch</a></h4>
+                                <h4 class="product-name"><a href="">Men's Black Watch</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 60%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(1 Reviews)</a>
+                                    <a href="" class="rating-reviews">(1 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$75.00</ins><del class="old-price">$79.00</del>
@@ -2800,7 +2777,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/4-3.jpg" alt="Product" width="300"
                                         height="338">
                                 </a>
@@ -2815,13 +2792,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Fabulous Sound Speaker</a></h4>
+                                <h4 class="product-name"><a href="">Fabulous Sound Speaker</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 100%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(5 Reviews)</a>
+                                    <a href="" class="rating-reviews">(5 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$62.00</ins>
@@ -2833,7 +2810,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/4-4-1.jpg" alt="Product" width="300"
                                         height="338">
                                     <img src="assets/images/demos/demo5/products/4-4-2.jpg" alt="Product" width="300"
@@ -2850,13 +2827,13 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Mini Wireless Earphone</a></h4>
+                                <h4 class="product-name"><a href="">Mini Wireless Earphone</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 100%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(8 Reviews)</a>
+                                    <a href="" class="rating-reviews">(8 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$49.99</ins>
@@ -2868,7 +2845,7 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="product-default.html">
+                                <a href="">
                                     <img src="assets/images/demos/demo5/products/4-5.jpg" alt="Product" width="300"
                                         height="338">
                                 </a>
@@ -2883,14 +2860,14 @@
                                 </div>
                             </figure>
                             <div class="product-details">
-                                <h4 class="product-name"><a href="product-default.html">Good-Performance Humidifier</a>
+                                <h4 class="product-name"><a href="">Good-Performance Humidifier</a>
                                 </h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">
                                         <span class="ratings" style="width: 80%;"></span>
                                         <span class="tooltiptext tooltip-top"></span>
                                     </div>
-                                    <a href="product-default.html" class="rating-reviews">(4 Reviews)</a>
+                                    <a href="" class="rating-reviews">(4 Reviews)</a>
                                 </div>
                                 <div class="product-price">
                                     <ins class="new-price">$79.00</ins>
@@ -3088,13 +3065,13 @@
                     <div class="product-wrap">
                         <div class="product text-center product-absolute">
                             <figure class="product-media">
-                                <a href="https://www.portotheme.com/html/wolmart/product-defaproduct-default.html">
+                                <a href="https://www.portotheme.com/html/wolmart/product-defa">
                                     <img src="assets/images/demos/demo5/products/3-5.jpg" alt="Category image"
                                         width="130" height="146" style="background-color: #fff" />
                                 </a>
                             </figure>
                             <h4 class="product-name">
-                                <a href="product-default.html">Headkerchief</a>
+                                <a href="">Headkerchief</a>
                             </h4>
                         </div>
                     </div>
@@ -3102,13 +3079,13 @@
                     <div class="product-wrap">
                         <div class="product text-center product-absolute">
                             <figure class="product-media">
-                                <a href="https://www.portotheme.com/html/wolmart/product-defaproduct-default.html">
+                                <a href="https://www.portotheme.com/html/wolmart/product-defa">
                                     <img src="assets/images/demos/demo5/products/1-1-1.jpg" alt="Category image"
                                         width="130" height="146" style="background-color: #fff" />
                                 </a>
                             </figure>
                             <h4 class="product-name">
-                                <a href="product-default.html">Leather Stripe Watch</a>
+                                <a href="">Leather Stripe Watch</a>
                             </h4>
                         </div>
                     </div>
@@ -3116,13 +3093,13 @@
                     <div class="product-wrap">
                         <div class="product text-center product-absolute">
                             <figure class="product-media">
-                                <a href="https://www.portotheme.com/html/wolmart/product-defaproduct-default.html">
+                                <a href="https://www.portotheme.com/html/wolmart/product-defa">
                                     <img src="assets/images/demos/demo5/products/4-1-1.jpg" alt="Category image"
                                         width="130" height="146" style="background-color: #fff" />
                                 </a>
                             </figure>
                             <h4 class="product-name">
-                                <a href="product-default.html">Red Cap Sound Marker</a>
+                                <a href="">Red Cap Sound Marker</a>
                             </h4>
                         </div>
                     </div>
@@ -3130,13 +3107,13 @@
                     <div class="product-wrap">
                         <div class="product text-center product-absolute">
                             <figure class="product-media">
-                                <a href="https://www.portotheme.com/html/wolmart/product-defaproduct-default.html">
+                                <a href="https://www.portotheme.com/html/wolmart/product-defa">
                                     <img src="assets/images/demos/demo5/products/2-3.jpg" alt="Category image"
                                         width="130" height="146" style="background-color: #fff" />
                                 </a>
                             </figure>
                             <h4 class="product-name">
-                                <a href="product-default.html">Smartphone Electronic Charger</a>
+                                <a href="">Smartphone Electronic Charger</a>
                             </h4>
                         </div>
                     </div>
@@ -3144,13 +3121,13 @@
                     <div class="product-wrap">
                         <div class="product text-center product-absolute">
                             <figure class="product-media">
-                                <a href="https://www.portotheme.com/html/wolmart/product-defaproduct-default.html">
+                                <a href="https://www.portotheme.com/html/wolmart/product-defa">
                                     <img src="assets/images/demos/demo5/products/2-5.jpg" alt="Category image"
                                         width="130" height="146" style="background-color: #fff" />
                                 </a>
                             </figure>
                             <h4 class="product-name">
-                                <a href="product-default.html">Blue Ski Boots</a>
+                                <a href="">Blue Ski Boots</a>
                             </h4>
                         </div>
                     </div>
@@ -3158,13 +3135,13 @@
                     <div class="product-wrap">
                         <div class="product text-center product-absolute">
                             <figure class="product-media">
-                                <a href="https://www.portotheme.com/html/wolmart/product-defaproduct-default.html">
+                                <a href="https://www.portotheme.com/html/wolmart/product-defa">
                                     <img src="assets/images/demos/demo5/products/2-8.jpg" alt="Category image"
                                         width="130" height="146" style="background-color: #fff" />
                                 </a>
                             </figure>
                             <h4 class="product-name">
-                                <a href="product-default.html">Soft Sound Marker</a>
+                                <a href="">Soft Sound Marker</a>
                             </h4>
                         </div>
                     </div>
@@ -3172,13 +3149,13 @@
                     <div class="product-wrap">
                         <div class="product text-center product-absolute">
                             <figure class="product-media">
-                                <a href="https://www.portotheme.com/html/wolmart/product-defaproduct-default.html">
+                                <a href="https://www.portotheme.com/html/wolmart/product-defa">
                                     <img src="assets/images/demos/demo5/products/3-1-1.jpg" alt="Category image"
                                         width="130" height="146" style="background-color: #fff" />
                                 </a>
                             </figure>
                             <h4 class="product-name">
-                                <a href="product-default.html">Multi function Watch</a>
+                                <a href="">Multi function Watch</a>
                             </h4>
                         </div>
                     </div>
@@ -3186,13 +3163,13 @@
                     <div class="product-wrap">
                         <div class="product text-center product-absolute">
                             <figure class="product-media">
-                                <a href="https://www.portotheme.com/html/wolmart/product-defaproduct-default.html">
+                                <a href="https://www.portotheme.com/html/wolmart/product-defa">
                                     <img src="assets/images/demos/demo5/products/1-2.jpg" alt="Category image"
                                         width="130" height="146" style="background-color: #fff" />
                                 </a>
                             </figure>
                             <h4 class="product-name">
-                                <a href="product-default.html">Running Machine</a>
+                                <a href="">Running Machine</a>
                             </h4>
                         </div>
                     </div>
