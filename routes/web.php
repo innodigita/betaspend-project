@@ -37,7 +37,7 @@ Route::get('/become-a-vendor', [TemplateController::class, 'become_a_vendor']);
 
 Route::get('/my-account', [TemplateController::class, 'my_account']);
 
-Route::get('/login', [TemplateController::class, 'login']);
+Route::get('/login2', [TemplateController::class, 'login']);
 
 Route::get('/cart', [TemplateController::class, 'cart']);
 
@@ -50,3 +50,7 @@ Route::get('/checkout', [TemplateController::class, 'checkout']);
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

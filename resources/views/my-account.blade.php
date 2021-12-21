@@ -9,7 +9,7 @@
 
 
          {{--  Start of Header  --}}
-        @include('Layout.general-top-header')
+        @include('layout.home_menu_header') <!--Layout.general-top-header')-->
          {{--  End of Header   --}}
 
 
@@ -67,10 +67,21 @@
                             <div class="tab-pane active in" id="account-dashboard">
                                 <p class="greeting">
                                     Hello
-                                    <span class="text-dark font-weight-bold">John Doe</span>
+                                    <span class="text-dark font-weight-bold">{{ Auth::user()->name }}</span>
                                     (not
-                                    <span class="text-dark font-weight-bold">John Doe</span>?
-                                    <a href="#" class="text-primary">Log out</a>)
+                                    <span class="text-dark font-weight-bold">{{ Auth::user()->name }}</span>?
+                                    <!--------------------------------------->
+                                    <a href="{{ route( 'logout' )}}" class="text-primary"
+                                    onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                     <i>Log Out</i></a>)
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+
+                                    <!----------------------------------------------->
+                                    
                                 </p>
 
                                 <p class="mb-4">
