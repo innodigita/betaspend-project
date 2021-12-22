@@ -52,8 +52,7 @@ Route::get('/compare', [TemplateController::class, 'compare']);
 
 Route::get('/checkout', [TemplateController::class, 'checkout']);
 
-
-
+Route::post('/administration/category/new', [AdminController::class,  'store' ] );
 
 
 Auth::routes();
