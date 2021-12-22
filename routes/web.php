@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AdminController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +27,9 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [TemplateController::class, 'index']);
 
 Route::get('/administration', [AdminController::class, 'index']);
-    
+
+Route::get('/administration/category', [AdminController::class, 'category']);
+
 Route::get('/shop', [ProductsController::class, 'index']);
 
 Route::get('/details', [ProductsController::class, 'product_details']);
@@ -34,6 +37,8 @@ Route::get('/details', [ProductsController::class, 'product_details']);
 Route::get('/contact', [TemplateController::class, 'contact']);
 
 Route::get('/become-a-vendor', [TemplateController::class, 'become_a_vendor']);
+
+Route::get('/vendors', [TemplateController::class, 'vendors']);
 
 Route::get('/my-account', [TemplateController::class, 'my_account']);
 

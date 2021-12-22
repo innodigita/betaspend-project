@@ -33,10 +33,7 @@
 <body>
 
 
-
    @yield('content')
-
-
 
 
     <script src="{{ asset('/admin/vendors/jquery/dist/jquery.min.js') }}"></script>

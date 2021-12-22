@@ -22,6 +22,12 @@ class TemplateController extends Controller
         return view('become-a-vendor');
     }
 
+    public function vendors(){
+
+        return view('vendors');
+        
+    }
+
     public function my_account(){
         
         return view('my-account');

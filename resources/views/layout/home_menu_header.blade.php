@@ -678,7 +678,7 @@
 
 
                                     <li>
-                                        <a href="vendors">Vendors</a>
+                                        <a href="{{ url('./vendors') }}">Vendors</a>
                                     </li>
 
 
