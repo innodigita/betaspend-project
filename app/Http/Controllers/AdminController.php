@@ -16,6 +16,11 @@ class AdminController extends Controller
        return view('Admin.index');
     }
 
+    public function category()
+    {
+        return view('Admin.Layouts.category');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
