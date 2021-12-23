@@ -44,10 +44,10 @@
                                 </select>
                             </div>
                             <div class="toolbox-item toolbox-layout mb-0 d-flex">
-                                <a href="vendors.php" class="icon-mode-grid btn-layout active">
+                                <a href="{{ url('./vendors') }}" class="icon-mode-grid btn-layout active">
                                     <i class="w-icon-grid"></i>
                                 </a>
-                                <a href="{{ url('/vendors-list') }}" class="icon-mode-list btn-layout">
+                                <a href="{{ url('./vendors-list') }}" class="icon-mode-list btn-layout">
                                     <i class="w-icon-list"></i>
                                 </a>
                             </div>
@@ -74,7 +74,7 @@
                                 <!-- End of Store Header -->
                                 <div class="store-content">
                                     <h4 class="store-title">
-                                        <a href="#">Vendor 1</a>
+                                        <a href="{{ url('./vendors-details') }}">Vendor 1</a>
                                         <label class="featured-label">Featured</label>
                                     </h4>
                                     <div class="ratings-container">
@@ -116,7 +116,7 @@
                                 <!-- End of Store Header -->
                                 <div class="store-content">
                                     <h4 class="store-title">
-                                        <a href="vendor-dokan-store.html">Vendor 2</a>
+                                        <a href="{{ url('./vendors-details') }}">Vendor 2</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -138,7 +138,7 @@
                                     <figure class="seller-brand">
                                         <img src="assets/images/vendor/brand/2.jpg" alt="Brand" width="80" height="80" />
                                     </figure>
-                                    <a href="about_vendor.php" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                                    <a href="{{ url('./vendors-details') }}" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                                 </div>
                                 <!-- End of Store Footer -->
                             </div>
@@ -155,7 +155,7 @@
                                 <!-- End of Store Header -->
                                 <div class="store-content">
                                     <h4 class="store-title">
-                                        <a href="about_vendor.php">Vendor 3</a>
+                                        <a href="{{ url('./vendors-details') }}">Vendor 3</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -177,7 +177,7 @@
                                     <figure class="seller-brand">
                                         <img src="assets/images/vendor/brand/3.jpg" alt="Brand" width="80" height="80" />
                                     </figure>
-                                    <a href="about_vendor.php" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                                    <a href="{{ url('./vendors-details') }}" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                                 </div>
                                 <!-- End of Store Footer -->
                             </div>
@@ -194,7 +194,7 @@
                                 <!-- End of Store Header -->
                                 <div class="store-content">
                                     <h4 class="store-title">
-                                        <a href="vendor-dokan-store.html">Vendor 4</a>
+                                        <a href="{{ url('./vendors-details') }}">Vendor 4</a>
                                     </h4>
                                     <div class="ratings-container">
                                         <div class="ratings-full">
@@ -233,7 +233,7 @@
                                 <!-- End of Store Header -->
                                 <div class="store-content">
                                     <h4 class="store-title">
-                                        <a href="about_vendor.php">Vendor 5</a>
+                                        <a href="{{ url('./vendors-details') }}">Vendor 5</a>
                                         <label class="featured-label">Featured</label>
                                     </h4>
                                     <div class="ratings-container">
@@ -256,7 +256,7 @@
                                     <figure class="seller-brand">
                                         <img src="assets/images/vendor/brand/5.jpg" alt="Brand" width="80" height="80" />
                                     </figure>
-                                    <a href="about_vendor.php" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                                    <a href="{{ url('./vendors-details') }}" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                                 </div>
                                 <!-- End of Store Footer -->
                             </div>
@@ -295,7 +295,7 @@
                                     <figure class="seller-brand">
                                         <img src="assets/images/vendor/brand/6.jpg" alt="Brand" width="80" height="80" />
                                     </figure>
-                                    <a href="about_vendor.php" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
+                                    <a href="{{ url('./vendors-details') }}" class="btn btn-dark btn-link btn-underline btn-icon-right btn-visit">Visit Store<i class="w-icon-long-arrow-right"></i></a>
                                 </div>
                                 <!-- End of Store Footer -->
                             </div>

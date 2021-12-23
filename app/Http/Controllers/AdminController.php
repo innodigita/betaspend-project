@@ -16,9 +16,13 @@ class AdminController extends Controller
        return view('Admin.index');
     }
 
-    public function category()
+    public function add_category()
     {
-        return view('Admin.Layouts.category');
+        return view('Admin.Layouts.add_category');
+    }
+
+    public function view_category(){
+        return view('Admin.Layouts.view_category');
     }
 
     /**

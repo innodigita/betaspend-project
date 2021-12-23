@@ -68,13 +68,23 @@
                                              </textarea>
                                             </div>
 
+                                            <div class="form-group">
+                                                <label for="cat_parent" class="control-label mb-1">Is it parent?</label>
+                                                <input type="checkbox">
 
-                                                <div class="form-group has-success">
-                                                    <label for="cc-name" class="control-label mb-1">category icon(only parent category)</label>
-                                                    <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
-                                                    <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
-                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="cat_parent" class="control-label mb-1">Status</label>
+                                                <select class="form-control">
+                                                    <option>Active</option>
+                                                    <option>Inactive</option>
+                                                </select>
+
+                                            </div>
+
                                                 <div class="form-group">
+                                                    <label for="cat_icon" class="control-label mb-1">category icon(only parent category)</label>
                                                     <select name="class_icon" class="form-control">
                                                         <option>Choose Icon class</option>
                                                         <option></option>
@@ -82,8 +92,8 @@
                                                 </div>
                                                 
                                                 <div>
-                                                    <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
-                                                        <span id="cat-name">Add Category</span>
+                                                    <button id="submit" type="submit" class="btn btn-lg btn-primary btn-block">
+                                                        <span id="submit">Add Category</span>
                                                         <span id="submitting" style="display:none;">Adding New Record</span>
                                                     </button>
                                                 </div>

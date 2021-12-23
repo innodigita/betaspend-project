@@ -28,7 +28,9 @@ Route::get('/', [TemplateController::class, 'index']);
 
 Route::get('/administration', [AdminController::class, 'index']);
 
-Route::get('/administration/category', [AdminController::class, 'category']);
+Route::get('/administration/view_category', [AdminController::class, 'view_category']);
+
+Route::get('/administration/add_category', [AdminController::class, 'add_category']);
 
 Route::get('/shop', [ProductsController::class, 'index']);
 
@@ -39,6 +41,12 @@ Route::get('/contact', [TemplateController::class, 'contact']);
 Route::get('/become-a-vendor', [TemplateController::class, 'become_a_vendor']);
 
 Route::get('/vendors', [TemplateController::class, 'vendors']);
+
+Route::get('/vendors-list', [TemplateController::class, 'vendors_list']);
+
+Route::get('/vendors-details', [TemplateController::class, 'vendors_details']);
+
+Route::get('/vendors-details-list', [TemplateController::class, 'vendors_details_list']);
 
 Route::get('/my-account', [TemplateController::class, 'my_account']);
 

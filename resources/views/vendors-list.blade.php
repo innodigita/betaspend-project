@@ -17,10 +17,8 @@
             <nav class="breadcrumb-nav">
                 <div class="container">
                     <ul class="breadcrumb mb-6">
-                        <li><a href="demo1.html">Home</a></li>
-                        <li><a href="#">Vendor</a></li>
-                        <li><a href="#">Dokan</a></li>
-                        <li>Store List</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Vendor</a></li>                       
                     </ul>
                 </div>
             </nav>
@@ -45,10 +43,10 @@
                                 </select>
                             </div>
                             <div class="toolbox-item toolbox-layout mb-0 d-flex">
-                                <a href="vendors.php" class="icon-mode-grid btn-layout">
+                                <a href="{{ url('./vendors') }}" class="icon-mode-grid btn-layout">
                                     <i class="w-icon-grid"></i>
                                 </a>
-                                <a href="vendors-list.php" class="icon-mode-list btn-layout active">
+                                <a href="{{ url('./vendors-list') }}" class="icon-mode-list btn-layout active">
                                     <i class="w-icon-list"></i>
                                 </a>
                             </div>

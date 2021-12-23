@@ -45,9 +45,20 @@
                     <a href="#"><i class="menu-icon fa fa-fw fa-desktop"></i> Orders </a>
                 </li>
 
-                <li>
-                    <a href="{{ url('./administration/category') }}"><i class="menu-icon fa fa-fw fa-desktop"></i> Manage Categories </a>
+                <li class="menu-item-has-children dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-briefcase"></i> Manage Category
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><a href="{{ url('./administration/view_category') }}">View Categories</a></li>
+                        
+                        <li><a href="{{ url('./administration/add_category') }}"> Add Category</a></li>
+
+                    </ul>
+
                 </li>
+
+
 
                 <li>
                     <a href="#"><i class="menu-icon fa fa-gift"></i> Coupons</a>
