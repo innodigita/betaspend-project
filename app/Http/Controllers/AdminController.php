@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Category;
+
 class AdminController extends Controller
 {
     /**
@@ -43,7 +45,14 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Category::create(
+            [
+                'Parent_cat_title'  => $request['cat_title'],
+                'Parent_cat_desc'   => $request['cat_desc'],
+                'Parent_cat_img'    => 'cat.jpg',//$request['cat_img'],
+                'Parent_cat_status' => 'available'//$request['cat_status']
+            ]);
+        return "{{ route('login') }}";
     }
 
     /**

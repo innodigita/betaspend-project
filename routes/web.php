@@ -50,7 +50,7 @@ Route::get('/vendors-details-list', [TemplateController::class, 'vendors_details
 
 Route::get('/my-account', [TemplateController::class, 'my_account']);
 
-Route::get('/login', [TemplateController::class, 'login']);
+Route::get('/login2', [TemplateController::class, 'login']);
 
 Route::get('/cart', [TemplateController::class, 'cart']);
 
@@ -60,6 +60,9 @@ Route::get('/compare', [TemplateController::class, 'compare']);
 
 Route::get('/checkout', [TemplateController::class, 'checkout']);
 
+Route::post('/administration/category/new', [AdminController::class,  'store' ] );
 
 
+Auth::routes();
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

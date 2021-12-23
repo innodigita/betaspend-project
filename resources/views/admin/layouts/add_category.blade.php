@@ -54,16 +54,17 @@
                                             <h3 class="text-center">Add Category</h3>
                                         </div>
                                         <hr>
-                                        <form action="" method="post" novalidate="novalidate">
+                                        <form action="/administration/category/new" method="post" novalidate="novalidate">
+                                        @csrf
                                            
                                             <div class="form-group">
                                                 <label for="category_name" class="control-label mb-1">Category Name</label>
-                                                <input id="category_name" name="category_name" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Name of category">
+                                                <input id="category_name" name="cat_title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Name of category">
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="cat_description"> Category Description</label>
-                                             <textarea name="cat_description" class="form-control" height="50">
+                                             <textarea name="cat_desc" class="form-control" height="50">
 
                                              </textarea>
                                             </div>
