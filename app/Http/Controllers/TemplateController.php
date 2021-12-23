@@ -45,6 +45,24 @@ class TemplateController extends Controller
         
     }
 
+    public function vendors_list(){
+
+        return view('vendors-list');
+        
+    }
+
+    public function vendors_details(){
+
+        return view('vendors-details');
+
+    }
+
+    public function vendors_details_list(){
+
+        return view('vendors-details-list');
+        
+    }
+
     public function my_account(){
         
         return view('my-account');
