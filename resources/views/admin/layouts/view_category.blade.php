@@ -91,7 +91,33 @@
                                 </tr>
                             </thead>
                             <tbody>
+    @if ( count( $categs ) > 0 )
+    {{$n = 1;}}
+    @foreach( $categs as $ctgs )
                                 <tr>
+                                    <td>{{$n}}</td>
+                                    <td>{{$ctgs->Parent_cat_title}}</td>
+                                    <td>wement-wears</td>
+                                    <td>{{$ctgs->cat_is_parent}}</td>
+                                    <td>
+                                        @if( $ctgs->cat_is_parent == 'yes' )
+                                            {{$ctgs->Parent_cat_title}}
+                                        @else
+                                            Parent
+                                        @endif
+                                    </td>
+                                    <td><img src="" width="" height=""></td>
+                                    <td>{{$ctgs->Parent_cat_status}}</td>
+                                    <td>
+                                        <span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span>
+                                        <span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-trash"></i></span>
+                                    </td>
+
+                                </tr>
+        {{$n++;}}
+    @endforeach
+    @endif
+                                <!--tr>
                                     <td>1</td>
                                     <td>Women Wears</td>
                                     <td>wement-wears</td>
@@ -102,7 +128,7 @@
                                     <td>
                                         <span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span>
                                         <span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-trash"></i></span>
-                                    </td>
+                                    </td-->
 
                                 </tr>
                                 

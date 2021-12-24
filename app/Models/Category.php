@@ -15,7 +15,8 @@ class Category extends Model
         'Parent_cat_title',
         'Parent_cat_desc',
         'Parent_cat_img',
-        'Parent_cat_status'
+        'Parent_cat_status',
+        'cat_is_parent'
 
     ];
 }
