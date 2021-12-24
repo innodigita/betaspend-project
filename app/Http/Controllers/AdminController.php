@@ -61,7 +61,7 @@ class AdminController extends Controller
                 'Parent_cat_status' => $request->status,//'available'//$request['cat_status']
                 'cat_is_parent'     => $is_prnt
             ]);
-        return "{{ route('login') }}";
+        return redirect()->route('administration/view_category');
     }
 
     /**

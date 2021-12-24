@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\AdminController;
+use App\Http\Middleware\isAdmin;
 
 
 
@@ -26,11 +27,11 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/', [TemplateController::class, 'index']);
 
-Route::get('/administration', [AdminController::class, 'index']);
+Route::middleware(['isAdmin'])->get('/administration', [AdminController::class, 'index'])->name('administration');
 
-Route::get('/administration/view_category', [AdminController::class, 'view_category']);
+Route::middleware(['isAdmin'])->get('/administration/view_category', [AdminController::class, 'view_category'])->name('administration/view_category');
 
-Route::get('/administration/add_category', [AdminController::class, 'add_category']);
+Route::middleware(['isAdmin'])->get('/administration/add_category', [AdminController::class, 'add_category']);
 
 Route::get('/shop', [ProductsController::class, 'index']);
 
