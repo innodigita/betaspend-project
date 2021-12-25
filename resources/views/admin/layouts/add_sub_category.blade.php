@@ -54,18 +54,18 @@
                                             <h3 class="text-center">Add Sub Category</h3>
                                         </div>
                                         <hr>
-                                        <form action="{{ url('./administration/add-sub-category') }}" type="multipart/form-data" method="post" novalidate="novalidate">
+                                        <form action="{{ url('./administration/add-sub-category') }}" enctype="multipart/form-data" method="post">
                                         @csrf
                                            
                                             <div class="form-group">
                                                 <label for="sub_cat_title" class="control-label mb-1">Sub Category Name</label>
-                                                <input id="sub_cat_title" name="sub_cat_title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Name of sub category">
+                                                <input id="sub_cat_title" name="sub_cat_title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Name of sub category" required>
                                             </div>                                         
 
                                             <div class="form-group">
                                                 <label for="cat_parent" class="control-label mb-1">Select Parent Category</label>
                                                 <select class="form-control" name="cat_parent">
-                                                    <option>Select</option>
+                                                    <option value="No Parent">Select</option>
                                     @if( count( $p_ctgs ) > 0)
                                         @foreach( $p_ctgs as $pctg )
                                                     <option value={{$pctg->id}} >{{$pctg->Parent_cat_title}}</option>
@@ -77,7 +77,7 @@
 
                                                 <div class="form-group">
                                                     <label for="sub_cat_img" class="control-label mb-1">Sub Category Image</label>
-                                                    <input name="sub_cat_img" type="file" class="form-control p-1">
+                                                    <input name="sub_cat_img" type="file" class="form-control p-1" required>
                                                     
                                                 </div>
                                                 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Category;
+use App\Models\SubCategory;
 
 class AdminController extends Controller
 {
@@ -51,21 +52,37 @@ class AdminController extends Controller
 
     public function add_sub_category(Request $request){
         
-        
+        if( $request->hasFile('sub_cat_img') )
+        {
         $request->validate(
             [
-                'sub_cat_img' => 'required',//|sub_cat_img|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                'sub_cat_img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                'sub_cat_title' => 'required|unique:sub_categories,title'
             ]
         );
-        return "hi";
 
-        $imageName = time().'.'.$request->sub_cat_img->extention;
+        $directory = './sub_categ_icons/';
+        $img_nm = time().'.'.basename( $_FILES['sub_cat_img']['name']);
+        $filename = $directory.$img_nm;
 
-        return $imageName;
+        if( move_uploaded_file($_FILES["sub_cat_img"]["tmp_name"],  $filename) )
+        {
+            SubCategory::create(
+                [
+                    'title' => $request->sub_cat_title,
+                    'parent_id' => $request->cat_parent,
+                    'img_address'=> $img_nm
+                ]
+            );
+            return redirect()->route('/administration/sub-category');//route('Admin.Layouts.view_sub_category');
+        }
     }
+}
 
     public function view_sub_category(){
-        return view('Admin.Layouts.view_sub_category');
+        $categs = SubCategory::all();
+        $pids = Category::all();
+        return view('Admin.Layouts.view_sub_category')->with( [ 'categs'=> $categs , 'pids' => $pids ] );
     }
 
     /**

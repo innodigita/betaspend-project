@@ -43,7 +43,7 @@ Route::get('/administration/add-sub-category', [AdminController::class, 'view_ad
 
 Route::post('/administration/add-sub-category', [AdminController::class, 'add_sub_category']);
 
-Route::get('/administration/sub-category', [AdminController::class, 'view_sub_category']);
+Route::get('/administration/sub-category', [AdminController::class, 'view_sub_category'])->name('/administration/sub-category');
 
 Route::get('/shop', [ProductsController::class, 'index']);
 
