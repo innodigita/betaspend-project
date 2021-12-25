@@ -71,13 +71,13 @@
 
                                             <div class="form-group">
                                                 <label for="cat_parent" class="control-label mb-1">Is it parent?</label>
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="is_p">
 
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="cat_parent" class="control-label mb-1">Status</label>
-                                                <select class="form-control">
+                                                <select class="form-control" name="status">
                                                     <option>Active</option>
                                                     <option>Inactive</option>
                                                 </select>

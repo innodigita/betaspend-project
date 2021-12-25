@@ -24,7 +24,8 @@ class AdminController extends Controller
     }
 
     public function view_category(){
-        return view('Admin.Layouts.view_category');
+        $categs = Category::all();
+        return view('Admin.Layouts.view_category')->with('categs', $categs);
     }
 
     public function add_sub_category(){
@@ -53,14 +54,22 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
+        if ( isset( $request->is_p ) )
+        {
+            $is_prnt = "yes";
+        }else {
+            $is_prnt = "no";
+        }
+
         Category::create(
             [
                 'Parent_cat_title'  => $request['cat_title'],
                 'Parent_cat_desc'   => $request['cat_desc'],
                 'Parent_cat_img'    => 'cat.jpg',//$request['cat_img'],
-                'Parent_cat_status' => 'available'//$request['cat_status']
+                'Parent_cat_status' => $request->status,//'available'//$request['cat_status']
+                'cat_is_parent'     => $is_prnt
             ]);
-        return "{{ route('login') }}";
+        return redirect()->route('administration/view_category');
     }
 
     /**

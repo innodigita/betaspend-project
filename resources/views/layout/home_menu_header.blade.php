@@ -589,7 +589,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="shop-banner-sidebar.html"
+                                            <a href="/administration/view_category"
                                                 class="font-weight-bold text-uppercase ls-25">
                                                 View All Categories<i class="w-icon-angle-right"></i>
                                             </a>
