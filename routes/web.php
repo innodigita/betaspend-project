@@ -32,6 +32,10 @@ Route::get('/administration/view_category', [AdminController::class, 'view_categ
 
 Route::get('/administration/add_category', [AdminController::class, 'add_category']);
 
+Route::get('/administration/add-sub-category', [AdminController::class, 'add_sub_category']);
+
+Route::get('/administration/sub-category', [AdminController::class, 'view_sub_category']);
+
 Route::get('/shop', [ProductsController::class, 'index']);
 
 Route::get('/details', [ProductsController::class, 'product_details']);

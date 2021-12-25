@@ -27,6 +27,14 @@ class AdminController extends Controller
         return view('Admin.Layouts.view_category');
     }
 
+    public function add_sub_category(){
+        return view('Admin.Layouts.add_sub_category');
+    }
+
+    public function view_sub_category(){
+        return view('Admin.Layouts.view_sub_category');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

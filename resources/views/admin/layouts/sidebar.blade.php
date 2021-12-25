@@ -54,6 +54,8 @@
                         
                         <li><a href="{{ url('./administration/add_category') }}"> Add Category</a></li>
 
+                        <span>Sub Category Section</span>
+
                     </ul>
 
                 </li>
