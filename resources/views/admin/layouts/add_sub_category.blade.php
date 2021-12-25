@@ -54,7 +54,7 @@
                                             <h3 class="text-center">Add Sub Category</h3>
                                         </div>
                                         <hr>
-                                        <form action="{{ url('./administration/sub-category') }}" method="post" novalidate="novalidate">
+                                        <form action="{{ url('./administration/add-sub-category') }}" type="multipart/form-data" method="post" novalidate="novalidate">
                                         @csrf
                                            
                                             <div class="form-group">
@@ -66,8 +66,11 @@
                                                 <label for="cat_parent" class="control-label mb-1">Select Parent Category</label>
                                                 <select class="form-control" name="cat_parent">
                                                     <option>Select</option>
-                                                    <option>Fashion</option>
-                                                    <option>Electronics</option>
+                                    @if( count( $p_ctgs ) > 0)
+                                        @foreach( $p_ctgs as $pctg )
+                                                    <option value={{$pctg->id}} >{{$pctg->Parent_cat_title}}</option>
+                                        @endforeach
+                                    @endif
                                                 </select>
 
                                             </div>

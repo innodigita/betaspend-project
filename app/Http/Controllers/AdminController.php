@@ -28,8 +28,25 @@ class AdminController extends Controller
         return view('Admin.Layouts.view_category')->with('categs', $categs);
     }
 
-    public function add_sub_category(){
-        return view('Admin.Layouts.add_sub_category');
+    public function view_add_sub_category(){
+
+        $categs = Category::all();
+        return view('Admin.Layouts.add_sub_category')->with('p_ctgs', $categs);
+    }
+
+    public function add_sub_category(Request $request){
+        
+        
+        $request->validate(
+            [
+                'sub_cat_img' => 'required',//|sub_cat_img|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            ]
+        );
+        return "hi";
+
+        $imageName = time().'.'.$request->sub_cat_img->extention;
+
+        return $imageName;
     }
 
     public function view_sub_category(){
