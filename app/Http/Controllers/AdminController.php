@@ -18,6 +18,21 @@ class AdminController extends Controller
        return view('Admin.index');
     }
 
+    public function admin_register(){
+
+        return view('Admin.Log.register');
+    }
+
+    public function admin_login(){
+
+        return view('Admin.Log.login');
+    }
+
+    public function admin_reset(){
+
+        return view('Admin.Log.reset');
+    }
+
     public function add_category()
     {
         return view('Admin.Layouts.add_category');

@@ -29,6 +29,12 @@ Route::get('/', [TemplateController::class, 'index']);
 
 Route::middleware(['isAdmin'])->get('/administration', [AdminController::class, 'index'])->name('administration');
 
+Route::get('/administration/register', [AdminController::class, 'admin_register']);
+
+Route::get('/administration/login', [AdminController::class, 'admin_login']);
+
+Route::get('/administration/reset', [AdminController::class, 'admin_reset']);
+
 Route::middleware(['isAdmin'])->get('/administration/view_category', [AdminController::class, 'view_category'])->name('administration/view_category');
 
 Route::middleware(['isAdmin'])->get('/administration/add_category', [AdminController::class, 'add_category']);
