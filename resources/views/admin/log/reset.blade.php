@@ -6,7 +6,7 @@
     <div class="container">
         <div class="login-content">
             <div class="login-logo">
-                <a href="index.html">
+                <a href="#">
                     <img class="align-content" src="{{ asset('assets/images/icons/betaspend_favicon.png') }}" alt="Betaspend Logo">
                 </a>
             </div>
