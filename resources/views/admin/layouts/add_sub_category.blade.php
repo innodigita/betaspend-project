@@ -32,7 +32,7 @@
                     <ol class="breadcrumb text-right">
                         <li><a href="#">Dashboard</a></li>
                         <li><a href="#">Category</a></li>
-                        <li class="active">All</li>
+                        <li class="active">Add sub category</li>
                     </ol>
                 </div>
             </div>
@@ -44,57 +44,43 @@
                   <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Add Category</strong>
+                                <strong class="card-title">Add Sub Category</strong>
                             </div>
                             <div class="card-body">
                                 
                                 <div id="category">
                                     <div class="card-body">
                                         <div class="card-title">
-                                            <h3 class="text-center">Add Category</h3>
+                                            <h3 class="text-center">Add Sub Category</h3>
                                         </div>
                                         <hr>
-                                        <form action="/administration/category/new" method="post" novalidate="novalidate">
+                                        <form action="{{ url('./administration/sub-category') }}" method="post" novalidate="novalidate">
                                         @csrf
                                            
                                             <div class="form-group">
-                                                <label for="category_name" class="control-label mb-1">Category Name</label>
-                                                <input id="category_name" name="cat_title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Name of category">
-                                            </div>
+                                                <label for="sub_cat_title" class="control-label mb-1">Sub Category Name</label>
+                                                <input id="sub_cat_title" name="sub_cat_title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Name of sub category">
+                                            </div>                                         
 
                                             <div class="form-group">
-                                                <label for="cat_description"> Category Description</label>
-                                             <textarea name="cat_desc" class="form-control" height="50">
-
-                                             </textarea>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="cat_parent" class="control-label mb-1">Is it parent?</label>
-                                                <input type="checkbox">
-
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="cat_parent" class="control-label mb-1">Status</label>
-                                                <select class="form-control">
-                                                    <option>Active</option>
-                                                    <option>Inactive</option>
+                                                <label for="cat_parent" class="control-label mb-1">Select Parent Category</label>
+                                                <select class="form-control" name="cat_parent">
+                                                    <option>Select</option>
+                                                    <option>Fashion</option>
+                                                    <option>Electronics</option>
                                                 </select>
 
                                             </div>
 
                                                 <div class="form-group">
-                                                    <label for="cat_icon" class="control-label mb-1">category icon(only parent category)</label>
-                                                    <select name="class_icon" class="form-control">
-                                                        <option>Choose Icon class</option>
-                                                        <option></option>
-                                                    </select>
+                                                    <label for="sub_cat_img" class="control-label mb-1">Sub Category Image</label>
+                                                    <input name="sub_cat_img" type="file" class="form-control p-1">
+                                                    
                                                 </div>
                                                 
                                                 <div>
                                                     <button id="submit" type="submit" class="btn btn-lg btn-primary btn-block">
-                                                        <span id="submit">Add Category</span>
+                                                        <span id="submit">Add Sub Category</span>
                                                         <span id="submitting" style="display:none;">Adding New Record</span>
                                                     </button>
                                                 </div>

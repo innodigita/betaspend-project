@@ -109,8 +109,8 @@
                                     <td><img src="" width="" height=""></td>
                                     <td>{{$ctgs->Parent_cat_status}}</td>
                                     <td>
-                                        <span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span>
-                                        <span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-trash"></i></span>
+                                        <a href="#"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span></a>
+                                        <a href="#"><span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-trash"></i></span></a>
                                     </td>
 
                                 </tr>

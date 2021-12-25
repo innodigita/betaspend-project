@@ -23,7 +23,8 @@ class User extends Authenticatable
         'password',
         'user_name',
         'phone_number',
-        'vend_cust',
+        'isAdmin'
+        // 'vend_cust',
     ];
 
     /**

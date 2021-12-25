@@ -46,7 +46,7 @@
                 </li>
 
                 <li class="menu-item-has-children dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-briefcase"></i> Manage Category
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-briefcase"></i> Parent Category
                         <span class="caret"></span>
                     </a>
                     <ul class="sub-menu children dropdown-menu">
@@ -54,13 +54,26 @@
                         
                         <li><a href="{{ url('./administration/add_category') }}"> Add Category</a></li>
 
-                        <span>Sub Category Section</span>
+                    </ul>
+
+                </li>
+
+                <li class="menu-item-has-children dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-briefcase"></i> Sub Category
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><a href="{{ url('./administration/sub-category') }}">View Categories</a></li>
+                        
+                        <li><a href="{{ url('./administration/add-sub-category') }}"> Add Sub Category</a></li>
 
                     </ul>
 
                 </li>
 
 
+
+                
 
                 <li>
                     <a href="#"><i class="menu-icon fa fa-gift"></i> Coupons</a>

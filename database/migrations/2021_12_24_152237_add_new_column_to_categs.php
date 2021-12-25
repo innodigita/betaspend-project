@@ -25,7 +25,7 @@ class AddNewColumnToCategs extends Migration
      */
     public function down()
     {
-        Schema::table('categs', function (Blueprint $table) {
+        Schema::table('categories', function (Blueprint $table) {
             $table->dropColumn('cat_is_parent');
         });
     }

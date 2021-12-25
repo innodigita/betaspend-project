@@ -17,7 +17,7 @@ class AddNewFieldsToUsers extends Migration
         schema::table('users', function($table){
             $table->string('user_name');
             $table->string('phone_number');
-            $table->string('vend_cust');
+            // $table->string('vend_cust');
         });
     }
 

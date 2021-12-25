@@ -54,8 +54,8 @@
                             <div class="tab-content">
 
 
-                                    <h4 class="alert-title alert alert-error alert-bg alert-block alert-inline" style="margin-top: 2px; color:red;">
-                                    </i> Error message here</h4>
+                                    {{-- <h4 class="alert-title alert alert-error alert-bg alert-block alert-inline" style="margin-top: 2px; color:red;">
+                                    </i> Error message here</h4> --}}
 
 
 
@@ -139,16 +139,16 @@
                                             <input type="text" class="form-control" name="phone_number" id="phone_number" required>
                                     </div>
 
-                                    <div class="form-checkbox user-checkbox mt-0">
-                                        <input type="checkbox" class="custom-checkbox checkbox-round active" id="check-customer" name="check-customer" required="">
+                                    {{-- <div class="form-checkbox user-checkbox mt-0">
+                                        <input type="checkbox" class="custom-checkbox checkbox-round" id="check-customer" name="vend_cust" required="vend_cust">
                                         <label for="check-customer" class="check-customer mb-1">I am a customer</label>
-                                    </div>
+                                    </div> --}}
                                     <p>Your personal data will be used to support your experience
                                         throughout this website, to manage access to your account,
                                         and for other purposes described in our <a href="#" class="text-primary">privacy policy</a>.</p>
                                     <a href="#" class="d-block mb-5 text-primary">Signup as a vendor?</a>
                                     <div class="form-checkbox d-flex align-items-center justify-content-between mb-5">
-                                        <input type="checkbox" class="custom-checkbox" id="remember" name="remember" required="">
+                                        <input type="checkbox" class="custom-checkbox" id="remember" name="remember">
                                         <label for="remember" class="font-size-md">I agree to the <a  href="#" class="text-primary font-size-md">privacy policy</a></label>
                                     </div>
                                     <input class="btn btn-primary" type="submit" name="submit" value="Sign Up">

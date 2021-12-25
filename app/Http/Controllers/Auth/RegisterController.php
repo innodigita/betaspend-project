@@ -71,8 +71,10 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'user_name' => $data['username'],
             'phone_number' => $data['phone_number'],
-            'vand_cust' => 'cust',
+            'isAdmin' => 1,
+            // 'vand_cust' => 'cust',
             'password' => Hash::make($data['password']),
+
         ]);
     }
 }

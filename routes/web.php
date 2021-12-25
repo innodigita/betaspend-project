@@ -55,7 +55,7 @@ Route::get('/vendors-details-list', [TemplateController::class, 'vendors_details
 
 Route::get('/my-account', [TemplateController::class, 'my_account']);
 
-Route::get('/login2', [TemplateController::class, 'login']);
+// Route::get('/login2', [TemplateController::class, 'login']);
 
 Route::get('/cart', [TemplateController::class, 'cart']);
 
