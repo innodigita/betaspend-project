@@ -42,11 +42,25 @@
                         <span class="divider d-lg-show"></span>
                         <a href="blog" class="d-lg-show">Blog</a>
                         <a href="contact" class="d-lg-show">Contact Us</a>
-                        <a href="my-account" class="d-lg-show">My Account</a>
-                        <a href="login" class="d-lg-show"><i
+
+                        @if ( Auth::check() )
+                        <a href="{{ route( 'logout' )}}" class="d-lg-show"><i
+                                class="w-icon-account" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Log Out</i></a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                <a href="my-account"><b>{{ Auth::user()->name}}</b></a>
+
+                        @else
+
+                             <a href="{{ route( 'login' )}}" class="d-lg-show"><i
                                 class="w-icon-account"></i>Sign In</a>
-                        <!-- <span class="delimiter d-lg-show">/</span> -->
-                        <a href="login">Register</a>
+                            <a href="login">Register</a>
+
+                        @endif
+
                     </div>
                 </div>
             </div>

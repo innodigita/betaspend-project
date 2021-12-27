@@ -28,6 +28,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
+
 </head>
 
 <body>
@@ -48,6 +49,9 @@
     <script src="{{ asset('/admin/vendors/jqvmap/dist/jquery.vmap.min.js') }}"></script>
     <script src="{{ asset('/admin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
     <script src="{{ asset('/admin/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+
+
+
     <script>
         (function($) {
             "use strict";
@@ -65,6 +69,7 @@
                 normalizeFunction: 'polynomial'
             });
         })(jQuery);
+
     </script>
 
 </body>
