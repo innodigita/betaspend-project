@@ -6,14 +6,14 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="/"><img src="{{ asset('../public/assets/images/demos/demo5/betaspend-logo.png') }}" alt="Logo"></a>
-            <a class="navbar-brand hidden" href="/"><img src="{{ asset('../public/assets/images/demos/demo5/betaspend-logo.png') }}" alt="Logo"></a>
+            <a class="navbar-brand" href="{{ url('./administration') }}"><img src="{{ asset('../public/assets/images/demos/demo5/betaspend-logo.png') }}" alt="Logo"></a>
+            <a class="navbar-brand hidden" href="{{ url('./administration') }}"><img src="{{ asset('../public/assets/images/demos/demo5/betaspend-logo.png') }}" alt="Logo"></a>
         </div>
 
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="/administration"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    <a href="{{ url('./administration') }}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                 </li>
 
                 <li class="menu-item-has-children dropdown">
@@ -34,8 +34,8 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><a href="products.php">All Products</a></li>
-                        <li><a href="add_product.php">Add Products</a></li>
+                        <li><a href="{{ url('./administration/view-product') }}">All Products</a></li>
+                        <li><a href="{{ url('./administration/add-product') }}">Add Products</a></li>
 
                     </ul>
 
