@@ -35,8 +35,8 @@
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
                         <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Category</a></li>
-                        <li class="active">All</li>
+                        <li><a href="#">Products</a></li>
+                        <li class="active">View Products</li>
                     </ol>
                 </div>
             </div>
@@ -53,8 +53,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Data Table</strong>
-                        <a href="{{ url('./administration/add-sub-category') }}" class=" float-right btn btn-success" style="border-radius: 5px;">Add Sub Category</a>
+                        <strong class="card-title">Products Data Table</strong>
+                        <a href="{{ url('./administration/add-product') }}" class=" float-right btn btn-success" style="border-radius: 5px;"><i class="menu-icon ti-plus"></i>Add Product</a>
                     </div>
                     
                     <div class="card-body">
@@ -62,19 +62,32 @@
 
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
+                                <form>
                             <div class="dataTables_length" id="bootstrap-data-table-export_length">
-                                <label>Show <select name="bootstrap-data-table-export_length" aria-controls="bootstrap-data-table-export" class="custom-select custom-select-sm form-control form-control-sm">
-                                    <option value="10">10</option>
+
+                                <label><select name="bootstrap-data-table-export_length" aria-controls="bootstrap-data-table-export" class="custom-select custom-select-sm form-control form-control-sm">
+                                    <option value="">All Dates </option>
                                     <option value="25">25</option>                                   
                                     <option value="-1">All</option>
                                 </select>
-                                 entries</label>
+                                 </label>
                                 </div>
+                                <div>
+                                 <select name="parent_cat" aria-controls="bootstrap-data-table-export"  class="custom-select form-select col-md-4 mb-2">
+                                    <option value="10">Select Category</option>
+                                    <option value="25">Fashion</option>                                   
+                                    <option value="-1">Electronics</option>
+                                </select><button class="btn btn-primary mb-2 rounded-top rounded-bottom" name="filter">filter</button>
+                                 
+                                </div>
+                                                            
+                            </form>
                             </div>
                             
                             <div class="col-sm-12 col-md-6">
                                 <div id="bootstrap-data-table-export_filter" class="dataTables_filter">
-                                    <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="bootstrap-data-table-export"></label>
+                                    <label><input type="search" class="form-control" placeholder="Search Products" aria-controls="bootstrap-data-table-export"></label>
+                                    <button class="btn btn-primary m-1 rounded-top rounded-bottom" name="P_search">Search</button>
                                 </div>
                             </div>
                         </div>
@@ -83,9 +96,15 @@
                             <thead>
                                 <tr>
                                     <th>S.N</th>
-                                    <th>Sub Category Title</th>                                  
-                                    <th>Parent Category</th>
-                                    <th>images</th>
+                                    <th>image</th>                                  
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                    <th>SKU</th>
+                                    <th>Stock</th>
+                                    <th>Price</th>
+                                    <th> Product Type</th>
+                                    <th>Views</th>
+                                    <th>Date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -93,9 +112,15 @@
     
                                 <tr>
                                     <td>1</td>
-                                    <td>Clothes</td>
-                                    <td>Fashion</td>
                                     <td><img src="" width="" height=""></td>
+                                    <td>White Energy Fan</td>
+                                    <td><span class="bg-success text-white p-1">Active</span></td>
+                                    <td>---</td>
+                                    <td>In Stock</td>
+                                    <td>$900</td>
+                                    <td>Physical</td>
+                                    <td>5</td>
+                                    <td>2021/12/28 <br><span>Published</span></td>
                                     <td>
                                         <a href="#"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:100%"><i class="menu-icon ti-pencil-alt"></i></span></a>
                                         <a href="#"><span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:100%"><i class="menu-icon ti-trash"></i></span></a>
