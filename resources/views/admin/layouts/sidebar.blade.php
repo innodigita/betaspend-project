@@ -42,7 +42,7 @@
                 </li>
 
                 <li>
-                    <a href="#"><i class="menu-icon fa fa-fw fa-desktop"></i> Orders </a>
+                    <a href="{{ url('./administration/orders') }}"><i class="menu-icon fa fa-fw fa-desktop"></i> Orders </a>
                 </li>
 
                 <li class="menu-item-has-children dropdown">
