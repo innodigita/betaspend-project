@@ -41,6 +41,10 @@ class AdminController extends Controller
         return view('Admin.view_product');
     }
 
+    public function orders(){
+        return view('Admin.orders');
+    }
+
     public function add_category()
     {
         return view('Admin.Layouts.add_category');

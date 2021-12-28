@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
         } else $("#time-sec").fadeOut();
     });
 
-    // Floating add product Button
+    //
 
     $(function () {
         $("#Product_type").change(function () {

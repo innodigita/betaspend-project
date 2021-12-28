@@ -401,8 +401,8 @@
                                                         <div class="tab-pane fade show mt-3 " id="vairable-tab">
                                                             <div class="form-group col-md-12">
 
-                                                                <label for="product_color" class="control-label mb-1">Add Product Color</label>
-                                                                <input name="product_color" type="color" class="form-control">
+                                                                <label for="product_color" class="control-label  mb-1">Add Product Color</label>
+                                                                <input name="product_color" type="color" class="form-control form-control-color">
                 
                                                                </div>
                                                         </div>
