@@ -123,24 +123,17 @@
                                               
                                               </div>
 
-                                             <div class="row">
-
-                                                <div class="form-group col-md-4">
-                                                    <label for="quantity" class="control-label mb-1">Product Quantity</label>
-                                                    <input name="quantity" class="form-control" type="number" placeholder="30">
-    
-                                                </div>  
-
-                                                <div class="form-group col-md-4">
+                                                <div class="form-group">
                                                     <label for="brand" class="control-label mb-1">Brand</label>
                                                     <select class="form-control" name="brand">
                                                         <option> -- Select Brand -- </option>
-                                                        <option>Clothes</option>
+                                                        <option value="">Amazon</option>
+                                                        <option value="">Apple</option>
+                                                        <option value="">Google</option>
+
                                                     </select>
     
                                                 </div>
-
-                                             </div>
 
                                             <div class="form-group">
                                                 <label for="product_description"> Short Product Description</label>
@@ -156,9 +149,7 @@
                                              </textarea>
                                             </div>                                                                                      
 
-                                            <div class="row">
-
-                                                <div class="form-group col-md-4">
+                                                <div class="form-group">
                                                     <label for="brand" class="control-label mb-1">Product Label</label>
                                                     <select class="form-control" name="brand">
                                                         <option> -- Select Type-- </option>
@@ -167,17 +158,6 @@
                                                     </select>
     
                                                 </div>
-
-                                                <div class="form-group col-md-4">
-
-                                                    <label for="product_size" class="control-label mb-1">Add Product size</label>
-                                                    <input name="product_size" type="text" class="form-control">
-    
-                                                   </div>
-
-                                            </div>
-
-                                            
 
                                             <div class="form-group">
                                                 <label for="product_status" class="control-label mb-1">Product Status</label>
@@ -191,6 +171,9 @@
                                         </div>
 
                                         
+
+                                        
+                                       {{-- Sidebar Section Starts--}}
 
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -239,189 +222,237 @@
                                             </textarea>
                                         </div>
 
-                                        
-                                             {{-- This is the tab section --}}
-                                            <div class="row col-md-12">
+                                        {{-- Sidebar Section Ends --}}
 
-                                                <div class="col-md-3 w-50">
-                                                    <ul class="nav nav-tabs flex-column">
-                                                       <li class=" nav-link bg-dark text-white m-1" href="#inventory-tab" data-toggle="tab">Inventory</li>
-                                                       <li class=" nav-link bg-dark text-white m-1" href="#shipping-tab" data-toggle="tab">Shipping</li>
-                                                       <li class=" nav-link bg-dark text-white m-1" href="#attribute-tab" data-toggle="tab">Attribute</li>
-                                                       <li class=" nav-link bg-dark text-white m-1" href="#vairable-tab" data-toggle="tab">Viarable Product</li>
-                                                       <li class=" nav-link bg-dark text-white m-1" href="#commision-tab" data-toggle="tab">Product Commission</li>
-                                                       <li class=" nav-link bg-dark text-white m-1" href="#policy-tab" data-toggle="tab">Product Policies</li>
-                                                       
-                                                    </ul>
+                                        {{-- Big Section starts --}}
 
+                                        <div class="col-md-12 col-sm-12 col-lg-12">
+
+                                            <div class="card">
+                                                <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Inventory <span style="font-size: 16px">Manage inventory for the product</span>
+                                                </h3> </div>
+                                                <div class="card-body">
+                                                   
+                                                 <div class="row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="sku" class="control-label mb-1">SKU <span>(Stock Keeping Unit)</span></label>
+                                                        <input type="text" name="sku" placeholder="Stock Keeping Unit" class="form-control" >
+        
+                                                    </div>
+
+                                                    <div class="form-group col-md-6">
+                                                        <label for="stock_status" class="control-label mb-1">Stock Status</label>
+                                                        <select class="form-control " name="stock_status">
+                                                            <option value="">In Stock</option>
+                                                            <option value="">Out Of Stock</option>
+                                                        </select>
+        
+                                                    </div>
                                                 </div>
 
-                                                <div class="col-md-6">
-                                                    <div class="tab-content flex-center">
-                                                        <div class="tab-pane fade show active mt-3" id="inventory-tab">
-                                                            <div class="card">
-                                                                <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Inventory <span style="font-size: 16px">Manage inventory for the product</span>
-                                                                </div></h3> 
-                                                                <div class="card-body">
-                                                                   
-                                                                    <div class="form-group">
-                                                                        <label for="sku" class="control-label mb-1">SKU <span>(Stock Keeping Unit)</span></label>
-                                                                        <input type="text" name="sku" placeholder="Stock Keeping Unit" class="form-control" >
-                        
-                                                                    </div>
-                                                                    <div class="form-group">
-                                                                        <input type="checkbox" name="enable_sku">
-                                                                        <label for="enable_sku" class="control-label mb-1">Enable Stock Management System</label>                                                       
-                                                                    </div>
-                                                                </div>
-                
-                                                            </div>
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="enable_sku">
+                                                        <label for="enable_sku" class="control-label mb-1">Enable Stock Management System</label>                                                       
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="form-group col-md-6">
+                                                            <label for="stock_qty" class="control-label mb-1">Stock quantity</label>
+                                                            <input type="number" name="stock_qty" class="form-control" >
+            
                                                         </div>
+    
+                                                        <div class="form-group col-md-6">
+                                                            <label for="low_stock" class="control-label mb-1">Low stock threshold</label>
+                                                            <input type="number" name="low_stock" class="form-control" >
+            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="single_order">
+                                                        <label for="single_order" class="control-label mb-1">Allow only one quantity of this product to be bought in a single order</label>                                                       
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            {{-- Shipping Section Starts --}}
+
+                                            <div class="card">
+                                                <div class="card-header"> <h3><i class="menu-icon ti-truck"></i> Shipping & Tax <span style="font-size: 16px"> Manage shipping and tax for this product</span>
+                                                </div></h3> 
+
+                                                <div class="card-body">
                                                          
-                                                        {{-- Shipping Start --}}
-                                                        <div class="tab-pane fade show mt-3" id="shipping-tab">
-                                                            <div class="card">
-                                                                <div class="card-header"> <h3><i class="menu-icon ti-truck"></i> Shipping & Tax <span style="font-size: 16px">Manage shipping and tax for this product</span>
-                                                                </div></h3> 
-                
-                                                                <div class="card-body">
-                                                                         
-                                                                    <div class="form-group">
-                                                                        <input type="checkbox" name="enable_shipping">
-                                                                        <label for="enable_shipping" class="control-label mb-1">Does this product require shipping</label>                                                       
-                                                                    </div>
-                
-                                                                    <div class="row">                                                  
-                    
-                                                                        <div class="form-group col-md-3">
-                                                                          <input placeholder="Weight(ibs)" name="weight" class="form-control" type="number">
-                                                                        </div>
-                    
-                                                                        <div class="form-group col-md-3">
-                                                                            <input placeholder="Length(in)" name="length" class="form-control" type="number">
-                                                                          </div>
-                    
-                                                                          <div class="form-group col-md-3">
-                                                                            <input placeholder="Width(in)" name="Width" class="form-control" type="number">
-                                                                          </div>
-                    
-                                                                          <div class="form-group col-md-3">
-                                                                            <input placeholder="height(in)" name="height" class="form-control" type="number">
-                                                                          </div>
-                    
-                
-                                                                    </div>
-                                                                    
-                                                                    <div class="form-group">
-                                                                     <label for="shipping_class" class="control-label mb-1"> Shipping Class</label>
-                                                                     <select class="form-control" name="shipping_class">
-                                                                         <option>No Shipping Class</option>
-                                                                         <option>Shipping class</option>
-                                                                     </select>
-                                                                     <span style="color: grey">Shipping class are used by certain shipping methods to group similar product</span>
-                                                                    </div>
-                
-                                                                    <div class="col-md-4 form-group">
-                                                                       
-                                                                        <label for="tax_status" class="control-label mb-1">Tax Status</label>
-                                                                        <select  name="tax_status" class="form-control">
-                                                                            <option>Taxable</option>
-                                                                            <option>Non Taxable</option>
-                                                                        </select>
-                                                                    </div>
-                
-                                                                    <div class="col-md-4 form-group">
-                                                                       
-                                                                        <label for="tax_class" class="control-label mb-1">Tax Class</label>
-                                                                        <select  name="tax_class" class="form-control">
-                                                                            <option>Standard</option>
-                                                                            <option>None Standard</option>
-                                                                        </select>
-                                                                    </div>
-                
-                                                                    
-                                                                </div>
-                                                                
-                
-                                                            </div>
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="enable_shipping">
+                                                        <label for="enable_shipping" class="control-label mb-1">Does this product require shipping</label>                                                       
+                                                    </div>
+
+                                                    <div class="row">                                                  
+    
+                                                        <div class="form-group col-md-3">
+                                                          <input placeholder="Weight(ibs)" name="weight" class="form-control" type="number">
                                                         </div>
-                                                         {{-- Shipping Ends --}}
+    
+                                                        <div class="form-group col-md-3">
+                                                            <input placeholder="Length(in)" name="length" class="form-control" type="number">
+                                                          </div>
+    
+                                                          <div class="form-group col-md-3">
+                                                            <input placeholder="Width(in)" name="Width" class="form-control" type="number">
+                                                          </div>
+    
+                                                          <div class="form-group col-md-3">
+                                                            <input placeholder="height(in)" name="height" class="form-control" type="number">
+                                                          </div>
+    
 
-                                                        <div class="tab-pane fade show mt-3" id="attribute-tab">
-                                                            <div class="card">
-                                                                <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Attribute <span style="font-size: 16px">Manage Attribute for this product</span>
-                                                                </div></h3> 
-                                                                <div class="card-body">
-                                                                   
-                                                                    <div class="row">
-                                                                        
-                                                                    <div id="attribute-section">
-                                                                        <div class="form-group">
-                                                                            <input type="checkbox" class="ml-3" name="activate">
-                                                                            <label for="activate" class="control-label mb-1">Active?</label>                                                       
-                                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                     <label for="shipping_class" class="control-label mb-1"> Shipping Class</label>
+                                                     <select class="form-control" name="shipping_class">
+                                                         <option>No Shipping Class</option>
+                                                         <option>Shipping class</option>
+                                                     </select>
+                                                     <span style="color: grey">Shipping class are used by certain shipping methods to group similar product</span>
+                                                    </div>
 
-                                                                        <div class="form-group col-md-12">
-                                                                            <label for="activate" class="control-label mb-1">Attribute Name</label>
-                                                                            <input type="text" class="form-control" name="title-attribute" placeholder="enter Attribute Name">                                                                                                                      
-                                                                        </div>
+                                                    {{-- <div class="col-md-4 form-group">
+                                                       
+                                                        <label for="tax_status" class="control-label mb-1">Tax Status</label>
+                                                        <select  name="tax_status" class="form-control">
+                                                            <option>Taxable</option>
+                                                            <option>Non Taxable</option>
+                                                        </select>
+                                                    </div>
 
-                                                                        <div class="form-group col-md-12">
-                                                                            <label for="attri_value" class="control-label mb-1">Attribute Value(s)</label>
-                                                                            <textarea class="form-control" name="attri_value">
-                                                                                
-                                                                            </textarea>                                                                                                                      
-                                                                        </div>
+                                                    <div class="col-md-4 form-group">
+                                                       
+                                                        <label for="tax_class" class="control-label mb-1">Tax Class</label>
+                                                        <select  name="tax_class" class="form-control">
+                                                            <option>Standard</option>
+                                                            <option>None Standard</option>
+                                                        </select>
+                                                    </div> --}}
 
-                                                                        <div class="form-group">
-                                                                            <input type="checkbox" class="ml-3" name="visible">
-                                                                            <label for="visible" class="control-label mb-1">Visible to the product page?</label>                                                       
-                                                                        </div>
+                                                    
+                                                </div>
+                                                
 
-                                                                    </div>
+                                            </div>
 
-                                                                    <div class="form-group col-md-6">
-                                                                        <select class="form-control" name="attribute">
-                                                                            <option>Add Attribute</option>
-                                                                            
-                                                                        </select>                                                    
-                                                                    </div>                                                                   
-                
-                                                                        <div class="form-group col-md-3">
-                                                            
-                                                                            <button class="btn btn-primary">Add Attribute</button>
-                          
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                
-                                                            </div>
-                                                        </div>
+                                            {{-- Shipping Section Ends --}}
 
-                                                        <div class="tab-pane fade show mt-3 " id="vairable-tab">
-                                                            <div class="form-group col-md-12">
+                                             {{-- Variation Section Starts --}}
+
+                                            <div class="card">
+                                                <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Variable Product<span style="font-size: 16px"> Add Variation for this product</span>
+                                                </div></h3> 
+                                                <div class="card-body">
+                    
+                                                        <div class="row">
+
+                                                            <div class="form-group col-md-4" id="cat_parent">
+                                                                <label for="size" class="control-label mb-1">Sizes Added From Attribute</label>
+                                                                <select class="form-control" name="size" id="size">
+                                                                  <option> -- Select Sizes -- </option>
+                                                                  <option value="fas">SM</option>
+                                                                  <option value="furn">XL</option>
+                                                                </select>
+                                                              
+                                                              </div>
+
+                                                              <div class="form-group col-md-4" id="cat_parent">
+                                                                <label for="color" class="control-label mb-1">Color Names Added From Attribute</label>
+                                                                <select class="form-control" name="color" id="color">
+                                                                  <option> -- Select Colors -- </option>
+                                                                  <option value="fas">Blue</option>
+                                                                  <option value="furn">Red</option>
+                                                                </select>
+                                                              
+                                                              </div>
+
+                                                              <div class="form-group col-md-4" id="cat_parent">
+                                                                <label for="other_attribute" class="control-label mb-1">Other Attributes</label>
+                                                                <select class="form-control" name="other_attribute" id="other_attribute">
+                                                                  <option> -- Select Colors -- </option>
+                                                                  <option value="fas">Blue</option>
+                                                                  <option value="furn">Red</option>
+                                                                </select>
+                                                              
+                                                              </div>
+
+                                                            {{-- <div class="form-group col-md-6">
 
                                                                 <label for="product_color" class="control-label  mb-1">Add Product Color</label>
                                                                 <input name="product_color" type="color" class="form-control form-control-color">
                 
-                                                               </div>
+                                                            </div>
+
+                                                            <div class="form-group col-md-4">
+
+                                                                <label for="product_size" class="control-label mb-1">Product Size</label>
+                                                                <input name="product_size" class="form-control" type="text" placeholder="SM, MD, XL, XXL">
+                
+                                                            </div>   --}}
+
+                                                        </div>
+                                                </div>
+
+                                            </div>
+
+                                             {{-- Variable Section Ends --}}
+
+
+                                             {{-- Other Section Starts --}}
+
+                                             <div class="card">
+                                                <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Product Commission & Others<span style="font-size: 16px"> Add Variation for this product</span>
+                                                </div></h3> 
+                                                <div class="card-body">
+
+                                                    <div class="row">
+                                                      
+                                                        <div class="form-group col-md-4">
+
+                                                            <label for="commission_rate" class="control-label mb-1">Product Commision for Affiliate</label>
+                                                            <select class="form-control" name="commission_rate">
+                                                                <option>percent(%)</option>
+                                                                <option>Fixed Rate</option>
+                                                            </select>
+            
                                                         </div>
 
-                                                        <div class="tab-pane fade show " id="commision-tab">
-                                                            <p class="m-5">Description Commision</p>
-                                                        </div>
+                                                        <div class="form-group col-md-4">
 
-                                                        <div class="tab-pane fade show " id="policy-tab">
-                                                            <p class="m-5">Description policy</p>
+                                                            <label for="product_commission" class="control-label mb-1">Product Commision for Affiliate (Rate)</label>
+                                                            <input name="product_commission" class="form-control" type="number">
+            
                                                         </div>
 
                                                     </div>
-
+                    
+                                                    <div class="form-group">
+                                                        <label for="purchase_note"> Purchase Note</label>
+                                                     <textarea name="purchase_note" class="form-control" height="50">
+        
+                                                     </textarea>
+                                                    </div>
+                                                        
                                                 </div>
 
-                                              </div>
+                                            </div>
+
+                                             {{-- Other Section Ends --}}
+
+
+                                        </div>
+                                         {{-- Big Section Ends--}}
                                        
-                                              <div class="col-md-8 col-lg-8 col-sm-8 mt-4">
+                                              <div class="col-md-12 col-lg-12 col-sm-8 mt-12">
                                                 <button id="submit" type="submit" class="btn btn-lg btn-success btn-block">
                                                     <span id="submit">Add Product</span>
                                                     <span id="submitting" style="display:none;">Adding New Record</span>
@@ -443,13 +474,5 @@
 </div>
 
 
-
-     <script>
-
-    $(".click-me").click(function(){
-        alert('Am Clicked');
-    });
-
-    </script>
 
 @endsection
