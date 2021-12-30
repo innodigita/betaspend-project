@@ -41,9 +41,13 @@ Route::middleware(['isAdmin'])->get('/administration/add_category', [AdminContro
 
 Route::get('/administration/add-sub-category', [AdminController::class, 'view_add_sub_category']);
 
-Route::get('/administration/add-product', [AdminController::class, 'add_product']);
 
-Route::get('/administration/view-product', [AdminController::class, 'view_product']);
+
+Route::get('/administration/add-product',  [ ProductsController::class, 'add_product']);
+Route::get('/administration/view-product', [ ProductsController::class, 'view_product']);
+Route::post('/administration/add/product', [ ProductsController::class, 'store']);
+
+
 
 Route::get('/administration/orders', [AdminController::class, 'orders']);
 
@@ -53,9 +57,18 @@ Route::post('/administration/add-sub-category', [AdminController::class, 'add_su
 
 Route::get('/administration/sub-category', [AdminController::class, 'view_sub_category'])->name('/administration/sub-category');
 
+
+
 Route::get('/shop', [ProductsController::class, 'index']);
 
 Route::get('/details', [ProductsController::class, 'product_details']);
+
+
+
+
+
+
+
 
 Route::get('/contact', [TemplateController::class, 'contact']);
 

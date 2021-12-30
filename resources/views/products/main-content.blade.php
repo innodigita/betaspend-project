@@ -380,12 +380,18 @@
                                     </div>
                                 </div>
                             </nav>
+
+<!------------------------------------------------------------------>
+                    
                             <div class="product-wrapper row cols-lg-4 cols-md-3 cols-sm-2 cols-2">
+
+                        @if ( count( $Products) > 0 )
+                        @foreach ( $Products as $product ) 
                                 <div class="product-wrap">
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="product-default.html">
-                                                <img src="assets/images/shop/1.jpg" alt="Product" width="300"
+                                                <img src="{{url('assets/images/products/product_images/'.$product->Product_img)}}" alt="Product" width="300"
                                                     height="338" />
                                             </a>
                                             <div class="product-action-horizontal">
@@ -404,7 +410,7 @@
                                                 <a href="shop-banner-sidebar.html">Electronics</a>
                                             </div>
                                             <h3 class="product-name">
-                                                <a href="product-default.html">3D Television</a>
+                                                <a href="product-default.html">{{$product->Product_name}}</a>
                                             </h3>
                                             <div class="ratings-container">
                                                 <div class="ratings-full">
@@ -415,12 +421,16 @@
                                             </div>
                                             <div class="product-pa-wrapper">
                                                 <div class="product-price">
-                                                    $220.00 - $230.00
+                                                    {{$product->Price}}
+                                                    <!--$220.00 - $230.00-->
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            @endforeach
+                        @endif
+    <!------------------------------------------------------------------>
                                 <div class="product-wrap">
                                     <div class="product text-center">
                                         <figure class="product-media">

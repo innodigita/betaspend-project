@@ -34,13 +34,6 @@ class AdminController extends Controller
         return view('Admin.Log.reset');
     }
 
-    public function add_product(){
-        return view('Admin.add_product');
-    }
-
-    public function view_product(){
-        return view('Admin.view_product');
-    }
 
     public function orders(){
         return view('Admin.orders');

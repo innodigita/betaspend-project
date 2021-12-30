@@ -109,24 +109,28 @@
                                 </tr>
                             </thead>
                             <tbody>
-    
+                                
+                                @if( count ( $products ) > 0 )
+                                    @foreach( $products as $product)  
                                 <tr>
                                     <td>1</td>
-                                    <td><img src="" width="" height=""></td>
-                                    <td>White Energy Fan</td>
-                                    <td><span class="bg-success text-white p-1">Active</span></td>
-                                    <td>---</td>
+                                    <td><img src="{{url('assets/images/products/product_images/'.$product->Product_img)}}" alt="Product Image" width="80" height="80"></td>
+                                    <td>{{$product->Product_name}}</td>
+                                    <td><span class="bg-success text-white p-1">{{$product->Product_status}}</span></td>
+                                    <td>{{$product->Sku}}</td>
                                     <td>In Stock</td>
-                                    <td>$900</td>
-                                    <td>Physical</td>
+                                    <td>{{$product->Price}}</td>
+                                    <td>{{$product->product_type}}</td>
                                     <td>5</td>
-                                    <td>2021/12/28 <br><span>Published</span></td>
+                                    <td>{{$product->product_date}}<br><span>Published</span></td>
                                     <td>
                                         <a href="#"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:100%"><i class="menu-icon ti-pencil-alt"></i></span></a>
                                         <a href="#"><span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:100%"><i class="menu-icon ti-trash"></i></span></a>
                                     </td>
 
                                 </tr>
+                                    @endforeach
+                                @endif
                                 
                               
                             </tbody>

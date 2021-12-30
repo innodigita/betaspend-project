@@ -51,7 +51,7 @@
                                 <div id="category">
                                     <div class="card-body">
                 
-                                        <form action="#" method="post" novalidate="novalidate">
+                                        <form action="{{ url('./administration/add/product') }}" enctype="multipart/form-data" method="post">
                                         @csrf
                                            
                                         <div class="col-lg-8 col-md-8 col-sm-8">                                            
@@ -59,10 +59,13 @@
                                             <div class="form-group">
                                                 <label for="p_type" class="control-label mb-1">Product Type</label>
                                                 <select name="p_type" class="form-control" id="Product_type">
-                                                    <option value="simple_p">Simple Product</option>
-                                                    <option value="variable_p">Variable Product</option>
-                                                    <option value="digital_p">Digital Product</option>
-                                                    <option value="physical_p">Physical Product</option>
+                                                    
+                                                    <option value="Simple Product"     >Simple Product</option>
+                                                    <option value="Variable Product"   >Variable Product</option>
+                                                    <option value="Digital Product"    >Digital Product</option>
+                                                    <option value="Physical Product"   >Physical Product</option>
+                                                    <option value="Event Base Product" >Event Base Product</option>
+                                                    
 
                                                 </select>
                                             </div>
@@ -151,7 +154,7 @@
 
                                             <div class="form-group">
                                                 <label for="product_description"> Long Product Description</label>
-                                             <textarea name="product_description" class="form-control" height="50">
+                                             <textarea name="product_description_lg" class="form-control" height="50">
 
                                              </textarea>
                                             </div>                                                                                      
@@ -160,7 +163,7 @@
 
                                                 <div class="form-group col-md-4">
                                                     <label for="brand" class="control-label mb-1">Product Label</label>
-                                                    <select class="form-control" name="brand">
+                                                    <select class="form-control" name="p_label">
                                                         <option> -- Select Type-- </option>
                                                         <option>Hot</option>
                                                         <option>New</option>
@@ -202,10 +205,13 @@
                                        <div class="form-group col-md-4" id="cat_parent">
                                         <label for="cat_parent" class="control-label mb-1">Category</label>
                                         <select class="form-control" name="cat_parent" id="cat_parent">
-                                          <option> -- Select Any Category -- </option>
-                                          <option value="fas">Fashion</option>
-                                          <option value="furn">Furnitures</option>
-                                          <option value="elect">Electronics</option>
+                                          
+                                            @if( count( $parent_categ ) > 0)
+                                                @foreach( $parent_categ as $pctgs )
+                                                    <option value={{$pctgs->id}} >{{$pctgs->Parent_cat_title}}</option>
+                                                @endforeach
+                                            @endif
+
                                         </select>
                                       
                                       </div>
@@ -214,21 +220,28 @@
                                         <label for="sub_cat" class="control-label mb-1">Sub Category</label>
                                       
                                         <select class="form-control" name="sub_cat" id="sub_cat">
-                                          <option> -- Select Sub Category -- </option>
-                                          <!--   Fashion   -->
+                                          
+                                            @if( count( $sub_categ ) > 0)
+                                                @foreach( $sub_categ as $sctgs )
+                                                    <option value={{$sctgs->id}} >{{$sctgs->title}}</option>
+                                                @endforeach
+                                            @endif
+                                          
+                                          <!--option> -- Select Sub Category -- </option-->
+                                          <!--   Fashion   ->
                                           <option value="fas">Clothes</option>
                                           <option value="fas">Shoes</option>
                                           <option value="fas">Belts</option>
-                                          <option value="fas">Caps</option>
+                                          <option value="fas">Caps</option-->
                                       
-                                          <!--  Electronics    -->
+                                          <!--  Electronics    ->
                                           <option value="elect">Fan</option>
                                           <option value="elect">Television</option>
-                                          <option value="elect">Speaker</option>
+                                          <option value="elect">Speaker</option-->
                                       
-                                          <!--   Furnitures   -->
+                                          <!--   Furnitures   ->
                                           <option value="furn">Chairs</option>
-                                          <option value="furn">Table</option>
+                                          <option value="furn">Table</option-->
                                         </select>
                                       </div>
 
