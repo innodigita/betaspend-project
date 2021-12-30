@@ -129,11 +129,12 @@
                                                 <div class="form-group">
                                                     <label for="brand" class="control-label mb-1">Brand</label>
                                                     <select class="form-control" name="brand">
-                                                        <option> -- Select Brand -- </option>
-                                                        <option value="">Amazon</option>
-                                                        <option value="">Apple</option>
-                                                        <option value="">Google</option>
-
+                                                    @if ( count( $brands ) > 0 )
+                                                        @foreach( $brands as $brand )
+                                                        <!--option> -- Select Brand -- </option-->
+                                                        <option value="{{$brand->id}}">{{$brand->name}}</option>
+                                                        @endforeach
+                                                    @endif
                                                     </select>
     
                                                 </div>

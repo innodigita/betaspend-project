@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 use App\Models\Category;
 use App\Models\SubCategory;
-
+use App\Models\Brands;
 use App\Models\Products;
 
 class ProductsController extends Controller
@@ -35,8 +35,15 @@ class ProductsController extends Controller
 
         $P_categ   = Category::all();
         $Sub_categ = SubCategory::all();
+        $brands    = Brands::all();
         
-        return view('Admin.add_product')->with( ['parent_categ'=> $P_categ, 'sub_categ'=> $Sub_categ ]);
+        return view('Admin.add_product')
+               ->with( 
+                   [
+                        'parent_categ' => $P_categ,
+                        'sub_categ'    => $Sub_categ,
+                        'brands'       => $brands
+                   ]);
     }
 
     public function view_product(){
