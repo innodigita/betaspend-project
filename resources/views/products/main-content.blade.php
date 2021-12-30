@@ -420,7 +420,7 @@
                                                 <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
                                             </div>
                                             <div class="product-pa-wrapper">
-                                                <div class="product-price">
+                                                <div class="product-price">      
                                                     {{$product->Price}}
                                                     <!--$220.00 - $230.00-->
                                                 </div>
