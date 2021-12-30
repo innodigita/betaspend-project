@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Category;
 use App\Models\SubCategory;
+use App\Models\Brands;
 
 class AdminController extends Controller
 {
@@ -40,7 +41,9 @@ class AdminController extends Controller
     }
 
     public function brands(){
-        return view('Admin.brands');
+        $brands = Brands::all();
+
+        return view('Admin.brands')->with( 'brands', $brands);
     }
 
     public function attributes(){
@@ -53,6 +56,37 @@ class AdminController extends Controller
 
     public function add_brand(){
         return view('Admin.add-brand');
+    }
+
+    public function add_new_brand( Request $request ){
+
+        if ( $request->hasFile( 'brand_img' ) )
+        {
+            $request->validate(
+                [
+                    'brand_img'  => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+                    'brand_name' => 'required',
+                ]
+            );
+
+            $directory = "./assets/images/brands/category/";
+            $path = $_FILES['brand_img']['name'];
+            $ext = pathinfo($path, PATHINFO_EXTENSION);
+            $img_nm    = $request->brand_name.'@'.time().'.'.$ext;
+
+            $filename = $directory.$img_nm;
+            if( move_uploaded_file($_FILES["brand_img"]["tmp_name"],  $filename) )
+            {
+                Brands::create(
+                    [
+                        'name'=> $request->brand_name,
+                        'image'=> $img_nm
+                    ]);
+                    return redirect( '/administration/brands');
+            }
+            return "hlo";
+        }
+        return $request;
     }
 
     public function add_category()

@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 use App\Models\Category;
 use App\Models\SubCategory;
-
+use App\Models\Brands;
 use App\Models\Products;
 
 class ProductsController extends Controller
@@ -35,8 +35,15 @@ class ProductsController extends Controller
 
         $P_categ   = Category::all();
         $Sub_categ = SubCategory::all();
+        $brands    = Brands::all();
         
-        return view('Admin.add_product')->with( ['parent_categ'=> $P_categ, 'sub_categ'=> $Sub_categ ]);
+        return view('Admin.add_product')
+               ->with( 
+                   [
+                        'parent_categ' => $P_categ,
+                        'sub_categ'    => $Sub_categ,
+                        'brands'       => $brands
+                   ]);
     }
 
     public function view_product(){
@@ -89,21 +96,21 @@ class ProductsController extends Controller
                     'sale_Price'               => $request->sale_price,
                     'Product_date'             => $request->start_p_date,
                     'Product_end_date'         => $request->stop_p_date,
-                    'Quantity'                 => $request->quantity,
                     'Product_desc'             => $request->product_description,
                     'Product_long_desc'        => $request->product_description_lg,
                     'Product_label'            => $request->p_label,
-                    'Size'                     => $request->product_size,
                     'Product_status'           => $request->product_status,
                     //'Product_img'              => $request->im,
                     'product_category_id'      => $request->cat_parent, 
                     'Product_sub_category_id'  => $request->sub_cat,
                     'tags'                     => $request->tags,
-                    'Sku'                      => $request->sku,
-                    'Unit_weight'              => $request->weight,
-                    'Color'                    => $request->product_color,
-            
-            
+
+                    'Sku'                      => 'Null',        //$request->sku,
+                    'Unit_weight'              => 0,            //$request->weight,
+                    'Color'                    => 'Null',      //$request->product_color,
+                    'Quantity'                 => 0,          //$request->quantity,
+                    'Size'                     => 0,         //$request->product_size,
+
                     'Vendor_id'=>rand(),
                     'Vendor_product_id'=>rand(),
                     'Discount'=>Str::random(10),

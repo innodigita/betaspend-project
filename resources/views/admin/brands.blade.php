@@ -91,10 +91,14 @@
                             </thead>
                             <tbody>
    
+
+   @if ( count( $brands) > 0 )
+        {{$sn = 1}}
+        @foreach ( $brands as $brand )
                                 <tr>
-                                    <td>1</td>                                   
-                                    <td><img src="" width="" height=""></td>
-                                    <td>Samsung</td>
+                                    <td>{{$sn}}</td>                                   
+                                    <td><img src="{{url('assets/images/brands/category/'.$brand->image)}}" width="80" height="80"></td>
+                                    <td>{{$brand->name}}</td>
                                     <td><span class="btn btn-outline-success rounded">Active</span></td>
                                     <td>
                                         <a href="#"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span></a>
@@ -102,6 +106,9 @@
                                     </td>
 
                                 </tr>
+        {{$sn++}}
+        @endforeach
+    @endif
     
                            </tbody>
                         </table>

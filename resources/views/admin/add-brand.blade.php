@@ -60,7 +60,7 @@
                                                 <h3 class="text-center">Add Brand</h3>
                                             </div>
                                             <hr>
-                                            <form action="{{ url('./administration/brands') }}" method="post" novalidate="novalidate">
+                                            <form action="{{ url('./administration/add-new-brand') }}" method="post" enctype="multipart/form-data">
                                             @csrf
                                                
                                                 <div class="form-group">
