@@ -88,11 +88,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-    
+
+
+    @if ( count( $categs ) > 0 )
+    {{$n = 1;}}
+    @foreach( $categs as $ctgs )
+<?php
+
+foreach( $pids as $p )
+{
+    if ( $p->id == $ctgs->parent_id){
+        $parnm = $p->Parent_cat_title;
+        break; 
+    }
+}
+
+?>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Clothes</td>
-                                    <td>Fashion</td>
+                                    <td>{{$n}}</td>
+                                    <td>{{$ctgs->title}}</td>
+                                    <td>{{    $parnm }}</td>
                                     <td><img src="" width="" height=""></td>
                                     <td>
                                         <a href="#"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:100%"><i class="menu-icon ti-pencil-alt"></i></span></a>
@@ -100,7 +115,9 @@
                                     </td>
 
                                 </tr>
-                                
+    {{$n++;}}
+    @endforeach
+    @endif                            
                               
                             </tbody>
                         </table>
