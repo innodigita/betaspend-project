@@ -39,6 +39,22 @@ class AdminController extends Controller
         return view('Admin.orders');
     }
 
+    public function brands(){
+        return view('Admin.brands');
+    }
+
+    public function attributes(){
+        return view('Admin.attributes');
+    }
+
+    public function add_attribute(){
+        return view('Admin.add-attribute');
+    }
+
+    public function add_brand(){
+        return view('Admin.add-brand');
+    }
+
     public function add_category()
     {
         return view('Admin.Layouts.add_category');

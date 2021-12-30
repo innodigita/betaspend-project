@@ -71,7 +71,18 @@
 
                 </li>
 
+                <li class="menu-item-has-children dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-briefcase"></i> Brand / Attributes
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><a href="{{ url('./administration/brands') }}">Brands</a></li>
+                        
+                        <li><a href="{{ url('./administration/attributes') }}"> Attributes</a></li>
 
+                    </ul>
+
+                </li>
 
                 
 

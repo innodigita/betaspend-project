@@ -51,6 +51,14 @@ Route::post('/administration/add/product', [ ProductsController::class, 'store']
 
 Route::get('/administration/orders', [AdminController::class, 'orders']);
 
+Route::get('/administration/brands', [AdminController::class, 'brands']);
+
+Route::get('/administration/attributes', [AdminController::class, 'attributes']);
+
+Route::get('/administration/add-attribute', [AdminController::class, 'add_attribute']);
+
+Route::get('/administration/add-brand', [AdminController::class, 'add_brand']);
+
 Route::get('/administration/add-sub-category', [AdminController::class, 'add_sub_category']);
 
 Route::post('/administration/add-sub-category', [AdminController::class, 'add_sub_category']);
