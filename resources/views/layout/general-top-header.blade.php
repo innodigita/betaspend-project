@@ -114,7 +114,7 @@
                         </a>
                         <div class="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
                             <div class="cart-overlay"></div>
-                            <a href="#" class="cart-toggle label-down link">
+                            <a href="{{url('cart')}}" class="cart-toggle label-down link">
                                 <i class="w-icon-cart">
                                     <span class="cart-count">2</span>
                                 </i>

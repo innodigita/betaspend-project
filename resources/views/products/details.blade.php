@@ -62,9 +62,9 @@
                                         <div
                                             class="product-single-carousel owl-carousel owl-theme owl-nav-inner row cols-1 gutter-no">
                                             <figure class="product-image">
-                                                <img src="assets/images/products/section/1-800x900.jpg"
+                                                <img src="{{url('assets/images/products/product_images/'.$product->Product_img)}}"
                                                     data-zoom-image="assets/images/products/section/1-800x900.jpg"
-                                                    alt="Classic Simple Backpack" width="800" height="900">
+                                                    alt="{{$product->Product_name}}" width="800" height="900">
                                             </figure>
                                             <figure class="product-image">
                                                 <img src="assets/images/products/section/2-800x900.jpg"
@@ -111,19 +111,19 @@
                                 
                                 <div class="col-md-6 mb-6 mb-md-8">
                                     <div class="product-details" data-sticky-options="{'minWidth': 767}">
-                                        <h1 class="product-title">Classic Simple Backpack</h1>
+                                        <h1 class="product-title">{{$product->Product_name}}</h1>
                                         <div class="product-bm-wrapper">
                                             <figure class="brand">
-                                                <img src="assets/images/products/brand/brand-4.jpg" alt="Brand"
+                                                <img src="{{url('assets/images/brands/category/'.$brand->image)}}" alt="Brand"
                                                     width="106" height="48" />
                                             </figure>
                                             <div class="product-meta">
                                                 <div class="product-categories">
                                                     Category:
-                                                    <span class="product-category"><a href="#">Fashion</a></span>
+                                                    <span class="product-category"><a href="#">{{$category->Parent_cat_title}}</a></span>
                                                 </div>
                                                 <div class="product-sku">
-                                                    SKU: <span>MS46891367</span>
+                                                    SKU: <span>{{$product->Sku}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -131,7 +131,7 @@
                                         <hr class="product-divider">
 
                                         <div class="product-price">
-                                            <ins class="new-price">$85.00</ins>
+                                            <ins class="new-price">${{$product->Price}}</ins>
                                         </div>
 
                                         <div class="ratings-container">
@@ -162,7 +162,9 @@
                                                         <button class="quantity-minus w-icon-minus"></button>
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-primary btn-cart">
+                                                <button class="btn btn-primary btn-cart"
+                                                onclick= " alert('ksdhj')"
+                                                >
                                                     <i class="w-icon-cart"></i>
                                                     <span>Add to Cart</span>
                                                 </button>
@@ -195,14 +197,17 @@
                             <section class="description-section">
                                 <div class="title-link-wrapper no-link">
                                     <h2 class="title title-link">Description</h2>
+                                    <script>
+                                    </script>
                                 </div>
                                 <div class="pt-4 pb-1" id="product-tab-description">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            <p class="mb-4">{{$product->Product_long_desc}}
+                                            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                                 sed do eiusmod tempor incididunt arcu cursus vitae congue mauris.
                                                 Sagittis id consectetur purus ut. Tellus rutrum tellus pelle Vel
-                                                pretium lectus quam id leo in vitae turpis massa.</p>
+                                                pretium lectus quam id leo in vitae turpis massa.--></p>
                                             <ul class="list-type-check list-style-none pl-0">
                                                 <li>Nunc nec porttitor turpis. In eu risus enim. In vitae mollis elit.
                                                 </li>

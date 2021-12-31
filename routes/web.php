@@ -73,7 +73,12 @@ Route::get('/administration/sub-category', [AdminController::class, 'view_sub_ca
 
 Route::get('/shop', [ProductsController::class, 'index']);
 
-Route::get('/product/details', [ProductsController::class, 'product_details']);
+Route::get('/details/{prodId}', [ProductsController::class, 'product_details']);
+
+Route::get('/sess', [ProductsController::class, 'sess']);
+
+Route::get('/product/details{{prodID}', [ProductsController::class, 'product_details']);
+
 
 
 
