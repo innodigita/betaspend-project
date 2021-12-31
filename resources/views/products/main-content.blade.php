@@ -402,7 +402,7 @@
                                 <div class="product-wrap">
                                     <div class="product text-center">
                                         <figure class="product-media">
-                                            <a href="/details/{{$product->id}}">
+                                            <a href="/product/details/{{$product->id}}">
                                                 <img src="{{url('assets/images/products/product_images/'.$product->Product_img)}}" alt="Product" width="300"
                                                     height="338" />
                                             </a>
