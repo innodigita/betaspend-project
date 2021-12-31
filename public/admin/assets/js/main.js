@@ -60,4 +60,56 @@ jQuery(document).ready(function ($) {
             .children("option[value^=" + $(this).val() + "]")
             .show();
     });
+
+    // Code Stock Management
+
+    $(function () {
+        $("#enable_qty").click(function (event) {
+            var x = $(this).is(":checked");
+            if (x == true) {
+                $("#stock_low_qty").show();
+            } else {
+                $("#stock_low_qty").hide();
+            }
+        });
+    });
+
+    // Is shipping Required Code
+
+    $(function () {
+        $("#enable_shipping").click(function (event) {
+            var x = $(this).is(":checked");
+            if (x == true) {
+                $("#shipping_control").show();
+            } else {
+                $("#shipping_control").hide();
+            }
+        });
+    });
+
+    // For Variable Products
+
+    $(function () {
+        $("#color_size").click(function (event) {
+            var x = $(this).is(":checked");
+            if (x == true) {
+                $(".color_vs_size").show();
+            } else {
+                $(".color_vs_size").hide();
+            }
+        });
+    });
+
+    // For Attritute code
+
+    $(function () {
+        $("#enable_variation").click(function (event) {
+            var x = $(this).is(":checked");
+            if (x == true) {
+                $("#for_size_color").show();
+            } else {
+                $("#for_size_color").hide();
+            }
+        });
+    });
 });

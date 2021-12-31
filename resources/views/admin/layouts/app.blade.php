@@ -43,12 +43,14 @@
     <script src="{{ asset('/admin/assets/js/main.js') }}"></script>
 
 
+   
     <script src="{{ asset('/admin/vendors/chart.js/dist/Chart.bundle.min.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/dashboard.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/widgets.js') }}"></script>
     <script src="{{ asset('/admin/vendors/jqvmap/dist/jquery.vmap.min.js') }}"></script>
     <script src="{{ asset('/admin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
     <script src="{{ asset('/admin/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+    <script src="{{ asset('/admin/vendors/flot/jquery.flot.pie.js') }}"></script>
 
 
 

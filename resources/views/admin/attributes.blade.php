@@ -84,6 +84,8 @@
                                 <tr>
                                     <th>S.N</th>
                                     <th>Attribute</th>
+                                    <th>Size Name</th>
+                                    <th>Color Name</th>
                                     <th> Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -93,13 +95,15 @@
                                 <tr>
                                     <td>1</td>                                   
                                     <td>Fabric</td>
+                                    <td>Shoes <span>( SM, XL )</span></td>
+                                    <td>Red <span style="background-color:#ff0000;" class="color-code"></span></td>
                                     <td><span class="btn btn-outline-success rounded">Active</span></td>
                                     <td>
                                         <a href="#"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span></a>
                                         <a href="#"><span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-trash"></i></span></a>
                                     </td>
 
-                                </tr>                               
+                                </tr>              
                               
                             </tbody>
                         </table>

@@ -129,7 +129,7 @@ class AdminController extends Controller
                     'img_address'=> $img_nm
                 ]
             );
-            return redirect()->route('/administration/sub-category');//route('Admin.Layouts.view_sub_category');
+            return redirect()->route('./administration/sub-category');//route('Admin.Layouts.view_sub_category');
         }
     }
 }
@@ -173,7 +173,7 @@ class AdminController extends Controller
                 'Parent_cat_status' => $request->status,//'available'//$request['cat_status']
                 'cat_is_parent'     => $is_prnt
             ]);
-        return redirect()->route('administration/view_category');
+        return redirect()->route('/administration/view_category');
     }
 
     /**

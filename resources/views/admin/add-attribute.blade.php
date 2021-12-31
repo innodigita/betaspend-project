@@ -52,7 +52,7 @@
                                 
                                 <div class="row">
                                   <div class="col-md-3"></div>
-                                  <div class="col-md-6 border border-5 border-primary">
+                                  <div class="col-md-6 shadow border border-5 border-primary">
 
                                     <div id="category">
                                         <div class="card-body"> 
@@ -64,22 +64,47 @@
                                             @csrf
                                                
                                                 <div class="form-group">
-                                                    <label for="brand_name" class="control-label mb-1">Name</label>
-                                                    <input id="brand_name" name="brand_name" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Enter Attribute Name">
+                                                    <label for="attribute_name" class="control-label mb-1">Name</label>
+                                                    <input id="attribute_name" name="attribute_name" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Enter Attribute Name">
                                                 </div>
                                                     
                                                 <hr>
-                                                <h6 class="text-center text-danger">Leave this Section If Your Product Is Not A Variable Product</h6>
-                                                <hr>
+                                                
                                                 <div class="form-group">
-                                                    <label for="color" class="control-label mb-1">Color</label>
-                                                    <input id="color" name="color" type="color" class="form-control" aria-required="true" aria-invalid="false">
+                                                    <input type="checkbox" name="enable_size_color" id="enable_variation">
+                                                    <label for="enable_size_color"  class="control-label mb-1 text-danger" aria-required="true" aria-invalid="false">Do you want to include Color and Size?</label>                                                       
+                                                </div>
+                                                <hr>
+                                                
+                                                   <div id="for_size_color">
+                                                <div class="row">
+                                                      
+                                                    <div class="form-group col">
+                                                        <label for="color_name" class="control-label mb-1">Color Name</label>
+                                                        <input id="color_name" name="color_name" type="text" class="form-control" placeholder="Red, Blue, Green">
+                                                    </div>
+
+                                                    <div class="form-group col">
+                                                        <label for="color" class="control-label mb-1">Color</label>
+                                                        <input id="color" name="color" type="color" class="form-control" aria-required="true" aria-invalid="false">
+                                                    </div>
+
                                                 </div>
 
-                                                <div class="form-group">
-                                                    <label for="size" class="control-label mb-1">Size</label>
-                                                    <input id="size" name="text" type="size" class="form-control" aria-required="true" aria-invalid="false" placeholder="Enter Size">
+                                                <div class="row">
+                                                       
+                                                    <div class="form-group col">
+                                                        <label for="size_name" class="control-label mb-1">Size Name</label>
+                                                        <input id="size_name" name="size_name" type="text" class="form-control"  placeholder="Enter Size, SM, ML">
+                                                    </div>
+
+                                                    <div class="form-group col">
+                                                        <label for="size" class="control-label mb-1">Size</label>
+                                                        <input id="size" name="text" type="size" class="form-control" aria-required="true" aria-invalid="false" placeholder="Enter Size">
+                                                    </div>
+
                                                 </div>
+                                            </div>
                                                     
                                                     <div>
                                                         <button id="submit" type="submit" class="btn btn-lg btn-primary btn-block">

@@ -263,13 +263,14 @@
         
                                                     </div>
                                                 </div>
-
+                                                    
+                                                   
                                                     <div class="form-group">
-                                                        <input type="checkbox" name="enable_sku">
-                                                        <label for="enable_sku" class="control-label mb-1">Enable Stock Management System</label>                                                       
+                                                        <input type="checkbox" name="enable_sku" id="enable_qty">
+                                                        <label for="enable_sku"  class="control-label mb-1">Enable Stock Management System</label>                                                       
                                                     </div>
 
-                                                    <div class="row">
+                                                    <div class="row" id="stock_low_qty">
                                                         <div class="form-group col-md-6">
                                                             <label for="stock_qty" class="control-label mb-1">Stock quantity</label>
                                                             <input type="number" name="stock_qty" class="form-control" >
@@ -287,6 +288,7 @@
                                                         <input type="checkbox" name="single_order">
                                                         <label for="single_order" class="control-label mb-1">Allow only one quantity of this product to be bought in a single order</label>                                                       
                                                     </div>
+                                                
                                                 </div>
 
                                             </div>
@@ -300,11 +302,11 @@
                                                 <div class="card-body">
                                                          
                                                     <div class="form-group">
-                                                        <input type="checkbox" name="enable_shipping">
+                                                        <input type="checkbox" name="enable_shipping" id="enable_shipping">
                                                         <label for="enable_shipping" class="control-label mb-1">Does this product require shipping</label>                                                       
                                                     </div>
 
-                                                    <div class="row">                                                  
+                                                    <div class="row" id="shipping_control">                                                  
     
                                                         <div class="form-group col-md-3">
                                                           <input placeholder="Weight(ibs)" name="weight" class="form-control" type="number">
@@ -366,28 +368,33 @@
                                                 <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Variable Product<span style="font-size: 16px"> Add Variation for this product</span>
                                                 </div></h3> 
                                                 <div class="card-body">
+
+                                                    <div class="form-group">
+                                                        <input type="checkbox" name="color_&_size" id="color_size">
+                                                        <label for="color_&_size" class="control-label mb-1">Does your product requires color and size for variable product?</label>                                                       
+                                                    </div>
                     
                                                         <div class="row">
 
-                                                            <div class="form-group col-md-4" id="cat_parent">
-                                                                <label for="size" class="control-label mb-1">Sizes Added From Attribute</label>
-                                                                <select class="form-control" name="size" id="size">
-                                                                  <option> -- Select Sizes -- </option>
-                                                                  <option value="fas">SM</option>
-                                                                  <option value="furn">XL</option>
-                                                                </select>
-                                                              
-                                                              </div>
-
-                                                              <div class="form-group col-md-4" id="cat_parent">
-                                                                <label for="color" class="control-label mb-1">Color Names Added From Attribute</label>
-                                                                <select class="form-control" name="color" id="color">
-                                                                  <option> -- Select Colors -- </option>
-                                                                  <option value="fas">Blue</option>
-                                                                  <option value="furn">Red</option>
-                                                                </select>
-                                                              
-                                                              </div>
+                                                                <div class="form-group col-md-4 color_vs_size" id="cat_parent">
+                                                                    <label for="size" class="control-label mb-1">Sizes Added From Attribute</label>
+                                                                    <select class="form-control" name="size" id="size">
+                                                                      <option> -- Select Name Of Sizes -- </option>
+                                                                      <option value="fas">Shoes</option>
+                                                                      <option value="furn">T-Shirt</option>
+                                                                    </select>
+                                                                  
+                                                                  </div>
+    
+                                                                  <div class="form-group col-md-4 color_vs_size" id="cat_parent">
+                                                                    <label for="color" class="control-label mb-1">Color Names Added From Attribute</label>
+                                                                    <select class="form-control" name="color" id="color">
+                                                                      <option> -- Select Colors -- </option>
+                                                                      <option value="fas">Blue</option>
+                                                                      <option value="furn">Red</option>
+                                                                    </select>
+                                                                  
+                                                                  </div>
 
                                                               <div class="form-group col-md-4" id="cat_parent">
                                                                 <label for="other_attribute" class="control-label mb-1">Other Attributes</label>
@@ -419,7 +426,6 @@
                                             </div>
 
                                              {{-- Variable Section Ends --}}
-
 
                                              {{-- Other Section Starts --}}
 
