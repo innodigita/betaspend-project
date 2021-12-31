@@ -256,7 +256,12 @@
                                     <div class="widget widget-collapsible">
                                         <h3 class="widget-title"><span>All Categories</span></h3>
                                         <ul class="widget-body filter-items search-ul">
-                                            <li><a href="#">Accessories</a></li>
+                                            @if( count( $categories ) > 0 )
+                                                @foreach( $categories as $category )
+                                                    <li><a href="#">{{$category->Parent_cat_title}}</a></li>
+                                                @endforeach
+                                            @endif
+                                            <!--li><a href="#">Accessories</a></li>
                                             <li><a href="#">Babies</a></li>
                                             <li><a href="#">Beauty</a></li>
                                             <li><a href="#">Decoration</a></li>
@@ -267,7 +272,8 @@
                                             <li><a href="#">Kitchen</a></li>
                                             <li><a href="#">Medical</a></li>
                                             <li><a href="#">Sports</a></li>
-                                            <li><a href="#">Watches</a></li>
+                                            <li><a href="#">Watches</a></li-->
+                                        
                                         </ul>
                                     </div>
                                     <!-- End of Collapsible Widget -->
@@ -310,13 +316,19 @@
                                     <div class="widget widget-collapsible">
                                         <h3 class="widget-title"><span>Brand</span></h3>
                                         <ul class="widget-body filter-items item-check mt-1">
-                                            <li><a href="#">Elegant Auto Group</a></li>
+                                            @if( count( $brands ) > 0 )
+                                                @foreach( $brands as $brand )
+                                                    <li><a href="#">{{$brand->name}}</a></li>
+                                                @endforeach
+                                            @endif
+                                            
+                                            <!--li><a href="#">Elegant Auto Group</a></li>
                                             <li><a href="#">Green Grass</a></li>
                                             <li><a href="#">Node Js</a></li>
                                             <li><a href="#">NS8</a></li>
                                             <li><a href="#">Red</a></li>
                                             <li><a href="#">Skysuite Tech</a></li>
-                                            <li><a href="#">Sterling</a></li>
+                                            <li><a href="#">Sterling</a></li-->
                                         </ul>
                                     </div>
                                     <!-- End of Collapsible Widget -->
@@ -431,7 +443,7 @@
                             @endforeach
                         @endif
     <!------------------------------------------------------------------>
-                                <div class="product-wrap">
+                                <!--div class="product-wrap">
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="product-default.html">
@@ -883,7 +895,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div-->
+                                
                             </div>
 
                             <div class="toolbox toolbox-pagination justify-content-between">
