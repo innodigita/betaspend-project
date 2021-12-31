@@ -77,6 +77,9 @@ Route::get('/details/{prodId}', [ProductsController::class, 'product_details']);
 
 Route::get('/sess', [ProductsController::class, 'sess']);
 
+Route::get('/product/details{{prodID}', [ProductsController::class, 'product_details']);
+
+
 
 
 
@@ -100,15 +103,13 @@ Route::get('/my-account', [TemplateController::class, 'my_account']);
 
 // Route::get('/login2', [TemplateController::class, 'login']);
 
+Route::get('/product/cart', [TemplateController::class, 'cart']);
 
-Route::get('/cart', [TemplateController::class, 'cart']);
+Route::get('/product/wishlist', [TemplateController::class, 'wishlist']);
 
+Route::get('/product/compare', [TemplateController::class, 'compare']);
 
-Route::get('/wishlist', [TemplateController::class, 'wishlist']);
-
-Route::get('/compare', [TemplateController::class, 'compare']);
-
-Route::get('/checkout', [TemplateController::class, 'checkout']);
+Route::get('/product/checkout', [TemplateController::class, 'checkout']);
 
 Route::post('/administration/category/new', [AdminController::class,  'store' ] );
 
