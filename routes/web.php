@@ -73,7 +73,9 @@ Route::get('/administration/sub-category', [AdminController::class, 'view_sub_ca
 
 Route::get('/shop', [ProductsController::class, 'index']);
 
-Route::get('/details', [ProductsController::class, 'product_details']);
+Route::get('/details/{prodId}', [ProductsController::class, 'product_details']);
+
+Route::get('/sess', [ProductsController::class, 'sess']);
 
 
 
@@ -98,7 +100,9 @@ Route::get('/my-account', [TemplateController::class, 'my_account']);
 
 // Route::get('/login2', [TemplateController::class, 'login']);
 
+
 Route::get('/cart', [TemplateController::class, 'cart']);
+
 
 Route::get('/wishlist', [TemplateController::class, 'wishlist']);
 

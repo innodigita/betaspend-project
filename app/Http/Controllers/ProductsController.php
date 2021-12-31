@@ -33,11 +33,46 @@ class ProductsController extends Controller
                                             ] );
     }
 
-    public function product_details(){
+    public function product_details($prodId){
 
-        return view('Products.details');
+        $product = Products::find( $prodId );
+        
+        $categ   = Category::find( $product->product_category_id );
+        $brand   = Brands::find( $product->brand );
+        
+        return view('Products.details')->with( 
+            [
+                'product'   => $product,
+                'category' => $categ,
+                'brand'     => $brand
+            ] );
     }
 
+    ///////////////////////
+
+
+
+    public function sess() {
+        /*
+        session( [ 'cart' => [ 'name'=> 'TV',
+                               'Quantity' => 34
+                               ] ] );*/
+        
+                               if ( session()->has('cart') ){
+              var_dump( session('cart') );
+
+              echo session('cart.name');
+              session()->push( 'cart.name', 'PC');
+              echo "\t";
+              echo session('cart.name');
+              echo "\t";
+        }
+        else{
+           return session()->all();
+        }
+        return session()->all();
+    }
+    ///////////////////////////
 
     public function add_product(){
 
