@@ -35,11 +35,13 @@ Route::get('/administration/login', [AdminController::class, 'admin_login']);
 
 Route::get('/administration/reset', [AdminController::class, 'admin_reset']);
 
+
 Route::middleware(['isAdmin'])->get('/administration/view_category', [AdminController::class, 'view_category'])->name('administration/view_category');
+
 
 Route::middleware(['isAdmin'])->get('/administration/add_category', [AdminController::class, 'add_category']);
 
-Route::get('/administration/add-sub-category', [AdminController::class, 'view_add_sub_category']);
+
 
 
 
@@ -60,12 +62,12 @@ Route::get('/administration/attributes', [AdminController::class, 'attributes'])
 Route::get('/administration/add-attribute', [AdminController::class, 'add_attribute']);
 
 
-
-Route::get('/administration/add-sub-category', [AdminController::class, 'add_sub_category']);
+Route::get('/administration/view-add-sub-category', [AdminController::class, 'view_add_sub_category']);
+//Route::get('/administration/add-sub-category', [AdminController::class, 'add_sub_category']);
 
 Route::post('/administration/add-sub-category', [AdminController::class, 'add_sub_category']);
 
-Route::get('/administration/sub-category', [AdminController::class, 'view_sub_category'])->name('/administration/sub-category');
+Route::get('/administration/sub-category', [AdminController::class, 'view_sub_category'])->name('./administration/sub-category');
 
 
 

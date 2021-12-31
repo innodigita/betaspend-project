@@ -22,7 +22,15 @@ class ProductsController extends Controller
     {
 
         $products = Products::all();
-      return view('Products.shop')->with( 'Products', $products);
+        $categs   = Category::all();
+        $brands   = Brands::all();
+
+      return view('Products.shop')->with( 
+                                            [
+                                                'Products'   => $products,
+                                                'categories' => $categs,
+                                                'brands'     => $brands
+                                            ] );
     }
 
     public function product_details(){

@@ -65,7 +65,7 @@
                     <ul class="sub-menu children dropdown-menu">
                         <li><a href="{{ url('./administration/sub-category') }}">View Categories</a></li>
                         
-                        <li><a href="{{ url('./administration/add-sub-category') }}"> Add Sub Category</a></li>
+                        <li><a href="{{ url('./administration/view-add-sub-category') }}"> Add Sub Category</a></li>
 
                     </ul>
 
