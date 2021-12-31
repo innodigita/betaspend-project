@@ -147,6 +147,7 @@ class ProductsController extends Controller
                     'product_category_id'      => $request->cat_parent, 
                     'Product_sub_category_id'  => $request->sub_cat,
                     'tags'                     => $request->tags,
+                    'brand'                    => $request->brand,
 
                     'Sku'                      => 'Null',        //$request->sku,
                     'Unit_weight'              => 0,            //$request->weight,

@@ -30,6 +30,7 @@ class Products extends Model
         'Sku',
         'Unit_weight',
         'Available_color',
+        'brand',
         
         
         'Vendor_product_id',
