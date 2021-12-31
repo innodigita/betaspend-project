@@ -114,7 +114,7 @@
                         </a>
                         <div class="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
                             <div class="cart-overlay"></div>
-                            <a href="{{url('product/cart')}}" class="cart-toggle label-down link">
+                            <a href="#" class="cart-toggle label-down link">
                                 <i class="w-icon-cart">
                                     <span class="cart-count">2</span>
                                 </i>
@@ -176,7 +176,7 @@
                                 </div>
 
                                 <div class="cart-action">
-                                    <a href="cart" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
+                                    <a href="product/cart" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
                                     <a href="checkout" class="btn btn-primary  btn-rounded">Checkout</a>
                                 </div>
                             </div>

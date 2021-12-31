@@ -86,7 +86,7 @@
 
                                             <div class="form-group">
                                                 <label for="product_title" class="control-label mb-1">Title</label>
-                                                <input id="product_title" name="product_title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="A new Product">
+                                                <input id="product_title" name="product_title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="A new Product" required>
                                             </div>
 
                                             <div class="row">
@@ -94,14 +94,14 @@
                                                 <div class="form-group col-md-4">
                                               
                                                   <label for="price" class="control-label mb-1">Price($)</label>
-                                                  <input name="price" type="number" class="form-control">
+                                                  <input name="price" type="number" class="form-control"  required>
                                               
                                                 </div>
                                               
                                                 <div class="form-group col-md-4">
                                               
                                                   <label for="sale_price" class="control-label mb-1">Sale Price($)</label>
-                                                  <input name="sale_price" type="number" class="form-control">
+                                                  <input name="sale_price" type="number" class="form-control"  required>
                                                   <span href="#" class="ml-5 text-primary" id="toggletime" style="text-decoration: underline">schedule time</s>
                                               
                                                 </div>
@@ -113,14 +113,14 @@
                                                 <div class="form-group col-md-4">
                                               
                                                   <label for="start_p_date" class="control-label mb-1">From</label>
-                                                  <input name="start_p_date" type="date" class="form-control">
+                                                  <input name="start_p_date" type="date" class="form-control"  required>
                                               
                                                 </div>
                                               
                                                 <div class="form-group col-md-4">
                                               
                                                   <label for="stop_p_date" class="control-label mb-1">To</label>
-                                                  <input name="stop_p_date" type="date" class="form-control">
+                                                  <input name="stop_p_date" type="date" class="form-control"  required>
                                               
                                                 </div>
                                               
@@ -141,14 +141,14 @@
 
                                             <div class="form-group">
                                                 <label for="product_description"> Short Product Description</label>
-                                             <textarea name="product_description" class="form-control" height="50">
+                                             <textarea name="product_description" class="form-control" height="50"  required >
 
                                              </textarea>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="product_description"> Long Product Description</label>
-                                             <textarea name="product_description_lg" class="form-control" height="50">
+                                             <textarea name="product_description_lg"  class="form-control" height="50"  required>
 
                                              </textarea>
                                             </div>                                                                                      
@@ -156,7 +156,7 @@
                                                 <div class="form-group">
                                                     <label for="brand" class="control-label mb-1">Product Label</label>
                                                     <select class="form-control" name="p_label">
-                                                        <option> -- Select Type-- </option>
+                                                        
                                                         <option>Hot</option>
                                                         <option>New</option>
                                                     </select>
@@ -182,13 +182,13 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label for="p_img" class="control-label mb-0">Add Images</label>
-                                                <input type="file" name="p_img" class="form-control p-1">
+                                                <input  required type="file" name="p_img" class="form-control p-1">
                                             </div>
                                         </div>
                                        {{-- Category Form Section --}}
                                        <div class="form-group col-md-4" id="cat_parent">
                                         <label for="cat_parent" class="control-label mb-1">Category</label>
-                                        <select class="form-control" name="cat_parent" id="cat_parent">
+                                        <select class="form-control"  name="cat_parent" id="cat_parent">
                                           
                                             @if( count( $parent_categ ) > 0)
                                                 @foreach( $parent_categ as $pctgs )
@@ -231,7 +231,7 @@
 
                                         <div class="form-group col-md-4">
                                             <label for="tags" class="control-label mb-1">Tags</label>
-                                            <textarea name="tags" class="form-control">
+                                            <textarea name="tags"  required class="form-control">
                                                 
                                             </textarea>
                                         </div>

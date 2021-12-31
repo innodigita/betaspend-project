@@ -175,9 +175,9 @@ class ProductsController extends Controller
                     );
                     return redirect('/administration/view-product');
             }
-            return "falssse";
+            return "Upload Error";
         }
-        return "not";
+        return "No Image";
 
         
 
