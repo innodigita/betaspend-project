@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\products;
+use App\Models\Products;
 class TemplateController extends Controller
 {
     
     public function index(){
+        
         $products = Products::all();
         
         
@@ -78,9 +79,35 @@ class TemplateController extends Controller
         return view('cart');
     }
 
-    public function add_to_cart(){
+    public function clear_cart(){
+        session()->flush();
+        return view('cart');
+    }
 
-        return "view('cart')";
+    public function add_to_cart( Request $request){
+        
+        $product = Products::find($request->pid);
+        $id = $request->pid;
+        
+        $cart = session()->get('cart_new', []);
+  
+        if(isset($cart[$id])) {
+
+            $cart[$id]['quantity']++;
+
+        } else {
+            
+            $cart[$id] = [
+                "name" => $product->Product_name,
+                "quantity" => $request->pq,
+                "price" => $product->Price,
+                "image" => $product->Product_img
+            ];
+        }
+         
+        session()->put('cart_new', $cart);
+
+        return session('cart_new');
     }
 
     public function wishlist(){
