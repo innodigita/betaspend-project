@@ -8,7 +8,7 @@ function doAJAXcall( pid, pq, csrf_token, type, url, callback ) {
    var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function () {
- //       alert(xmlhttp.readyState +' '+ xmlhttp.status);
+ //     alert(xmlhttp.readyState +' '+ xmlhttp.status);
         if ( xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
             var data = xmlhttp.responseText;
 	 //alert( data);
@@ -29,7 +29,7 @@ function doAJAXcall( pid, pq, csrf_token, type, url, callback ) {
 //doAPIcall("get","hdg", "dhs");
 
 function add_to_cart ( Prod_Id, Prod_q, csrf ) {
-    if ( Prod_q == 0 || Prod_q == '' ){
+    if ( Prod_q == 0 || Prod_q == '' || Prod_q < 0 ){
         alert('Quantity should be atleast 1');
     } else {
         
@@ -184,19 +184,24 @@ function add_to_cart ( Prod_Id, Prod_q, csrf ) {
                                 </div>
 
                                 <div class="products">
+                                    
+                                    
+                                    @php $total = 0 @endphp
+                @if(session('cart_new'))
+                    @foreach(session('cart_new') as $id => $details)
+                        @php $total += $details['price'] * $details['quantity'] @endphp
+
                                     <div class="product product-cart">
                                         <div class="product-detail">
-                                            <a href="product-default.html" class="product-name">Beige knitted
-                                                elas<br>tic
-                                                runner shoes</a>
+                                            <a href="#" class="product-name">{{$details['name']}}</a>
                                             <div class="price-box">
-                                                <span class="product-quantity">1</span>
-                                                <span class="product-price">$25.68</span>
+                                                <span class="product-quantity">{{  $details['quantity'] }}</span>
+                                                <span class="product-price">${{ $details['price'] }}</span>
                                             </div>
                                         </div>
                                         <figure class="product-media">
-                                            <a href="product-default.html">
-                                                <img src="assets/images/cart/product-1.jpg" alt="product" height="84"
+                                            <a href="#">
+                                                <img src="{{url('assets/images/products/product_images/'.$details['image']) }}" alt="product" height="84"
                                                     width="94" />
                                             </a>
                                         </figure>
@@ -204,39 +209,25 @@ function add_to_cart ( Prod_Id, Prod_q, csrf ) {
                                             <i class="fas fa-times"></i>
                                         </button>
                                     </div>
-
-                                    <div class="product product-cart">
-                                        <div class="product-detail">
-                                            <a href="product-default.html" class="product-name">Blue utility
-                                                pina<br>fore
-                                                denim dress</a>
-                                            <div class="price-box">
-                                                <span class="product-quantity">1</span>
-                                                <span class="product-price">$32.99</span>
-                                            </div>
-                                        </div>
-                                        <figure class="product-media">
-                                            <a href="product-default.html">
-                                                <img src="assets/images/cart/product-2.jpg" alt="product" width="84"
-                                                    height="94" />
-                                            </a>
-                                        </figure>
-                                        <button class="btn btn-link btn-close">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </div>
+                    @endforeach
+                    
+                @endif
+                @if( $total == 0 )
+                       <h6 style="color:red">Cart is empty</h6>
+                    @endif
                                 </div>
 
                                 <div class="cart-total">
                                     <label>Subtotal:</label>
-                                    <span class="price">$58.67</span>
+                                    <span class="price">${{$total}}</span>
                                 </div>
 
                                 <div class="cart-action">
                                     <a href="product/cart" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
-                                    <a href="checkout" class="btn btn-primary  btn-rounded">Checkout</a>
+                                    <a href="product/checkout" class="btn btn-primary  btn-rounded">Checkout</a>
                                 </div>
                             </div>
+                            
                             <!-- End of Dropdown Box -->
                         </div>
                     </div>
@@ -651,7 +642,7 @@ function add_to_cart ( Prod_Id, Prod_q, csrf ) {
                                         <a href="/">Home</a>
                                     </li>
                                     <li class=" {{ request()->is('/shop') ? 'active' : '' }} ">
-                                        <a href="shop">Shop</a>
+                                        <a href="{{route('/shop')}}">Shop</a>
 
                                         <!-- Start of Megamenu -->
 

@@ -132,14 +132,19 @@
                                 </div>
 
                                 <div class="products">
+                                    
+                                    
+            @php $total = 0 @endphp
+                @if(session('cart_new'))
+                    @foreach(session('cart_new') as $id => $details)
+                        @php $total += $details['price'] * $details['quantity'] @endphp
+
                                     <div class="product product-cart">
                                         <div class="product-detail">
-                                            <a href="#" class="product-name">Beige knitted
-                                                elas<br>tic
-                                                runner shoes</a>
+                                            <a href="#" class="product-name">{{$details['name']}}</a>
                                             <div class="price-box">
-                                                <span class="product-quantity">1</span>
-                                                <span class="product-price">$25.68</span>
+                                                <span class="product-quantity">{{  $details['quantity'] }}</span>
+                                                <span class="product-price">${{ $details['price'] }}</span>
                                             </div>
                                         </div>
                                         <figure class="product-media">
@@ -152,37 +157,22 @@
                                             <i class="fas fa-times"></i>
                                         </button>
                                     </div>
-
-                                    <div class="product product-cart">
-                                        <div class="product-detail">
-                                            <a href="#" class="product-name">Blue utility
-                                                pina<br>fore
-                                                denim dress</a>
-                                            <div class="price-box">
-                                                <span class="product-quantity">1</span>
-                                                <span class="product-price">$32.99</span>
-                                            </div>
-                                        </div>
-                                        <figure class="product-media">
-                                            <a href="#">
-                                                <img src="assets/images/cart/product-2.jpg" alt="product" width="84"
-                                                    height="94" />
-                                            </a>
-                                        </figure>
-                                        <button class="btn btn-link btn-close">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </div>
+                    @endforeach
+                    
+                @endif
+                @if( $total == 0 )
+                       <h6 style="color:red">Cart is empty</h6>
+                    @endif
                                 </div>
 
                                 <div class="cart-total">
                                     <label>Subtotal:</label>
-                                    <span class="price">$58.67</span>
+                                    <span class="price">${{$total}}</span>
                                 </div>
 
                                 <div class="cart-action">
-                                    <a href="productcart" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
-                                    <a href="checkout" class="btn btn-primary  btn-rounded">Checkout</a>
+                                    <a href="product/cart" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
+                                    <a href="product/checkout" class="btn btn-primary  btn-rounded">Checkout</a>
                                 </div>
                             </div>
                             <!-- End of Dropdown Box -->

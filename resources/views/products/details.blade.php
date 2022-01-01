@@ -157,9 +157,17 @@
                                                 <div class="product-qty-form">
                                                     <div class="input-group">
                                                         <input class="quantity form-control" type="number" min="1" id="product_q"
-                                                            max="10000000" value=0>
-                                                        <button class="quantity-plus w-icon-plus"></button>
-                                                        <button class="quantity-minus w-icon-minus"></button>
+                                                            max="10000000" value=1>
+                                                        <button class="quantity-plus w-icon-plus"
+                                                        onclick="
+                                                        plus_quant( document.getElementById('product_q').value )
+                                                            
+                                                        "
+                                                        ></button>
+                                                        <button class="quantity-minus w-icon-minus"
+                                                         onclick="
+                                                        minus_quant( document.getElementById('product_q').value )   
+                                                        "></button>
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary btn-cart"

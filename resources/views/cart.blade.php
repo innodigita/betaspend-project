@@ -102,9 +102,9 @@
                                         <td class="product-price"><span class="amount">${{$details['price']}}</span></td>
                                         <td class="product-quantity">
                                             <div class="input-group">
-                                                <input class="quantity form-control" type="number" min="1" value="{{$details['quantity']}}" max="100000">
-                                                <button class="quantity-plus w-icon-plus"></button>
-                                                <button class="quantity-minus w-icon-minus"></button>
+                                                <input class="quantity form-control" type="number" min="1" value="{{$details['quantity']}}" max="100000" id="product_q">
+                                                <button class="quantity-plus w-icon-plus" onclick="plus_quant( document.getElementById('product_q').value )"></button>
+                                                <button class="quantity-minus w-icon-minus" onclick="minus_quant( document.getElementById('product_q').value )"></button>
                                             </div>
                                         </td>
                                         <td class="product-subtotal">
@@ -217,7 +217,7 @@
                                         <label>Total</label>
                                         <span class="ls-50">${{$total}}</span>
                                     </div>
-                                    <a href="#" onclick="alert(' Please Connect Payment Gateway. Its only for testing')"
+                                    <a href="/product/checkout" 
                                         class="btn btn-block btn-dark btn-icon-right btn-rounded  btn-checkout">
                                         Proceed to checkout<i class="w-icon-long-arrow-right"></i></a>
                                 </div>
@@ -226,6 +226,8 @@
                     </div>
                 </div>
             </div>
+            <!------------------------------------------------>
+            
             <!-- End of PageContent -->
         </main>
 
