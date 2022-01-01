@@ -2,23 +2,17 @@
 <script>
 
 //////////////////////////////////////
-/*
+
 function doAJAXcall( pid, pq, csrf_token, type, url, callback ) {
-    
-    var xmlhttp = new XMLHttpRequest();
+   
+   var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function () {
-        //alert(xmlhttp.readyState +' '+ xmlhttp.status);
+ //       alert(xmlhttp.readyState +' '+ xmlhttp.status);
         if ( xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
             var data = xmlhttp.responseText;
-	  alert('det');
-      //////////////////////////
-	  //obj = JSON.parse(data);
-	  //document.getElementById('chat_here').innerHTML=data;//obj.name;
-	 // var myElement = document.getElementById('sc_this');
-       //     var topPos = myElement.offsetTop;
-		//	document.getElementById('scrolling_div').scrollTop = topPos;
-	  ////////////////////////
+	 //alert( data);
+     location.reload();
         }
     };
 
@@ -28,15 +22,17 @@ function doAJAXcall( pid, pq, csrf_token, type, url, callback ) {
     data.append('pid', pid );
     data.append('pq', pq );
     xmlhttp.setRequestHeader('x-csrf-token', csrf_token);
-    xmlhttp.send( data );
+   xmlhttp.send( data );
+   //alert('d');
 }
-*/
+
 //doAPIcall("get","hdg", "dhs");
 
 function add_to_cart ( Prod_Id, Prod_q, csrf ) {
     if ( Prod_q == 0 || Prod_q == '' ){
         alert('Quantity should be atleast 1');
     } else {
+        
         doAJAXcall(
             Prod_Id,
             Prod_q,
@@ -44,7 +40,7 @@ function add_to_cart ( Prod_Id, Prod_q, csrf ) {
             "POST",
             "/product/add-to-cart",//https://domain.com/api/index.php?type=SELECT",
             function (data) {
-                alert();
+               // alert();
                 // alert(data);//document.getElementById("outputHere").innerHTML = data; //Place data at #outputHere
             },
         );
@@ -54,7 +50,7 @@ function add_to_cart ( Prod_Id, Prod_q, csrf ) {
 
 }
     ////////////////////////////////////////
-
+}
 
 </script>
 
@@ -171,9 +167,13 @@ function add_to_cart ( Prod_Id, Prod_q, csrf ) {
                         </a>
                         <div class="dropdown cart-dropdown cart-offcanvas mr-0 mr-lg-2">
                             <div class="cart-overlay"></div>
-                            <a href="#" class="cart-toggle label-down link">
+                            
+                            <script>
+                            
+                            </script>
+                            <a href="{{url('./product/cart')}}" class="cart-toggle label-down link">
                                 <i class="w-icon-cart">
-                                    <span class="cart-count">2</span>
+                                    <span class="cart-count">{{ count((array) session('cart_new')) }}</span>
                                 </i>
                                 <span class="cart-label">Cart</span>
                             </a>

@@ -44,7 +44,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    
+                                    <!--tr>
                                         <td class="product-thumbnail">
                                             <div class="p-relative">
                                                 <a href="product-default.html">
@@ -73,13 +74,20 @@
                                         <td class="product-subtotal">
                                             <span class="amount">$40.00</span>
                                         </td>
-                                    </tr>
+                                    </tr-->
+                                    
+         @php $total = 0 @endphp
+        @if(session('cart_new'))
+            @foreach(session('cart_new') as $id => $details)
+                @php $total += $details['price'] * $details['quantity'] @endphp                            
+                                    
+                                    
                                     <tr>
                                         <td class="product-thumbnail">
                                             <div class="p-relative">
                                                 <a href="product-default.html">
                                                     <figure>
-                                                        <img src="assets/images/shop/13.jpg" alt="product"
+                                                        <img src="{{url('assets/images/products/product_images/'.$details['image']) }}" alt="product"
                                                             width="300" height="338">
                                                     </figure>
                                                 </a>
@@ -88,27 +96,29 @@
                                         </td>
                                         <td class="product-name">
                                             <a href="product-default.html">
-                                                Smart Watch
+                                                {{$details['name']}}
                                             </a>
                                         </td>
-                                        <td class="product-price"><span class="amount">$60.00</span></td>
+                                        <td class="product-price"><span class="amount">${{$details['price']}}</span></td>
                                         <td class="product-quantity">
                                             <div class="input-group">
-                                                <input class="quantity form-control" type="number" min="1" max="100000">
+                                                <input class="quantity form-control" type="number" min="1" value="{{$details['quantity']}}" max="100000">
                                                 <button class="quantity-plus w-icon-plus"></button>
                                                 <button class="quantity-minus w-icon-minus"></button>
                                             </div>
                                         </td>
                                         <td class="product-subtotal">
-                                            <span class="amount">$60.00</span>
+                                            <span class="amount">${{$details['price']*$details['quantity'] }}</span>
                                         </td>
                                     </tr>
+                        @endforeach
+                    @endif
                                 </tbody>
                             </table>
 
                             <div class="cart-action mb-6">
-                                <a href="#" class="btn btn-dark btn-rounded btn-icon-left btn-shopping mr-auto"><i class="w-icon-long-arrow-left"></i>Continue Shopping</a>
-                                <button type="submit" class="btn btn-rounded btn-default btn-clear" name="clear_cart" value="Clear Cart">Clear Cart</button> 
+                                <a href="{{url('./shop')}}" class="btn btn-dark btn-rounded btn-icon-left btn-shopping mr-auto"><i class="w-icon-long-arrow-left"></i>Continue Shopping</a>
+                                <a href="{{route('clear-cart')}}"><button type="submit" class="btn btn-rounded btn-default btn-clear" name="clear_cart" href="{{route('clear-cart')}}" value="Clear Cart" >Clear Cart</button></a> 
                                 <button type="submit" class="btn btn-rounded btn-update disabled" name="update_cart" value="Update Cart">Update Cart</button>
                             </div>
 
@@ -124,7 +134,7 @@
                                     <h3 class="cart-title text-uppercase">Cart Totals</h3>
                                     <div class="cart-subtotal d-flex align-items-center justify-content-between">
                                         <label class="ls-25">Subtotal</label>
-                                        <span>$100.00</span>
+                                        <span>${{$total}}</span>
                                     </div>
 
                                     <hr class="divider">
@@ -205,9 +215,9 @@
                                     <hr class="divider mb-6">
                                     <div class="order-total d-flex justify-content-between align-items-center">
                                         <label>Total</label>
-                                        <span class="ls-50">$100.00</span>
+                                        <span class="ls-50">${{$total}}</span>
                                     </div>
-                                    <a href="#"
+                                    <a href="#" onclick="alert(' Please Connect Payment Gateway. Its only for testing')"
                                         class="btn btn-block btn-dark btn-icon-right btn-rounded  btn-checkout">
                                         Proceed to checkout<i class="w-icon-long-arrow-right"></i></a>
                                 </div>
