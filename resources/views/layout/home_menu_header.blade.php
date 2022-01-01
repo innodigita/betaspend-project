@@ -121,7 +121,7 @@
                             <div class="cart-overlay"></div>
                             <a href="#" class="cart-toggle label-down link">
                                 <i class="w-icon-cart">
-                                    <span class="cart-count">2</span>
+                                    <span class="cart-count">{{ count((array) session('cart_new')) }}</span>
                                 </i>
                                 <span class="cart-label">Cart</span>
                             </a>
