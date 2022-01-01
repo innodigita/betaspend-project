@@ -1,5 +1,62 @@
 
+<script>
 
+//////////////////////////////////////
+/*
+function doAJAXcall( pid, pq, csrf_token, type, url, callback ) {
+    
+    var xmlhttp = new XMLHttpRequest();
+    
+    xmlhttp.onreadystatechange = function () {
+        //alert(xmlhttp.readyState +' '+ xmlhttp.status);
+        if ( xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
+            var data = xmlhttp.responseText;
+	  alert('det');
+      //////////////////////////
+	  //obj = JSON.parse(data);
+	  //document.getElementById('chat_here').innerHTML=data;//obj.name;
+	 // var myElement = document.getElementById('sc_this');
+       //     var topPos = myElement.offsetTop;
+		//	document.getElementById('scrolling_div').scrollTop = topPos;
+	  ////////////////////////
+        }
+    };
+
+    xmlhttp.open(type, url, true);
+     
+    var data = new FormData();
+    data.append('pid', pid );
+    data.append('pq', pq );
+    xmlhttp.setRequestHeader('x-csrf-token', csrf_token);
+    xmlhttp.send( data );
+}
+*/
+//doAPIcall("get","hdg", "dhs");
+
+function add_to_cart ( Prod_Id, Prod_q, csrf ) {
+    if ( Prod_q == 0 || Prod_q == '' ){
+        alert('Quantity should be atleast 1');
+    } else {
+        doAJAXcall(
+            Prod_Id,
+            Prod_q,
+            csrf,
+            "POST",
+            "/product/add-to-cart",//https://domain.com/api/index.php?type=SELECT",
+            function (data) {
+                alert();
+                // alert(data);//document.getElementById("outputHere").innerHTML = data; //Place data at #outputHere
+            },
+        );
+
+//document.cookie = "clicked_on="+user['id'];
+//alert( "getCookie('clicked_on') ");
+
+}
+    ////////////////////////////////////////
+
+
+</script>
 
 
 
