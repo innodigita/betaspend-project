@@ -77,8 +77,8 @@ Route::get('/shop', [ProductsController::class, 'index']);
 
 Route::get('/sess', [ProductsController::class, 'sess']);
 
-Route::get('/product/details/{{prodID}', [ProductsController::class, 'product_details']);
-
+Route::get('/product/details/{prodId}', [ProductsController::class, 'product_details'])
+                        ->name('/product/details');
 
 
 
@@ -103,7 +103,13 @@ Route::get('/my-account', [TemplateController::class, 'my_account']);
 
 // Route::get('/login2', [TemplateController::class, 'login']);
 
+
 Route::get('/product/cart', [TemplateController::class, 'cart']);
+
+Route::get('/clear-cart', [TemplateController::class, 'clear_cart'])->name('clear-cart');
+
+Route::post('/product/add-to-cart', [TemplateController::class, 'add_to_cart']);
+
 
 Route::get('/product/wishlist', [TemplateController::class, 'wishlist']);
 

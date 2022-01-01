@@ -181,7 +181,7 @@
                                 </div>
 
                                 <div class="cart-action">
-                                    <a href="cart" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
+                                    <a href="productcart" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
                                     <a href="checkout" class="btn btn-primary  btn-rounded">Checkout</a>
                                 </div>
                             </div>
