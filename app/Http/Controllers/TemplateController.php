@@ -78,6 +78,11 @@ class TemplateController extends Controller
         return view('cart');
     }
 
+    public function add_to_cart(){
+
+        return "view('cart')";
+    }
+
     public function wishlist(){
 
         return view('wishlist');

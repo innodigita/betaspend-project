@@ -40,7 +40,7 @@ class ProductsController extends Controller
         $categ   = Category::find( $product->product_category_id );
         $brand   = Brands::find( $product->brand );
         
-        return view('Products.details')->with( 
+        return view('products.details')->with( 
             [
                 'product'   => $product,
                 'category' => $categ,
@@ -175,9 +175,9 @@ class ProductsController extends Controller
                     );
                     return redirect('/administration/view-product');
             }
-            return "falssse";
+            return "Upload Error";
         }
-        return "not";
+        return "No Image";
 
         
 
