@@ -216,11 +216,10 @@
                     <div class="product-wrap">
                         <div class="product text-center">
                             <figure class="product-media">
-                                <a href="">
-                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-1-1.jpg') }}" alt="Product" width="300"
+                                <a href="{{ route('/product/details', [ $deal->id ] ) }}">
+                                    <img src=" {{url('assets/images/products/product_images/'.$deal->Product_img)}}" alt="Product" width="300"
                                         height="338">
-                                    <img src=" {{ asset('assets/images/demos/demo5/products/1-1-2.jpg') }} " alt="Product" width="300"
-                                        height="338">
+                                   
                                 </a>
                                 <div class="product-action-vertical">
                                     <a href="#" class="btn-product-icon btn-cart w-icon-cart" title="Add to cart"></a>
@@ -527,8 +526,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="#">
-                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-1-1.jpg') }} " alt="Product"
+                                        <a href="{{ route('/product/details', [ $new_ar->id ] ) }}">
+                                            <img src=" {{url('assets/images/products/product_images/'.$new_ar->Product_img)}} " alt="Product"
                                                 width="300" height="338" />
                                             <img src=" {{ asset('assets/images/demos/demo1/products/3-1-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
@@ -579,8 +578,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="">
-                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-4-1.jpg') }} " alt="Product"
+                                        <a href="{{ route('/product/details', [ $bst_sell->id ] ) }}">
+                                            <img src=" {{url('assets/images/products/product_images/'.$bst_sell->Product_img)}} " alt="Product"
                                                 width="300" height="338" />
                                             <img src=" {{ asset('assets/images/demos/demo1/products/3--4-2.jpg') }} " alt="Product"
                                                 width="300" height="338" />
@@ -630,8 +629,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="">
-                                            <img src=" {{ asset('assets/images/demos/demo1/products/3-9.jpg') }} " alt="Product"
+                                        <a href="{{ route('/product/details', [ $mostP->id ] ) }}">
+                                            <img src="{{url('assets/images/products/product_images/'.$mostP->Product_img)}} " alt="Product"
                                                 width="300" height="338" />
                                         </a>
                                         <div class="product-action-vertical">
@@ -681,8 +680,8 @@
                             <div class="product-wrap">
                                 <div class="product text-center">
                                     <figure class="product-media">
-                                        <a href="">
-                                            <img src="assets/images/demos/demo1/products/3-4-1.jpg" alt="Product"
+                                        <a href="{{ route('/product/details', [ $feat->id ] ) }}">
+                                            <img src="{{url('assets/images/products/product_images/'.$feat->Product_img)}}" alt="Product"
                                                 width="300" height="338" />
                                             <img src="assets/images/demos/demo1/products/3-4-2.jpg" alt="Product"
                                                 width="300" height="338" />

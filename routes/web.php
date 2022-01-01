@@ -104,9 +104,12 @@ Route::get('/my-account', [TemplateController::class, 'my_account']);
 // Route::get('/login2', [TemplateController::class, 'login']);
 
 
+
 Route::get('/product/cart', [TemplateController::class, 'cart']);
 
 Route::get('/clear-cart', [TemplateController::class, 'clear_cart'])->name('clear-cart');
+
+
 
 Route::post('/product/add-to-cart', [TemplateController::class, 'add_to_cart']);
 
