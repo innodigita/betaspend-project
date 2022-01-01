@@ -7,7 +7,7 @@
                 <div class="container">
                     <ul class="breadcrumb bb-no">
                         <li><a href="demo1.html">Home</a></li>
-                        <li><a href="shop-banner-sidebar.html">Shop</a></li>
+                        <li><a href="{{ url('./shop') }}">Shop</a></li>
                         <li>4 Columns</li>
                     </ul>
                 </div>
@@ -419,17 +419,17 @@
                                         </figure>
                                         <div class="product-details">
                                             <div class="product-cat">
-                                                <a href="shop-banner-sidebar.html">Electronics</a>
+                                                <a href="#">Electronics</a>
                                             </div>
                                             <h3 class="product-name">
-                                                <a href="product-default.html">{{$product->Product_name}}</a>
+                                                <a href="#">{{$product->Product_name}}</a>
                                             </h3>
                                             <div class="ratings-container">
                                                 <div class="ratings-full">
                                                     <span class="ratings" style="width: 100%;"></span>
                                                     <span class="tooltiptext tooltip-top"></span>
                                                 </div>
-                                                <a href="product-default.html" class="rating-reviews">(3 reviews)</a>
+                                                <a href="#" class="rating-reviews">(3 reviews)</a>
                                             </div>
                                             <div class="product-pa-wrapper">
                                                 <div class="product-price">      

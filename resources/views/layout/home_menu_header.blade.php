@@ -76,7 +76,7 @@
                     <div class="header-left mr-md-4">
                         <a href="#" class="mobile-menu-toggle  w-icon-hamburger">
                         </a>
-                        <a href="/" class="logo ml-lg-0">
+                        <a href="{{ url('/') }}" class="logo ml-lg-0">
                             <img src="assets/images/demos/demo5/betaspend-logo.png" alt="logo" width="220" height="40" />
                         </a>
                         <form method="get" action="#" class="header-search hs-expanded hs-round d-none d-md-flex input-wrapper">

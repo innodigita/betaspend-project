@@ -21,7 +21,7 @@
 
             <nav class="breadcrumb-nav container">
                 <ul class="breadcrumb bb-no">
-                    <li><a href="demo1.html">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li>Products</li>
                 </ul>
                 <ul class="product-nav list-style-none">
