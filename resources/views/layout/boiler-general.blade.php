@@ -27,6 +27,21 @@
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
+
+
+
+
+        ////////////////////////////
+
+        function plus_quant( q ){
+            q++;
+            document.getElementById('product_q').value = q;
+        }
+        function minus_quant( q ){
+            q--;
+            document.getElementById('product_q').value = q;
+        }
+        ///////////////////////////////
     </script>
 
      <link rel="preload" href="{{ asset('assets/vendor/fontawesome-free/webfonts/fa-regular-400.woff2') }}" as="font" type="font/woff2"

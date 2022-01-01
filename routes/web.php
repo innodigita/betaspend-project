@@ -71,7 +71,7 @@ Route::get('/administration/sub-category', [AdminController::class, 'view_sub_ca
 
 
 
-Route::get('/shop', [ProductsController::class, 'index']);
+Route::get('/shop', [ProductsController::class, 'index'])->name('/shop');
 
 //Route::get('/details/{prodId}', [ProductsController::class, 'product_details']);
 
@@ -118,8 +118,11 @@ Route::get('/product/wishlist', [TemplateController::class, 'wishlist']);
 
 Route::get('/product/compare', [TemplateController::class, 'compare']);
 
-Route::get('/product/checkout', [TemplateController::class, 'checkout']);
+//Route::get('/product/checkout', [TemplateController::class, 'checkout']);
 
+Route::get('/product/checkout', function(){
+    return view('products.notcheckout');
+});
 Route::post('/administration/category/new', [AdminController::class,  'store' ] );
 
 
