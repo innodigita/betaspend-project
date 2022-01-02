@@ -109,9 +109,9 @@ Route::get('/product/cart', [TemplateController::class, 'cart']);
 
 Route::get('/clear-cart', [TemplateController::class, 'clear_cart'])->name('clear-cart');
 
+Route::post('/product/add-to-cart', [TemplateController::class, 'add_to_cart'])->name('/product/add-to-cart');
 
 
-Route::post('/product/add-to-cart', [TemplateController::class, 'add_to_cart']);
 
 
 Route::get('/product/wishlist', [TemplateController::class, 'wishlist']);
@@ -120,9 +120,14 @@ Route::get('/product/compare', [TemplateController::class, 'compare']);
 
 //Route::get('/product/checkout', [TemplateController::class, 'checkout']);
 
+<<<<<<< Updated upstream
 Route::get('/product/checkout', function(){
     return view('products.notcheckout');
 });
+=======
+Route::get('/product/order', [TemplateController::class, 'product_order']);
+
+>>>>>>> Stashed changes
 Route::post('/administration/category/new', [AdminController::class,  'store' ] );
 
 

@@ -60,7 +60,7 @@
                                                 <label for="p_type" class="control-label mb-1">Product Type</label>
                                                 <select name="p_type" class="form-control" id="Product_type">
                                                     
-                                                    <option value="Simple Product"     >Simple Product</option>
+                                                    <option value="Simple Product"     >Free Product</option>
                                                     <option value="Variable Product"   >Variable Product</option>
                                                     <option value="Digital Product"    >Digital Product</option>
                                                     <option value="Physical Product"   >Physical Product</option>

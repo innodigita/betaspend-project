@@ -158,6 +158,7 @@
                                                     <div class="input-group">
                                                         <input class="quantity form-control" type="number" min="1" id="product_q"
                                                             max="10000000" value=1>
+<<<<<<< Updated upstream
                                                         <button class="quantity-plus w-icon-plus"
                                                         onclick="
                                                         plus_quant( document.getElementById('product_q').value )
@@ -168,6 +169,10 @@
                                                          onclick="
                                                         minus_quant( document.getElementById('product_q').value )   
                                                         "></button>
+=======
+                                                        <button class="quantity-plus w-icon-plus"></button>
+                                                        <button class="quantity-minus w-icon-minus"></button>
+>>>>>>> Stashed changes
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary btn-cart"
