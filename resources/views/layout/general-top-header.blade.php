@@ -8,11 +8,8 @@ function doAJAXcall( pid, pq, csrf_token, type, url, callback ) {
    var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function () {
-<<<<<<< Updated upstream
+
  //     alert(xmlhttp.readyState +' '+ xmlhttp.status);
-=======
-    //    alert(xmlhttp.readyState +' '+ xmlhttp.status);
->>>>>>> Stashed changes
         if ( xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
             var data = xmlhttp.responseText;
 	 //alert( data);

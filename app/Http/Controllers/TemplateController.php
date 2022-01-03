@@ -126,6 +126,6 @@ class TemplateController extends Controller
     }
 
     public function product_order(){
-        return view('Products.order');
+        return view('products.order');
     }
 }
