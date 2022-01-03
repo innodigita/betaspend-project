@@ -22,12 +22,8 @@
     <link rel="stylesheet" href="{{ asset('/admin/vendors/flag-icon-css/css/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/admin/vendors/selectFX/css/cs-skin-elastic.css') }}">
     <link rel="stylesheet" href="{{ asset('/admin/vendors/jqvmap/dist/jqvmap.min.css') }}">
-
-
     <link rel="stylesheet" href="{{ asset('/admin/assets/css/style.css') }}">
-
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
 
 </head>
 
@@ -41,6 +37,10 @@
     <script src="{{ asset('/admin/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('/admin/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/main.js') }}"></script>
+    {{-- <script src="{{ asset('/admin/assets/js/tinymce/tinymce.min.js') }}"></script> --}}
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    
 
 
    
@@ -51,6 +51,7 @@
     <script src="{{ asset('/admin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
     <script src="{{ asset('/admin/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
     <script src="{{ asset('/admin/vendors/flot/jquery.flot.pie.js') }}"></script>
+
 
 
 

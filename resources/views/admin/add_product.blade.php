@@ -141,14 +141,14 @@
 
                                             <div class="form-group">
                                                 <label for="product_description"> Short Product Description</label>
-                                             <textarea name="product_description" class="form-control" height="50"  required >
+                                             <textarea name="product_description" rows="10" cols="88" class="form-control" height="50"  required  id="myeditor">
 
                                              </textarea>
                                             </div>
 
                                             <div class="form-group">
                                                 <label for="product_description"> Long Product Description</label>
-                                             <textarea name="product_description_lg"  class="form-control" height="50"  required>
+                                             <textarea name="product_description_lg"  class="form-control" height="50" id="myeditor"  required>
 
                                              </textarea>
                                             </div>                                                                                      
@@ -492,7 +492,6 @@
 
     {{--  Form  Section Ends --}}
 </div>
-
 
 
 @endsection

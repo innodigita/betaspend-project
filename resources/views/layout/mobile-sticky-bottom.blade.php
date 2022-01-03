@@ -34,7 +34,7 @@
                     </div>
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="assets/images/cart/product-1.jpg" alt="product" height="84" width="94" />
+                            <img src="{{ asset('assets/images/cart/product-1.jpg') }}" alt="product" height="84" width="94" />
                         </a>
                     </figure>
                     <button class="btn btn-link btn-close">
@@ -55,7 +55,7 @@
                     </div>
                     <figure class="product-media">
                         <a href="product-default.html">
-                            <img src="assets/images/cart/product-2.jpg" alt="product" width="84" height="94" />
+                            <img src="{{ asset('assets/images/cart/product-2.jpg') }}" alt="product" width="84" height="94" />
                         </a>
                     </figure>
                     <button class="btn btn-link btn-close">
@@ -70,8 +70,8 @@
             </div>
 
             <div class="cart-action">
-                <a href="cart.html" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
-                <a href="checkout.html" class="btn btn-primary  btn-rounded">Checkout</a>
+                <a href="#" class="btn btn-dark btn-outline btn-rounded">View Cart</a>
+                <a href="#" class="btn btn-primary  btn-rounded">Checkout</a>
             </div>
         </div>
         <!-- End of Dropdown Box -->

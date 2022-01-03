@@ -113,3 +113,6 @@ jQuery(document).ready(function ($) {
         });
     });
 });
+
+// For Text Editor
+
