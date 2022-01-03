@@ -120,9 +120,15 @@ Route::get('/product/compare', [TemplateController::class, 'compare']);
 
 Route::get('/product/checkout', [TemplateController::class, 'checkout']);
 
+// <<<<<<< Updated upstream
 
+// Route::get('/product/checkout', function(){
+//     return view('products.notcheckout');
+// });
+// =======
 Route::get('/product/order', [TemplateController::class, 'product_order']);
 
+// >>>>>>> Stashed changes
 Route::post('/administration/category/new', [AdminController::class,  'store' ] );
 
 

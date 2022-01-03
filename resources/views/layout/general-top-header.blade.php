@@ -9,7 +9,14 @@ function doAJAXcall( pid, pq, csrf_token, type, url, callback ) {
     
     xmlhttp.onreadystatechange = function () {
 
+// <<<<<<< Updated upstream
+
  //     alert(xmlhttp.readyState +' '+ xmlhttp.status);
+// =======
+    //    alert(xmlhttp.readyState +' '+ xmlhttp.status);
+
+// >>>>>>> Stashed changes
+
         if ( xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
             var data = xmlhttp.responseText;
 	 //alert( data);
@@ -77,16 +84,16 @@ function add_to_cart ( Prod_Id, Prod_q, csrf ) {
                         <!-- End of DropDown Menu -->
 
                         <div class="dropdown">
-                            <a href="#language"><img src="assets/images/flags/eng.png" alt="ENG Flag" width="14"
+                            <a href="#language"><img src="{{ asset('assets/images/flags/eng.png') }}" alt="ENG Flag" width="14"
                                     height="8" class="dropdown-image" /> ENG</a>
                             <div class="dropdown-box">
                                 <a href="#ENG">
-                                    <img src="assets/images/flags/eng.png" alt="ENG Flag" width="14" height="8"
+                                    <img src="{{ asset('assets/images/flags/eng.png') }}" alt="ENG Flag" width="14" height="8"
                                         class="dropdown-image" />
                                     ENG
                                 </a>
                                 <a href="#FRA">
-                                    <img src="assets/images/flags/fra.png" alt="FRA Flag" width="14" height="8"
+                                    <img src="{{ asset('assets/images/flags/fra.png') }}" alt="FRA Flag" width="14" height="8"
                                         class="dropdown-image" />
                                     FRA
                                 </a>
@@ -126,7 +133,7 @@ function add_to_cart ( Prod_Id, Prod_q, csrf ) {
                         <a href="#" class="mobile-menu-toggle  w-icon-hamburger">
                         </a>
                         <a href="{{ url('/') }}" class="logo ml-lg-0">
-                            <img src="assets/images/demos/demo5/betaspend-logo.png" alt="logo" width="220" height="40" />
+                            <img src="{{ asset('assets/images/demos/demo5/betaspend-logo.png') }}" alt="logo" width="220" height="40" />
                         </a>
                         <form method="get" action="#" class="header-search hs-expanded hs-round d-none d-md-flex input-wrapper">
                             <div class="select-box">

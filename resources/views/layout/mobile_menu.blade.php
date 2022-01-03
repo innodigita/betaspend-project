@@ -124,7 +124,7 @@
                                 <li><a href="blog.html">Classic</a></li>
                                 <li><a href="blog-listing.html">Listing</a></li>
                                 <li>
-                                    <a href="https://www.portotheme.com/html/wolmart/blog-grid.html">Grid</a>
+                                    <a href="#">Grid</a>
                                     <ul>
                                         <li><a href="blog-grid-2cols.html">Grid 2 columns</a></li>
                                         <li><a href="blog-grid-3cols.html">Grid 3 columns</a></li>
