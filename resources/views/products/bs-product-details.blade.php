@@ -61,7 +61,7 @@
             <div class="col-lg-10 col-md-10 col-sm-10">
                 
                 {{-- Card Start --}}
-                <div class="card border-primary">
+                <div class="card">
                     <div class="card-body">{{-- Card Body Start --}}
                  {{-- Start of Page Content --}}
                        <div class="container">{{-- Container Starts --}}
@@ -156,8 +156,22 @@
                                         </div>
 
                                         <hr class="product-divider">
+                                        {{-- | Only use this code if it is a variable product that is selected  else comment it out |--}}
+                                        <div class="product-price">
+                                            <ins class="new-price">$210.00 - $230.00</ins>
+                                        </div>
+                                        {{-- | Only use this code if it is a variable product that is selected  else comment it out |--}}
 
-                                        <div class="product-price"><ins class="new-price">$40.00</ins></div>
+                                        <div class="product-price"><ins class="new-price">$30.00</ins><del class="old-price">$60.00</del></div>
+                                         
+                                         {{-- | Only use this code if product has a discount and if date is used on when the offer will end else else comment it out |--}}
+                                        <div class="product-countdown-container">
+                                            <label class="mr-2">Offer Ends In:</label>
+                                            <div class="product-countdown countdown-compact" data-until="2022, 12, 31"
+                                                data-compact="true">
+                                                629 days, 11: 59: 52</div>
+                                        </div>
+                                         {{-- | Only use this code if product has a discount and if date is used on when the offer will end  else comment it out |--}}
 
                                         <div class="ratings-container">
                                             <div class="ratings-full">
@@ -261,18 +275,15 @@
                             </div>
                             <hr>
 
-                            <div class="text-center">
-                                
-                            </div>
 
                             <div class="arrow-section">
-                                <a href="#" class="arrow-p">
+                                <span class="arrow-p">
                                     <i class="fa fa-angle-down"></i>
-                                 </a>
+                                 </span>
                             </div>
 
                             <div class="product-form container fix-bottom text-center border-5">                           
-                                <button class="btn btn-primary btn-cart">
+                                <button class="btn btn-primary btn-cart buy">
                                     <i class="w-icon-cart"></i>
                                     <span>Buy Now</span>
                                 </button>
@@ -303,13 +314,13 @@
                             </div>
 
                             <div class="arrow-section">
-                                <a href="#" class="arrow-p">
+                                <span class="arrow-p">
                                     <i class="fa fa-angle-down"></i>
-                                 </a>
+                                 </span>
                             </div>
 
                             <div class="product-form container text-center mt-5 border-5">                           
-                                <button class="btn btn-primary btn-cart">
+                                <button class="btn btn-primary btn-cart buy">
                                     <i class="w-icon-cart"></i>
                                     <span>Buy Now</span>
                                 </button>
