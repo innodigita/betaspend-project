@@ -200,15 +200,23 @@
 
                                 <div class="dropdown-box">
                                     <ul class="menu vertical-menu category-menu">
+
+<!---------------------------------------------------------------------------------->
+
+@if( count( $Category ) > 0 )
+    @foreach( $Category as $category )
                                         <li>
                                             <a href="shop-fullwidth-banner.html">
-                                                <i class="w-icon-tshirt2"></i>Fashion
+                                                <i class="w-icon-tshirt2"></i>{{$category->Parent_cat_title}}
                                             </a>
+        @if ( $category->cat_is_parent == 'yes')
                                             <ul class="megamenu">
+            @foreach( $SubCategory as $subC )
+                @if (  $subC->parent_id == $category->id )                                        
                                                 <li>
-                                                    <h4 class="menu-title">Women</h4>
+                                                    <h4 class="menu-title">{{$subC->title}}</h4>
                                                     <hr class="divider">
-                                                    <ul>
+                                                    <!--ul>
                                                         <li><a href="shop-fullwidth-banner.html">New Arrivals</a>
                                                         </li>
                                                         <li><a href="shop-fullwidth-banner.html">Best Sellers</a>
@@ -222,9 +230,12 @@
                                                         <li><a href="shop-fullwidth-banner.html">Jewlery &
                                                                 Watches</a></li>
                                                         <li><a href="shop-fullwidth-banner.html">Sale</a></li>
-                                                    </ul>
+                                                    </ul-->
                                                 </li>
-                                                <li>
+                @endif
+            @endforeach                                    
+        
+                                                <!--li>
                                                     <h4 class="menu-title">Men</h4>
                                                     <hr class="divider">
                                                     <ul>
@@ -260,10 +271,15 @@
                                                             </a>
                                                         </div>
                                                     </div>
-                                                </li>
+                                                </li-->
                                             </ul>
-                                        </li>
-                                        <li>
+        
+        @endif    
+                                  </li>
+    @endforeach
+@endif
+<!---------------------------------------------------------------------------------->
+                                        <!--li>
                                             <a href="shop-fullwidth-banner.html">
                                                 <i class="w-icon-home"></i>Home & Garden
                                             </a>
@@ -583,7 +599,7 @@
                                                 class="font-weight-bold text-uppercase ls-25">
                                                 View All Categories<i class="w-icon-angle-right"></i>
                                             </a>
-                                        </li>
+                                        </li-->
                                     </ul>
                                 </div>
                             </div>
