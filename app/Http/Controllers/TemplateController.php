@@ -119,6 +119,7 @@ class TemplateController extends Controller
         return session('cart_new');
     }
 
+
     public function wishlist(){
 
         return view('wishlist');

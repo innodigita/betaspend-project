@@ -53,6 +53,7 @@
     <link rel="preload" href="{{ asset('assets/fonts/wolmart87d5.ttf?png09e') }}" as="font" type="font/ttf" crossorigin="anonymous">
 
     <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{{ asset('/assets/vendor/bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/fontawesome-free/css/all.min.css') }}">
 
     <!-- Plugins CSS -->

@@ -95,6 +95,14 @@ class ProductsController extends Controller
         return view('Admin.view_product')->with('products', $products);
     }
 
+    public function bs_product_details(){
+        return view('Products.bs-product-details');
+    }
+
+    public function bs_digital_service(){
+        return view('Products.bs-digital-service');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

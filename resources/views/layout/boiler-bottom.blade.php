@@ -2,6 +2,7 @@
 
 
  <!-- Plugin JS File -->
+    <script src="{{ asset('/assets/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/jquery.plugin/jquery.plugin.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/parallax/parallax.min.js') }}"></script>
