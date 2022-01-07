@@ -21,11 +21,12 @@ use App\Http\Middleware\isAdmin;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-Route::get('/', [TemplateController::class, 'index']);
+/*
+|--------------------------------------------------------------------------
+| THE START OF BETASPEND ADMINISTRATION DASHBOARD CODE START
+|--------------------------------------------------------------------------
+*/
 
 Route::middleware(['isAdmin'])->get('/administration', [AdminController::class, 'index'])->name('administration');
 
@@ -41,12 +42,10 @@ Route::middleware(['isAdmin'])->get('/administration/view_category', [AdminContr
 
 Route::middleware(['isAdmin'])->get('/administration/add_category', [AdminController::class, 'add_category']);
 
-
-
-
-
 Route::get('/administration/add-product',  [ ProductsController::class, 'add_product']);
+
 Route::get('/administration/view-product', [ ProductsController::class, 'view_product']);
+
 Route::post('/administration/add/product', [ ProductsController::class, 'store']);
 
 
@@ -69,7 +68,18 @@ Route::post('/administration/add-sub-category', [AdminController::class, 'add_su
 
 Route::get('/administration/sub-category', [AdminController::class, 'view_sub_category'])->name('./administration/sub-category');
 
+Route::post('/administration/category/new', [AdminController::class,  'store' ] );
 
+
+
+/*
+|--------------------------------------------------------------------------
+| THE START OF BETASPEND FRONT-END USERS CODE START
+|--------------------------------------------------------------------------
+*/
+
+
+Route::get('/', [TemplateController::class, 'index']);
 
 Route::get('/shop', [ProductsController::class, 'index'])->name('/shop');
 
@@ -80,12 +90,9 @@ Route::get('/sess', [ProductsController::class, 'sess']);
 Route::get('/product/details/{prodId}', [ProductsController::class, 'product_details'])
                         ->name('/product/details');
 
+Route::get('/product/bs-product-details', [ProductsController::class, 'bs_product_details']);
 
-
-
-
-
-
+Route::get('/product/bs-digital-service', [ProductsController::class, 'bs_digital_service']);
 
 Route::get('/contact', [TemplateController::class, 'contact']);
 
@@ -129,8 +136,6 @@ Route::get('/product/checkout', [TemplateController::class, 'checkout']);
 Route::get('/product/order', [TemplateController::class, 'product_order']);
 
 // >>>>>>> Stashed changes
-Route::post('/administration/category/new', [AdminController::class,  'store' ] );
-
 
 Auth::routes();
 
