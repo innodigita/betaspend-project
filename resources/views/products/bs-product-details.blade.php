@@ -63,6 +63,11 @@
                 {{-- Card Start --}}
                 <div class="card">
                     <div class="card-body">{{-- Card Body Start --}}
+                        <div class="alert alert-success alert-cart-product mb-2">
+                            <a href="cart.html" class="btn btn-success btn-rounded">View Cart</a>
+                            <p class="mb-0 ls-normal">“Alarm Clock With Lamp” has been added to your cart.</p>
+                            <a href="#" class="btn btn-link btn-close"><i class="close-icon"></i></a>
+                        </div>
                  {{-- Start of Page Content --}}
                        <div class="container">{{-- Container Starts --}}
                             <div class="product product-single row">
