@@ -232,6 +232,7 @@
                                 </div>
                             </figure>
                             <div class="product-details">
+                            <div class="pid" style="display:none">{{$deal->id}}</div>
                                 <h4 class="product-name"><a href="#">{{$deal->Product_name}}</a></h4>
                                 <div class="ratings-container">
                                     <div class="ratings-full">

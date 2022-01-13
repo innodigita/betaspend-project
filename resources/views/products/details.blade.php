@@ -14,7 +14,10 @@
 
 
         {{--  <!-- Start of Main -->  --}}
-        
+<script>
+
+
+</script>        
 <main class="main mb-10 pb-1">
 
             {{--  <!-- Start of Breadcrumb -->  --}}
@@ -169,14 +172,10 @@
                                                          onclick="
                                                         minus_quant( document.getElementById('product_q').value )   
                                                         "></button>
-{{-- ======= --}}
-                                                        {{-- <button class="quantity-plus w-icon-plus"></button>
-                                                        <button class="quantity-minus w-icon-minus"></button> --}}
-{{-- >>>>>>> Stashed changes --}}
                                                     </div>
                                                 </div>
                                                 <button class="btn btn-primary btn-cart"
-                                                onclick= " add_to_cart( {{$product->id}}, document.getElementById('product_q').value, '{{csrf_token()}}' )"
+                                                onclick= "bye()"
                                                 >
                                                     <i class="w-icon-cart"></i>
                                                     <span>Add to Cart</span>

@@ -76,8 +76,8 @@
                                         <div
                                             class="product-single-carousel owl-carousel owl-theme owl-nav-inner row cols-1 gutter-no">
                                             <figure class="product-image">
-                                                <img src="{{ asset('assets/images/products/default/1-800x900.jpg') }}"
-                                                    data-zoom-image="{{ asset('assets/images/products/default/1-800x900.jpg') }}"
+                                                <img src="{{url('assets/images/products/product_images/'.$product->Product_img)}}"
+                                                    data-zoom-image="{{url('assets/images/products/product_images/'.$product->Product_img)}}"
                                                     alt="Electronics Black Wrist Watch" width="800" height="900">
                                             </figure>
                                             <figure class="product-image">
@@ -143,19 +143,19 @@
                               {{-- Start of Page Side Description --}}
                                 <div class="col-md-6 col-lg-6">
                                     <div class="product-details" data-sticky-options="{'minWidth': 767}">
-                                        <h2 class="product-title">Electronics Black Wrist Watch</h2>
+                                        <h2 class="product-title">{{$product->Product_name}}</h2>
                                         <div class="product-bm-wrapper">
                                             <figure class="brand">
-                                                <img src="{{ asset('assets/images/products/brand/brand-1.jpg') }}" alt="Brand"
+                                                <img src="{{ url('assets/images/brands/category/'.$brand->image) }}" alt="Brand"
                                                     width="102" height="48" />
                                             </figure>
                                             <div class="product-meta">
                                                 <div class="product-categories">
                                                     Category:
-                                                    <span class="product-category"><a href="#">Electronics</a></span>
+                                                    <span class="product-category"><a href="#">{{$category->Parent_cat_title}}</a></span>
                                                 </div>
                                                 <div class="product-sku">
-                                                    SKU: <span>MS46891340</span>
+                                                    SKU: <span>{{$product->Sku}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -188,8 +188,7 @@
                                         </div>
 
                                         <div class="product-short-desc">
-                                            <p style="font-size: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                                Ut nascetur mollis curabitur auctor morbi, viverra hendrerit convallis.</p>
+                                            <p style="font-size: 15px;">{{$product->Product_desc}}</p>
                                         </div>
 
                                         <hr class="product-divider">
@@ -266,16 +265,7 @@
 
                             <div class="">
                                 <p class="text-dark fw-normal long-description">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit, 
-                                    scelerisque tristique facilisi augue elementum integer taciti pulvinar, 
-                                    interdum pretium euismod sollicitudin sociis mi. Luctus leo est hac nibh 
-                                    condimentum bibendum rhoncus nascetur senectus viverra vehicula gravida 
-                                    scelerisque sed, magnis blandit aliquam diam fames penatibus potenti aenean 
-                                    libero mauris mollis inceptos eros. Tincidunt et sociis curabitur odio nisl 
-                                    metus ridiculus augue, nascetur nunc volutpat taciti sociosqu senectus fames mus, 
-                                    faucibus tristique praesent non urna pellentesque sapien. Risus fermentum dignissim 
-                                    lobortis ridiculus lectus bibendum morbi cras cursus, vitae nam dui enim elementum 
-                                    aliquet mollis a, metus nec pellentesque pharetra orci cum fusce mi.
+                                    {{$product->Product_long_desc}}
                                 </p>
                             </div>
                             <hr>

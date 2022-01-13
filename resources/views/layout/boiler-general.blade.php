@@ -63,6 +63,13 @@
 
     <!-- Default CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/general-style.css') }}">
+    <!-- Add to Cart JS -->
+    <script src="assets/js/car.js"></script>
+    <script>
+    function bye(){
+        alert("bye bye");
+    }
+    </script>
 
 
 </head>

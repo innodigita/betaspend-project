@@ -140,3 +140,13 @@ Route::get('/product/order', [TemplateController::class, 'product_order']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+
+
+
+
+
+Route::post( "/product/get_subC",[ProductsController::class, 'Get_SubCategory'])->name('/product/get_subC');

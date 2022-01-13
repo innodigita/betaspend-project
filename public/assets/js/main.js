@@ -1213,15 +1213,29 @@ function(t) {
 
             // The Add to cart functions was here before.
             Wolmart.$body.on("click", ".product:not(.product-select) .btn-cart, .product-popup .btn-cart, .home .product-single .btn-cart", function(e) {
+                
                 e.preventDefault();
                 var a = t(this)
                   , i = a.closest(".product, .product-popup");
+
+                  /////////////////////////////////////
+
+                  var pid = i.find(".pid").text();
+                  var kk = tr( pid );
+                  alert(kk);
+                  /////////////////////////////////////
+                
                 a.hasClass("disabled") ? alert("Please select some product options before adding this product to your cart.") : (a.toggleClass("added").addClass("load-more-overlay loading"),
                 setTimeout(function() {
+                    /////////////////////////////
+                    
+
+                      /////////////////////////////
                     a.removeClass("load-more-overlay loading"),
                     Wolmart.Minipopup.open({
                         productClass: " product-cart",
                         name: i.find(".product-name, .product-title").text(),
+
                         nameLink: i.find(".product-name > a, .product-title > a").attr("href"),
                         imageSrc: i.find(".product-media img, .product-image:first-child img").attr("src"),
                         imageLink: i.find(".product-name > a").attr("href"),

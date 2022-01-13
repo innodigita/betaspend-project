@@ -16,6 +16,7 @@ function doAJAXcall( pid, pq, csrf_token, type, url, callback ) {
     //    alert(xmlhttp.readyState +' '+ xmlhttp.status);
 
 // >>>>>>> Stashed changes
+
         if ( xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
             var data = xmlhttp.responseText;
 	 //alert( data);

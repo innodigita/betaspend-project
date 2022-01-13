@@ -12,6 +12,7 @@
     <meta name="keywords" content="Affilate, vendors, Sellers" />
     <meta name="description" content="Betaspend Multi vendor ecommerce platform">
     <meta name="author" content="Betaspend">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/icons/betaspend_favicon.png">
@@ -49,7 +50,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/home.css">
     
     
-    
+    <!-- Add to Cart JS -->
+    <script src="assets/js/cart.js"></script>
+
+
 </head>
 
 {{--  home_menu_header Starts  --}}
