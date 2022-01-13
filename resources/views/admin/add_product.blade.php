@@ -188,26 +188,86 @@
                                        {{-- Category Form Section --}}
                                        <div class="form-group col-md-4" id="cat_parent">
                                         <label for="cat_parent" class="control-label mb-1">Category</label>
-                                        <select class="form-control"  name="cat_parent" id="cat_parent">
-                                          
+                                        <select class="form-control"  name="cat_parent" id="cat_parent_s" >
+                                            <option value='0'>--Select Parent Category--</option>
                                             @if( count( $parent_categ ) > 0)
                                                 @foreach( $parent_categ as $pctgs )
-                                                    <option value={{$pctgs->id}} >{{$pctgs->Parent_cat_title}}</option>
+                                                    <option value={{$pctgs->id}}>{{$pctgs->Parent_cat_title}}</option>
                                                 @endforeach
                                             @endif
 
                                         </select>
                                       
                                       </div>
-                                      
+<script>
+
+function ajaxP( CID, csrf_token, type, url) {
+   
+    var xmlhttp = new XMLHttpRequest();
+    
+    xmlhttp.onreadystatechange = function () {
+
+//        alert(xmlhttp.readyState +' '+ xmlhttp.status);
+
+        if ( xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
+            var data = xmlhttp.responseText;
+            
+            var dt = data.split('|');
+            
+
+            //for ( var i=0; i<dt.length; i++ ){
+                   
+                  // else
+                //   alert( dt[i]);
+              //  }
+
+            if ( dt.length > 0 ){
+                let options = document.getElementById( 'sub_cat_se' ).options;
+                document.getElementById(  options[0].id ).selected="selected";
+                for ( var i=0; i<options.length; i++ ){
+                  //  alert( dt[i]);
+                   
+                    if ( dt.includes ( options[i].id ) ){;
+                    document.getElementById( options[i].id ).style.display="block";
+                    }else{
+                        document.getElementById( options[i].id ).style.display="none";
+                    }
+                }
+                
+            }
+        }
+    };
+
+    xmlhttp.open(type, url, true);
+     
+    var data = new FormData();
+    data.append('CID', CID );
+    xmlhttp.setRequestHeader('x-csrf-token', csrf_token);
+    xmlhttp.send( data );
+}
+
+document.getElementById("cat_parent_s").addEventListener("change", function () {
+           var d = document.getElementById('cat_parent_s').value;
+           var csrf = document.querySelector("meta[name='csrf-token']").getAttribute('content');
+           
+               ajaxP(
+               d,
+               csrf,
+               "POST",
+               "{{ route('/product/get_subC') }}"
+               );
+           
+});
+
+</script>    
                                       <div class="form-group col-md-4" id="sub_cat">
                                         <label for="sub_cat" class="control-label mb-1">Sub Category</label>
                                       
-                                        <select class="form-control" name="sub_cat" id="sub_cat">
-                                          
+                                        <select class="form-control" name="sub_cat" id="sub_cat_se">
+                                            <option id=0 value=0>--Select Sub Category--</option>
                                             @if( count( $sub_categ ) > 0)
                                                 @foreach( $sub_categ as $sctgs )
-                                                    <option value={{$sctgs->id}} >{{$sctgs->title}}</option>
+                                                    <option id="{{$sctgs->id}}" value={{$sctgs->id}} style="display:none">{{$sctgs->title}}</option>
                                                 @endforeach
                                             @endif
                                           

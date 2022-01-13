@@ -40,7 +40,7 @@ class ProductsController extends Controller
         $categ   = Category::find( $product->product_category_id );
         $brand   = Brands::find( $product->brand );
         
-        return view('products.details')->with( 
+        return view('Products.bs-product-details')->with( 
             [
                 'product'   => $product,
                 'category' => $categ,
@@ -119,13 +119,28 @@ class ProductsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+     public function Get_SubCategory( Request $request ){
+        $subs = SubCategory::where( 'parent_id', '=', $request->CID)->get();
+
+        $subCs = "";
+        $i=1;
+        foreach( $subs as $s ){
+            $subCs .= $s->id;
+            if ( $i < count($subs) ) $subCs .='|';
+            $i++;
+        }
+        return $subCs;
+     }
+
     public function store(Request $request)
     {
+        return dd($request);
 
 
         if( $request->hasFile('p_img') )
         {
-            
+  
             $request->validate(
                 [
                     'p_img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
@@ -157,7 +172,7 @@ class ProductsController extends Controller
                     'tags'                     => $request->tags,
                     'brand'                    => $request->brand,
 
-                    'Sku'                      => 'Null',        //$request->sku,
+                    'Sku'                      => $request->sku,
                     'Unit_weight'              => 0,            //$request->weight,
                     'Color'                    => 'Null',      //$request->product_color,
                     'Quantity'                 => 0,          //$request->quantity,
