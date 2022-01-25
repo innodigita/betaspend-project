@@ -80,6 +80,8 @@
                         
                         <li><a href="{{ url('./administration/attributes') }}"> Attributes</a></li>
 
+                        <li><a href="{{ url('./administration/attribute-color') }}"> Colour </a></li>
+
                     </ul>
 
                 </li>

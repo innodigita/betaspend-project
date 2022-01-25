@@ -42,67 +42,115 @@
 {{--  Form  Section Starts --}}
 
                   <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
+                        <div class="card shadow rounded">
+                            <div class="card-header bg-white">
                                 <strong class="card-title">Add Product</strong>
                             </div>
-                            <div class="card-body">
+
+                        </div>
                                 
                                 <div id="category">
-                                    <div class="card-body">
-                
+
                                         <form action="{{ url('./administration/add/product') }}" enctype="multipart/form-data" method="post">
                                         @csrf
                                            
                                         <div class="col-lg-8 col-md-8 col-sm-8">                                            
-
+                                              
+                                            <div class="bg-white p-4 mb-3 round-border shadow">
                                             <div class="form-group">
-                                                <label for="p_type" class="control-label mb-1">Product Type</label>
-                                                <select name="p_type" class="form-control" id="Product_type">
-                                                    
-                                                    <option value="Simple Product"     >Free Product</option>
+                                                <label for="p_type" class="control-label mb-1 font-weight-bold">Product Type</label>
+                                                <select name="p_type" class="form-control" id="Product_type">                                               
+                                                    <option value="Simple Product"     >Simple Product</option>
                                                     <option value="Variable Product"   >Variable Product</option>
                                                     <option value="Digital Product"    >Digital Product</option>
                                                     <option value="Physical Product"   >Physical Product</option>
-                                                    <option value="Event Base Product" >Event Base Product</option>
-                                                    
-
+                                                    <option value="Eventbase Product"  >Event base Product</option>
                                                 </select>
                                             </div>
                                             
                                             <div class="row" id="">
 
                                             <div class="form-group p-2 ml-4">
-                                                <input type="checkbox" name="virtual">
-                                                <label for="virtual" class="control-label mb-1">Virtual</label>                                                       
+                                                <label class="switch switch-3d switch-primary">
+                                                    <input type="checkbox" name="virtual" class="switch-input" id="no-shipping"> 
+                                                    <span class="switch-label"></span> <span class="switch-handle"></span>
+                                                </label> Virtual
                                             </div>
 
                                             <div class="form-group p-2">
-                                                <input type="checkbox" name="downloadable">
-                                                <label for="downloadable" class="control-label mb-1">Downloadable</label>                                                       
+                                                <label class="switch switch-3d switch-primary">
+                                                    <input type="checkbox" name="downloadable" class="switch-input" id="downloadable"> 
+                                                    <span class="switch-label"></span> <span class="switch-handle"></span>
+                                                </label> Downloadable                                                       
                                             </div>
 
                                             </div>
+
+                                            <div id="download-file" >
+                                                <h6 class="m-1 p-1 bg-transparent border-0">Downloadable files</h6>
+                                                <div class="bg-white round-border shadow border  border-dark">
+
+                                                <div id="append-section">
+                                                <div class="append-move">
+                                                    
+                                                    <div class="col-md-6 form-group">
+                                                    <label for="file_name" class="label-control font-weight-bold"> Name </label>
+                                                    <input style="font-size: 12px;" class="form-control" type="text" placeholder="File Name" name="file_name">
+                                                    </div>
+                                
+                                                    <div class="col-md-6 form-group">
+                                                        <label for="file_url" class="label-control font-weight-bold"> FilL URl </label>
+                                                        <input style="font-size: 12px;" type="URL" name="file_url" class="form-control file-url" placeholder="Https://" value="">
+                                                    </div>       		
+                                                </div>
+                                                </div>
+                                
+                                                <div id="append-section-to"></div>
+                                            
+                                                <div class="form-group col-md-2">
+                                                    <button  class="btn btn-outline-light mt-1 ml-2 border border-primary text-primary rounded" style="font-size: 12px;" type="button" id="add-field"> add File </button>
+                                                </div>
+                                                <div class=" form-group col-md-2">
+                                                    <button  class="btn btn-outline-light mt-1 mr-6 border border-danger text-danger rounded" style="font-size: 12px;" type="button" id="remove-field"> Remove</button>
+                                                </div>
+
+                                             
+                                            <div class="form-group col-md-12" >
+                                                <hr>
+                                                <label for="download_limit" class="label-control">Download Limit</label>
+                                                <input class="form-control" type="number" name="download_limit" placeholder="Unlimited">
+                                                <small>Leave blank for unlimited re-downloads.</small>
+                                            </div>
+                                
+                                            <div class="form-group col-md-12">
+                                                <label for="download_expire" class="label-control">Download expiry</label>
+                                                <input class="form-control" type="number" name="download_expire" placeholder="Never">
+                                                <small>Enter the number of days before a download link expires, or leave blank.</small>
+                                            </div>
+                            
+                                            </div>
+                                    
+                                          </div>
 
                                             <div class="form-group">
-                                                <label for="product_title" class="control-label mb-1">Title</label>
+                                                <label for="product_title" class="control-label mb-1 font-weight-bold">Title</label>
                                                 <input id="product_title" name="product_title" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="A new Product" required>
                                             </div>
 
                                             <div class="row">
 
-                                                <div class="form-group col-md-4">
+                                                <div class="form-group col-md-6">
                                               
                                                   <label for="price" class="control-label mb-1">Price($)</label>
                                                   <input name="price" type="number" class="form-control"  required>
                                               
                                                 </div>
                                               
-                                                <div class="form-group col-md-4">
+                                                <div class="form-group col-md-6">
                                               
                                                   <label for="sale_price" class="control-label mb-1">Sale Price($)</label>
                                                   <input name="sale_price" type="number" class="form-control"  required>
-                                                  <span href="#" class="ml-5 text-primary" id="toggletime" style="text-decoration: underline">schedule time</s>
+                                                  <span href="#" class="ml-5 text-primary change-text" id="toggletime" style="text-decoration: underline">schedule time</s>
                                               
                                                 </div>
                                               
@@ -110,14 +158,14 @@
                                               
                                               <div class="row" id="time-sec" style="display: none;">
                                               
-                                                <div class="form-group col-md-4">
+                                                <div class="form-group col-md-6">
                                               
                                                   <label for="start_p_date" class="control-label mb-1">From</label>
                                                   <input name="start_p_date" type="date" class="form-control"  required>
                                               
                                                 </div>
                                               
-                                                <div class="form-group col-md-4">
+                                                <div class="form-group col-md-6">
                                               
                                                   <label for="stop_p_date" class="control-label mb-1">To</label>
                                                   <input name="stop_p_date" type="date" class="form-control"  required>
@@ -127,7 +175,7 @@
                                               </div>
 
                                                 <div class="form-group">
-                                                    <label for="brand" class="control-label mb-1">Brand</label>
+                                                    <label for="brand" class="control-label mb-1 font-weight-bold">Brand</label>
                                                     <select class="form-control" name="brand">
                                                     @if ( count( $brands ) > 0 )
                                                         @foreach( $brands as $brand )
@@ -138,23 +186,22 @@
                                                     </select>
     
                                                 </div>
+                                        </div>
 
-                                            <div class="form-group">
-                                                <label for="product_description"> Short Product Description</label>
-                                             <textarea name="product_description" rows="10" cols="88" class="form-control" height="50"  required  id="myeditor">
-
-                                             </textarea>
+                                            <div class="form-group bg-white p-4 round-border shadow">
+                                                <label for="product_description " class="font-weight-bold"> Short Product Description</label>
+                                             <textarea name="product_description" class="form-control"  required id="myeditor"></textarea>
                                             </div>
 
-                                            <div class="form-group">
-                                                <label for="product_description"> Long Product Description</label>
-                                             <textarea name="product_description_lg"  class="form-control" height="50" id="myeditor"  required>
+                                            <div class="form-group bg-white p-4 round-border shadow">
+                                                <label for="product_description" class="font-weight-bold"> Long Product Description</label>
+                                             <textarea name="product_description_lg" rows="5" cols="50"  class="form-control" height="50" required id="editor">
 
                                              </textarea>
                                             </div>                                                                                      
-
+                                                <div class="bg-white p-3 mb-3 round-border shadow">
                                                 <div class="form-group">
-                                                    <label for="brand" class="control-label mb-1">Product Label</label>
+                                                    <label for="brand" class="control-label mb-1 font-weight-bold">Product Label</label>
                                                     <select class="form-control" name="p_label">
                                                         
                                                         <option>Hot</option>
@@ -164,13 +211,14 @@
                                                 </div>
 
                                             <div class="form-group">
-                                                <label for="product_status" class="control-label mb-1">Product Status</label>
+                                                <label for="product_status" class="control-label mb-1 font-weight-bold">Product Status</label>
                                                 <select class="form-control" name="product_status">
                                                     <option>Active</option>
                                                     <option>Inactive</option>
                                                 </select>
 
-                                            </div>                                             
+                                            </div>  
+                                                </div>                                           
 
                                         </div>
 
@@ -179,15 +227,10 @@
                                         
                                        {{-- Sidebar Section Starts--}}
 
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label for="p_img" class="control-label mb-0">Add Images</label>
-                                                <input  required type="file" name="p_img" class="form-control p-1">
-                                            </div>
-                                        </div>
+                                        
                                        {{-- Category Form Section --}}
-                                       <div class="form-group col-md-4" id="cat_parent">
-                                        <label for="cat_parent" class="control-label mb-1">Category</label>
+                                       <div class="form-group col-md-4 bg-white pt-2 pb-3 round-border shadow" id="cat_parent">
+                                        <label for="cat_parent" class="control-label mb-1 font-weight-bold">Category</label>
                                         <select class="form-control"  name="cat_parent" id="cat_parent_s" >
                                             <option value='0'>--Select Parent Category--</option>
                                             @if( count( $parent_categ ) > 0)
@@ -260,8 +303,8 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
 });
 
 </script>    
-                                      <div class="form-group col-md-4" id="sub_cat">
-                                        <label for="sub_cat" class="control-label mb-1">Sub Category</label>
+                                      <div class="form-group col-md-4 bg-white pt-2 pb-3 shadow round-border" id="sub_cat">
+                                        <label for="sub_cat" class="control-label mb-1 font-weight-bold">Sub Category</label>
                                       
                                         <select class="form-control" name="sub_cat" id="sub_cat_se">
                                             <option id=0 value=0>--Select Sub Category--</option>
@@ -271,29 +314,15 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
                                                 @endforeach
                                             @endif
                                           
-                                          <!--option> -- Select Sub Category -- </option-->
-                                          <!--   Fashion   ->
-                                          <option value="fas">Clothes</option>
-                                          <option value="fas">Shoes</option>
-                                          <option value="fas">Belts</option>
-                                          <option value="fas">Caps</option-->
-                                      
-                                          <!--  Electronics    ->
-                                          <option value="elect">Fan</option>
-                                          <option value="elect">Television</option>
-                                          <option value="elect">Speaker</option-->
-                                      
-                                          <!--   Furnitures   ->
-                                          <option value="furn">Chairs</option>
-                                          <option value="furn">Table</option-->
+                                          
                                         </select>
                                       </div>
 
-                                        <div class="form-group col-md-4">
-                                            <label for="tags" class="control-label mb-1">Tags</label>
-                                            <textarea name="tags"  required class="form-control">
-                                                
-                                            </textarea>
+                                        <div class="form-group col-md-4 shadow round-border pb-3 pt-2 bg-white">
+                                            <label for="tags" class="control-label mb-1 font-weight-bold">Tags <small class="text-danger"> ( Press the comma after you typed. ) </small></label>
+                                            <div class="tag-container">
+                                            <input class="form-control " />
+                                            </div>
                                         </div>
 
                                         {{-- Sidebar Section Ends --}}
@@ -301,10 +330,63 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
                                         {{-- Big Section starts --}}
 
                                         <div class="col-md-12 col-sm-12 col-lg-12">
+                                               
+                                            {{-- Products Images starts --}}
+                                            <div class="card shadow p-4 round-border">
+                                                <div class="card-header">
+                                                    <span class="font-weight-bold"> Product Images/ Gallery </span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="col-md-8">
+                                                        <div class="form-group">
+                                                            <label for="p_img">Add Product Image</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="file" class="form-control" required name="p_img" accept="image/png, image/jpeg" id="inputGroupFile02">
+                                                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group container gallery">
+                                                            <label  class="control-label mb-2 mt-1 font-weight-bold text-center">Add Gallery Images</label>
+                                                            <input  required multiple onchange="preview();" type="file" id="gallery-image" accept="image/png, image/jpeg" name="p_gallery_img" class="form-control p-1">
+                                                            <label  for="gallery-image"  class="label-gallery control-label mb-0"><i class="fa fa-upload"></i> Upload Gallery</label>
+                                                            <p id="no-of-files" class="mt-2">No File Choosen</p>
+                                                            <div id="all-imgs"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            {{-- Product Video Starts --}}
+                                            <div class="card shadow p-4 round-border">
+                                                <div class="card-header">
+                                                    <span class="font-weight-bold"> Product Videos</span>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="col-md-8">
+                                                        <div class="form-group">
+                                                            <label class="label-control" for="video-source">Video Source</label>
+                                                            <select class="form-control" name="vide-source">
+                                                                <option>Youtube</option>
+                                                                <option>Vimeo</option>
+                                                                <Option>Dailymotion</Option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="video_link" class="label-control">Video Link</label>
+                                                            <input type="url" placeholder="Video Link " class="form-control" name="video_link">
+                                                            <span>Use proper link without extra parameter. Don't use short share link/embeded iframe code.</span>
+                                                        </div>
 
-                                            <div class="card">
-                                                <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Inventory <span style="font-size: 16px">Manage inventory for the product</span>
-                                                </h3> </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="card shadow p-4 round-border">
+                                                <div class="card-header"> <span class="font-weight-bold"><i class="menu-icon ti-briefcase"></i> Inventory <span style="font-size: 16px">Manage inventory for the product</span>
+                                                </span> </div>
                                                 <div class="card-body">
                                                    
                                                  <div class="row">
@@ -326,8 +408,10 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
                                                     
                                                    
                                                     <div class="form-group">
-                                                        <input type="checkbox" name="enable_sku" id="enable_qty">
-                                                        <label for="enable_sku"  class="control-label mb-1">Enable Stock Management System</label>                                                       
+                                                        <label class="switch switch-3d switch-primary">
+                                                            <input type="checkbox" name="enable_sku" class="switch-input" id="enable_qty"> 
+                                                            <span class="switch-label"></span> <span class="switch-handle"></span>
+                                                        </label> Enable Stock Management System
                                                     </div>
 
                                                     <div class="row" id="stock_low_qty">
@@ -345,8 +429,10 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <input type="checkbox" name="single_order">
-                                                        <label for="single_order" class="control-label mb-1">Allow only one quantity of this product to be bought in a single order</label>                                                       
+                                                        <label class="switch switch-3d switch-primary">
+                                                            <input type="checkbox" name="single_order" class="switch-input"> 
+                                                            <span class="switch-label"></span> <span class="switch-handle"></span>
+                                                        </label> Allow only one quantity of this product to be bought in a single order                                                     
                                                     </div>
                                                 
                                                 </div>
@@ -355,15 +441,17 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
 
                                             {{-- Shipping Section Starts --}}
 
-                                            <div class="card">
-                                                <div class="card-header"> <h3><i class="menu-icon ti-truck"></i> Shipping & Tax <span style="font-size: 16px"> Manage shipping and tax for this product</span>
+                                            <div class="card shadow p-4 round-border" id="hide_shipping">
+                                                <div class="card-header"> <span class="font-weight-bold"><i class="menu-icon ti-truck"></i> Shipping <span style="font-size: 16px"> Manage shipping for this product</span>
                                                 </div></h3> 
 
                                                 <div class="card-body">
                                                          
                                                     <div class="form-group">
-                                                        <input type="checkbox" name="enable_shipping" id="enable_shipping">
-                                                        <label for="enable_shipping" class="control-label mb-1">Does this product require shipping</label>                                                       
+                                                        <label class="switch switch-3d switch-primary">
+                                                            <input type="checkbox" name="enable_shipping" class="switch-input" id="enable_shipping"> 
+                                                            <span class="switch-label"></span> <span class="switch-handle"></span>
+                                                        </label> Does this product require shipping                                                   
                                                     </div>
 
                                                     <div class="row" id="shipping_control">                                                  
@@ -387,7 +475,7 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
 
                                                     </div>
                                                     
-                                                    <div class="form-group">
+                                                    <div class="form-group col-md-8">
                                                      <label for="shipping_class" class="control-label mb-1"> Shipping Class</label>
                                                      <select class="form-control" name="shipping_class">
                                                          <option>No Shipping Class</option>
@@ -395,103 +483,171 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
                                                      </select>
                                                      <span style="color: grey">Shipping class are used by certain shipping methods to group similar product</span>
                                                     </div>
-
-                                                    {{-- <div class="col-md-4 form-group">
-                                                       
-                                                        <label for="tax_status" class="control-label mb-1">Tax Status</label>
-                                                        <select  name="tax_status" class="form-control">
-                                                            <option>Taxable</option>
-                                                            <option>Non Taxable</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="col-md-4 form-group">
-                                                       
-                                                        <label for="tax_class" class="control-label mb-1">Tax Class</label>
-                                                        <select  name="tax_class" class="form-control">
-                                                            <option>Standard</option>
-                                                            <option>None Standard</option>
-                                                        </select>
-                                                    </div> --}}
-
-                                                    
                                                 </div>
-                                                
-
                                             </div>
-
                                             {{-- Shipping Section Ends --}}
 
-                                             {{-- Variation Section Starts --}}
+                                             {{-- Attribute Section Starts --}}
 
-                                            <div class="card">
-                                                <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Variable Product<span style="font-size: 16px"> Add Variation for this product</span>
-                                                </div></h3> 
+                                            <div class="card shadow p-4 round-border">
+                                                <div class="card-header"> <span class="font-weight-bold"><i class="menu-icon ti-briefcase"></i> Product Attribute & Variable </span>
+                                                </div> 
                                                 <div class="card-body">
 
                                                     <div class="form-group">
-                                                        <input type="checkbox" name="color_&_size" id="color_size">
-                                                        <label for="color_&_size" class="control-label mb-1">Does your product requires color and size for variable product?</label>                                                       
+                                                        <label class="switch switch-3d switch-primary">
+                                                            <input type="checkbox" name="color_var" class="switch-input" id="color_var"> 
+                                                            <span class="switch-label"></span> <span class="switch-handle"></span>
+                                                        </label> Do you need color?                                                   
                                                     </div>
+                                                    
                     
-                                                        <div class="row">
+                                                    <div class="">
 
-                                                                <div class="form-group col-md-4 color_vs_size" id="cat_parent">
-                                                                    <label for="size" class="control-label mb-1">Sizes Added From Attribute</label>
-                                                                    <select class="form-control" name="size" id="size">
-                                                                      <option> -- Select Name Of Sizes -- </option>
-                                                                      <option value="fas">Shoes</option>
-                                                                      <option value="furn">T-Shirt</option>
-                                                                    </select>
-                                                                  
-                                                                  </div>
-    
-                                                                  <div class="form-group col-md-4 color_vs_size" id="cat_parent">
-                                                                    <label for="color" class="control-label mb-1">Color Names Added From Attribute</label>
-                                                                    <select class="form-control" name="color" id="color">
-                                                                      <option> -- Select Colors -- </option>
-                                                                      <option value="fas">Blue</option>
-                                                                      <option value="furn">Red</option>
-                                                                    </select>
-                                                                  
-                                                                  </div>
+                                                      <div class="form-group row col-md-10 " id="color_select">
+                                                        <div class="col-md-2">
+                                                            <div class="input-group-prepend float-right">
+                                                                <label class="font-weight-bold input-group-text" for="Attributes">Colors</label>
+                                                            </div>
+                                                        </div>
+                                                          <div class="select-input mb-3 col-md-8">
+                                                            <select class="my-select w-100 selectpicker" data-live-search="true" data-actions-box="true" multiple data-selected-text-format="count > 3" multiple>
+                                                                <option disabled>No Color Selected</option>
+                                                                <option value="1" data-content='<span class="badge text-white" style="background-color:#ff0000;">Red</span>'> Red </option>
+                                                                <option value="2" data-content='<span class="badge text-white" style="background-color:#FFFF00;">Yellow</span>'> Yellow </option>
+                                                                <option value="3" data-content='<span class="badge text-white" style="background-color:#008000;">Green</span>'> Green </option>
+                                                            </select>
+                                                          </div>
+                                                        </div>
+                                                        
 
-                                                              <div class="form-group col-md-4" id="cat_parent">
-                                                                <label for="other_attribute" class="control-label mb-1">Other Attributes</label>
-                                                                <select class="form-control" name="other_attribute" id="other_attribute">
-                                                                  <option> -- Select Colors -- </option>
-                                                                  <option value="fas">Blue</option>
-                                                                  <option value="furn">Red</option>
-                                                                </select>
-                                                              
-                                                              </div>
+                                                        <div class="row col-md-10">
+                                                            <div class="col-md-2">
+                                                                <div class="input-group-prepend float-right">
+                                                                    <label class="font-weight-bold input-group-text" for="Attributes">Attributes</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="select-input col-md-8">
+                                                                   <select class="my-select w-100 selectpicker" name="attribute_select" data-live-search="true" data-actions-box="true"  id="attribute_select">
+                                                                       <option>Nothing Selected</option>
+                                                                       <option value="size"> Size </option>
+                                                                       <option value="fabric"> Fabric </option>
+                                                                   </select>                                                                  
+                                                            </div>
+                                                        </div>
+                                                        
+                                                           <div class="col-md-8 p-3">
+                                                               <small>Choose the attributes of this product and then input values of each attribute</small>
+                                                           </div>
+                                                           
+                                                           <div >
+                                                           <div class="row col-md-10" id="attribute_show">
+                                                               {{-- <div class="class-attribute"></div> --}}
+                                                            <div class="col-md-2">
+                                                                <div class="input-group-prepend float-right">
+                                                                    <button type="button" style="background-color: #fcc7e9;" class="btn round-border text-dark" id="confiqure-items"><i class="fa fa-cogs text-danger"></i> Confiqure</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="select-input col-md-6">
+                                                                   <select class="my-select w-100 selectpicker" id="attri-items" name="attri-items" data-actions-box="true" data-live-search="true">
+                                                                       <option selected>Nothing Selected</option>
+                                                                       <option class="size" value="1"> XXL </option>
+                                                                       <option class="size" value="1"> XL </option>
+                                                                       <option class="size" value="1">S</option>
+                                                                       <option class="fabric" value="2">Tafita</option>
+                                                                       <option class="fabric" value="2">white lace</option>
+                                                                   </select>                                                                  
+                                                            </div>
+                                                            
+                                                            <div class="col-md-2">
+                                                                <button type="button" style="background-color: #fcc7e9;" class="btn round-border" id="remove-attribute"><i class="fa fa-trash-o text-danger"></i></button>
+                                                            </div>
+                                                         </div>
+                                                        </div>
 
-                                                            {{-- <div class="form-group col-md-6">
+                                                         <div class="row col-md-10" id="attribute_append"></div>
 
-                                                                <label for="product_color" class="control-label  mb-1">Add Product Color</label>
-                                                                <input name="product_color" type="color" class="form-control form-control-color">
-                
+                                                        <div class="col-md-10 mt-4 border p-4">
+                                                        
+                                                            <div class="col-md-3">
+                                                                <span class="font-weight-bold">Variant Names</span>
+                                                                <hr>
+                                                                <div class="form-group mb-5">
+                                                                    <button class="btn rounded" style="background-color: #fcc7e9; color:#000000;" ><i class="fa fa-plus"></i> Size</button>
+                                                                </div>
+
+                                                                <hr>
+                                                                <div class="form-group">
+                                                                    <span class="font-weight-bold mt-4">Inventory </span>
+                                                                </div>
+
+                                                                <hr class="m-0 p-0">
+                                                                <div class="form-group mt-5">
+                                                                    <span class="font-weight-bold">Variable Image</span>
+                                                                </div>
+
                                                             </div>
 
-                                                            <div class="form-group col-md-4">
+                                                            <div class="col-md-9">
+                                                                <span class="font-weight-bold"> Variants Properties </span>
+                                                                <hr>
+                                                                     
+                                                                <div class="row">
+                                                                   <div class="input-group mb-3 col-md-6 form-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text" id="inputGroup-sizing-default">Price</span>
+                                                                    </div>
+                                                                    <input type="text" class="form-control" aria-label="Default" value="60" aria-describedby="inputGroup-sizing-default">
+                                                                    </div>
 
-                                                                <label for="product_size" class="control-label mb-1">Product Size</label>
-                                                                <input name="product_size" class="form-control" type="text" placeholder="SM, MD, XL, XXL">
-                
-                                                            </div>   --}}
+                                                                    <div class="input-group mb-3 col-md-6 form-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text" id="inputGroup-sizing-default">Sales</span>
+                                                                    </div>
+                                                                    <input type="text" class="form-control" aria-label="Default" value="60" aria-describedby="inputGroup-sizing-default">
+                                                                    </div>
+                                                                </div>
 
+                                                                    <hr>
+                                                                    <div class="input-group mb-3">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text" id="inputGroup-sizing-default">SKU</span>
+                                                                    </div>
+                                                                    <input type="text" class="form-control" aria-label="Default" value="60" aria-describedby="inputGroup-sizing-default">
+                                                                    </div>
+
+                                                                    <div class="input-group mb-3">
+                                                                        <div class="input-group-prepend">
+                                                                            <span class="input-group-text" id="StockStatus">Stock Status </span>
+                                                                        </div>
+                                                                        <select class="form-control " name="stock_status" id="StockStatus">
+                                                                            <option value="">In Stock</option>
+                                                                            <option value="">Out Of Stock</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                    <hr>
+                                                                    <div class="input-group">
+                                                                        <div class="custom-file">
+                                                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                                                        </div> 
+                                                                    </div>
+                                                            </div>
                                                         </div>
+                                                        
                                                 </div>
 
                                             </div>
+                                        </div>
 
-                                             {{-- Variable Section Ends --}}
+                                             {{-- Attribute and Variable Section Ends --}}
 
                                              {{-- Other Section Starts --}}
 
-                                             <div class="card">
-                                                <div class="card-header"> <h3><i class="menu-icon ti-briefcase"></i> Product Commission & Others<span style="font-size: 16px"> Add Variation for this product</span>
-                                                </div></h3> 
+                                             <div class="card shadow p-4 round-border">
+                                                <div class="card-header"><span class="font-weight-bold"><i class="menu-icon ti-briefcase"></i> Product Commission & Others</span>
+                                                </div> 
                                                 <div class="card-body">
 
                                                     <div class="row">
@@ -517,9 +673,7 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
                     
                                                     <div class="form-group">
                                                         <label for="purchase_note"> Purchase Note</label>
-                                                     <textarea name="purchase_note" class="form-control" height="50">
-        
-                                                     </textarea>
+                                                     <textarea name="purchase_note" class="form-control"></textarea>
                                                     </div>
                                                         
                                                 </div>
@@ -528,12 +682,10 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
 
                                              {{-- Other Section Ends --}}
 
-
-                                        </div>
                                          {{-- Big Section Ends--}}
                                        
-                                              <div class="col-md-12 col-lg-12 col-sm-8 mt-12">
-                                                <button id="submit" type="submit" class="btn btn-lg btn-success btn-block">
+                                              <div class="col-md-12 col-lg-12 col-sm-8 mt-0" style="margin-bottom: 50px;">
+                                                <button id="submit" type="submit" class="btn btn-lg btn-success btn-block shadow rounded">
                                                     <span id="submit">Add Product</span>
                                                     <span id="submitting" style="display:none;">Adding New Record</span>
                                                 </button>
@@ -542,10 +694,7 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
                                         </form>
                                     </div>
                                     
-                                </div>
-
-                            </div>
-                        </div> {{-- Card Ends --}}
+                        </div> 
 
                     </div>
                     

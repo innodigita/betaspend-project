@@ -58,7 +58,11 @@ Route::post('/administration/add-new-brand', [AdminController::class, 'add_new_b
 
 Route::get('/administration/attributes', [AdminController::class, 'attributes']);
 
-Route::get('/administration/add-attribute', [AdminController::class, 'add_attribute']);
+Route::get('/administration/attribute-detail', [AdminController::class, 'attribute_detail']);
+
+Route::get('/administration/attribute-color', [AdminController::class, 'attribute_color']);
+
+Route::get('/administration/config-attribute', [AdminController::class, 'config_attribute']);
 
 
 Route::get('/administration/view-add-sub-category', [AdminController::class, 'view_add_sub_category']);

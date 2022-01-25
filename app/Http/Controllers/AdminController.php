@@ -50,8 +50,16 @@ class AdminController extends Controller
         return view('Admin.attributes');
     }
 
-    public function add_attribute(){
-        return view('Admin.add-attribute');
+    public function attribute_detail(){
+        return view('Admin.attribute-detail');
+    }
+
+    public function attribute_color(){
+        return view('Admin.attribute-color');
+    }
+
+    public function config_attribute(){
+        return view('Admin.config-attribute');
     }
 
     public function add_brand(){

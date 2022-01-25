@@ -5345,7 +5345,7 @@ header .form-inline .search-form.close {
     width: 50px;
     padding: 12px 0;
     padding: 0.75rem 0;
-    margin: 0 !important !important;
+    margin: 0 !important;
     color: #fff;
     outline: 0;
     text-align: center;
@@ -6464,7 +6464,14 @@ header .form-inline .search-form.close {
     display: none;
 }
 
+#download-file {
+    display: none;
+}
+
 .color_vs_size {
+    display: none;
+}
+#color_select {
     display: none;
 }
 
@@ -6477,4 +6484,190 @@ header .form-inline .search-form.close {
     padding-right: 20px;
     padding-left: 20px;
     margin-left: 5px;
+}
+
+.select_color {
+    width: 60px;
+}
+
+.select_attribute {
+    width: 60px;
+}
+#attri-items{
+    display: none;
+}
+
+/* Add Gallery Image */
+.gallery {
+    min-height: 300px;
+    height: 250px;
+}
+
+.gallery input[type="file"] {
+    display: none;
+}
+.label-gallery {
+    display: block;
+    width: 40%;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background-color: #007bff;
+    border-radius: 5px;
+    font-weight: 700;
+    color: whitesmoke;
+    padding: 8px;
+    cursor: pointer;
+    align-items: left;
+    
+}
+#all-imgs {
+    width: 100%;
+    position: relative;
+    /* margin: auto; */
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    overflow: hidden;
+    padding: 20px;
+   
+
+}
+
+#all-imgs fiqure {
+    width: 30%;
+    margin: 0 !important;
+}
+#all-imgs img {
+    width: 30%;
+    border: 1px solid hotpink;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+#all-imgs span {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.round-border{
+    border-radius: 10px;
+}
+
+/* Downloadable File  Section*/
+
+.downloadable-file {
+    /* width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; */
+
+    display: none;
+    visibility: none;
+}
+
+.del-download {
+    background-color: lightgrey;
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+    margin: -2px;
+    cursor: pointer;
+}
+.custo {
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cus-icon {
+    font-size: 15px;
+    color: #fff;
+    padding: -1px;
+    align-items: center;
+}
+.del-icon {
+    height: 1em;
+    width: 1em;
+    position: relative;
+    padding: 2px;
+    font-size: 1.2em;
+    color: white;
+}
+.del-download:hover {
+    background-color: rgba(255, 0, 0, 0.753);
+}
+
+.downloadable-file + label {
+    font-size: 12px;
+
+    /* display: inline; */
+}
+
+.downloadable-file:focus + label,
+.downloadable-file + label:hover {
+    background-color: #ffffff;
+}
+
+/* FOR SELECT COLOR CODE */
+
+/* .variablecolor button {
+    background-color: darkcyan !important;
+    color: #fff !important;
+    padding: 15px 25px;
+} */
+.select-input button {
+    background-color: #aa1876 !important;
+    color: #fff !important;
+    padding: 10px 20px;
+}
+/* #attribute_show{
+    display: none;
+} */
+/* Product Add Tags Sections */
+
+.tag-container {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 6px;
+    overflow-x: hidden;
+}
+.tag-container .tag {
+    height: 30px;
+    margin: 5px;
+    padding: 5px 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    color: #333;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff;
+    cursor: default;
+}
+.tag i {
+    font-size: 16px;
+    color: #666;
+    margin-left: 5px;
+}
+.tag-container input {
+    padding: 5px;
+    font-size: 16px;
+    border: 2;
+    outline: 2;
+    font-family: "Rubik";
+    color: #333;
+    flex: 1;
 }

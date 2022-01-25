@@ -155,6 +155,9 @@
                                     <label>Email address *</label>
                                     <input type="email" class="form-control form-control-md" name="email" required>
                                 </div>
+                                {{-- Billing Form Ends --}}
+
+                                {{-- Shipping Toggle Start --}}
                                 <div class="form-group checkbox-toggle pb-2">
                                     <input type="checkbox" class="custom-checkbox" id="shipping-toggle"
                                         name="shipping-toggle">

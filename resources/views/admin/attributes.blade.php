@@ -50,11 +50,10 @@
     <div class="animated fadeIn">
         <div class="row">
 
-            <div class="col-md-12">
-                <div class="card">
+            <div class="col-md-8">
+                <div class="card rounded shadow">
                     <div class="card-header">
-                        <strong class="card-title">Attributes Data Table</strong>
-                        <a href="{{ url('./administration/add-attribute') }}" class=" float-right btn btn-success" style="border-radius: 5px;">Add Attribute</a>
+                        <strong class="card-title">Attributes</strong>
                     </div>
                     
                     <div class="card-body">
@@ -79,14 +78,12 @@
                             </div>
                         </div>
                         </div>
-                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                        <table id="bootstrap-data-table-export" class="table table-striped table-hover table-bordered">
                             <thead>
                                 <tr>
                                     <th>S.N</th>
-                                    <th>Attribute</th>
-                                    <th>Size Name</th>
-                                    <th>Color Name</th>
-                                    <th> Status</th>
+                                    <th>Name</th>
+                                    <th>Values</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -94,18 +91,27 @@
    
                                 <tr>
                                     <td>1</td>                                   
-                                    <td>Fabric</td>
-                                    <td>Shoes <span>( SM, XL )</span></td>
-                                    <td>Red <span style="background-color:#ff0000;" class="color-code"></span></td>
-                                    <td><span class="btn btn-outline-success rounded">Active</span></td>
+                                    <td>Size</td>
+                                    <td>Small, Meduim, Large</td>
                                     <td>
-                                        <a href="#"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span></a>
-                                        <a href="#"><span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-trash"></i></span></a>
+                                        <a href="{{ url('./administration/attribute-detail') }}"><span class="rounded-circle text-white bg-primary p-1"><i class="fa fa-cogs"></i></span></a>
+                                        <a href="#"><span class="rounded-circle text-white bg-warning p-1"><i class="menu-icon ti-pencil-alt"></i></span></a>
+                                        <a href="#"><span class="rounded-circle text-white bg-danger p-1"><i class="menu-icon ti-trash"></i></span></a>
                                     </td>
 
                                 </tr>              
                               
                             </tbody>
+
+                            <thead>
+                                <tr>
+                                    <th>S.N</th>
+                                    <th>Name</th>
+                                    <th>Values</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
                         </table>
                     </div>
                 </div>
@@ -130,6 +136,36 @@
 
             </div>
 
+
+            <div class="col-md-4">
+                <div class="card rounded shadow">
+                    <div class="card-header">
+                       <span class="card-title  font-weight-bold">Add New Attribute</span>
+                    </div>
+                    <div class="card-body">
+
+                        <form action="{{ url('./administration/attributes') }}" method="post" novalidate="novalidate">
+                            @csrf
+                               
+                                <div class="form-group">
+                                    <label for="attribute_name" class="control-label mb-1">Name</label>
+                                    <input id="attribute_name" name="attribute_name" type="text" class="form-control" aria-required="true" aria-invalid="false" placeholder="Name, Size">
+                                </div>
+                                
+                                <hr>
+                                    
+                                    <div>
+                                        <button id="submit" type="submit" class="btn btn-primary rounded">
+                                            <span id="submit">Add Attribute</span>
+                                            <span id="submitting" style="display:none;">Adding New Record</span>
+                                        </button>
+                                    </div>
+                            </form>
+
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     </div>

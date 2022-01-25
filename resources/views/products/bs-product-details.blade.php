@@ -202,6 +202,20 @@
                                                 <a href="#" class="color" style="background-color: #ccc;"></a>
                                                 <a href="#" class="color" style="background-color: #333;"></a>
                                             </div>
+                                            <div class="d-flex align-items-center product-variations">
+                                                <a href="#" class="image"><img
+                                                        src="{{ asset('assets/images/products/swatch/1-800x900.jpg') }}"
+                                                        alt="Product Swatch" width="24" height="24" /></a>
+                                                <a href="#" class="image"><img
+                                                        src="{{ asset('assets/images/products/swatch/7-800x900.jpg') }}"
+                                                        alt="Product Swatch" width="24" height="24" /></a>
+                                                <a href="#" class="image"><img
+                                                        src="{{ asset('assets/images/products/swatch/8-800x900.jpg') }}"
+                                                        alt="Product Swatch" width="24" height="24" /></a>
+                                                <a href="#" class="image"><img
+                                                        src="{{ asset('assets/images/products/swatch/14-800x900.jpg') }}"
+                                                        alt="Product Swatch" width="24" height="24" /></a>
+                                            </div>
                                         </div>
                                         <div class="product-form product-variation-form product-size-swatch">
                                             <label class="mb-1">Size:</label>
@@ -238,12 +252,12 @@
                                         <div class="social-links-wrapper">
                                             <div class="social-links">
                                                 <div class="social-icons social-no-color border-thin">
-                                                    <a href="#" class="social-icon social-facebook w-icon-facebook"></a>
-                                                    <a href="#" class="social-icon social-twitter w-icon-twitter"></a>
-                                                    <a href="#"
+                                                    <a href="#" style="text-decoration: none;" class="social-icon social-facebook w-icon-facebook"></a>
+                                                    <a href="#" style="text-decoration: none;" class="social-icon social-twitter w-icon-twitter"></a>
+                                                    <a href="#" style="text-decoration: none;"
                                                         class="social-icon social-pinterest fab fa-pinterest-p"></a>
-                                                    <a href="#" class="social-icon social-whatsapp fab fa-whatsapp"></a>
-                                                    <a href="#"
+                                                    <a href="#" style="text-decoration: none;" class="social-icon social-whatsapp fab fa-whatsapp"></a>
+                                                    <a href="#" style="text-decoration: none;"
                                                         class="social-icon social-youtube fab fa-linkedin-in"></a>
                                                 </div>
                                             </div>

@@ -41,25 +41,25 @@
                     <div class="tab tab-vertical row gutter-lg">
                         <ul class="nav nav-tabs mb-6" role="tablist">
                             <li class="nav-item">
-                                <a href="#account-dashboard" class="nav-link active">Dashboard</a>
+                                <a href="#account-dashboard" class="nav-link active"><i class="w-icon-dashboard acco"></i> Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#account-orders" class="nav-link">Orders</a>
+                                <a href="#account-orders" class="nav-link"><i class="w-icon-orders acco"></i> Orders</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#account-downloads" class="nav-link">Downloads</a>
+                                <a href="#account-downloads" class="nav-link"><i class="w-icon-download acco"></i> Downloads</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#account-addresses" class="nav-link">Addresses</a>
+                                <a href="#account-addresses" class="nav-link"><i class="w-icon-map-marker acco"></i> Addresses</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#account-details" class="nav-link">Account details</a>
+                                <a href="#account-details" class="nav-link"><i class=" w-icon-account acco"></i> Account details</a>
                             </li>
                             <li class="link-item">
-                                <a href="wishlist.html">Wishlist</a>
+                                <a href="#" class="nav-link"><i class="w-icon-heart acco"></i> Wishlist</a>
                             </li>
                             <li class="link-item">
-                                <a href="login.html">Logout</a>
+                                <a href="{{ route( 'logout' )}}" class="nav-link"><i class="w-icon-power-off acco"></i> Logout </a>
                             </li>
                         </ul>
 
@@ -69,7 +69,7 @@
                                     Hello
                                     <span class="text-dark font-weight-bold">{{ Auth::user()->name }}</span>
                                     (not
-                                    <span class="text-dark font-weight-bold">{{ Auth::user()->name }}</span>?
+                                    <span class="text-dark font-weight-bold">{{ Auth::user()->name }}</span> ?
                                     <!--------------------------------------->
                                     <a href="{{ route( 'logout' )}}" class="text-primary"
                                     onclick="event.preventDefault();
@@ -246,8 +246,8 @@
                                     </tbody>
                                 </table>
 
-                                <a href="shop-banner-sidebar.html" class="btn btn-dark btn-rounded btn-icon-right">Go
-                                    Shop<i class="w-icon-long-arrow-right"></i></a>
+                                <a href="{{route('/shop')}}" class="btn btn-primary btn-rounded btn-icon-right">Go
+                                    Shopping<i class="w-icon-long-arrow-right"></i></a>
                             </div>
 
                             <div class="tab-pane" id="account-downloads">
@@ -260,8 +260,31 @@
                                     </div>
                                 </div>
                                 <p class="mb-4">No downloads available yet.</p>
-                                <a href="shop-banner-sidebar.html" class="btn btn-dark btn-rounded btn-icon-right">Go
-                                    Shop<i class="w-icon-long-arrow-right"></i></a>
+
+                                {{-- If there is no product download please do not display the table, leave it to be hidden and let only 
+                                    No download Available Yet show and the Go shopping button too, please take note --}}
+
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                        <th>Product Name</th>
+                                        <th>Downloads Remaining</th>
+                                        <th>Expires</th>
+                                        <th>Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        <td>Product Name</td>
+                                        <td>5</td>
+                                        <td>January 19, 2022</td>
+                                        <td><a href="#" class="btn btn-primary btn-download">File Name</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <a href="{{route('/shop')}}" class="btn btn-primary btn-rounded btn-icon-right">Go
+                                    Shopping<i class="w-icon-long-arrow-right"></i></a>
                             </div>
 
                             <div class="tab-pane" id="account-addresses">

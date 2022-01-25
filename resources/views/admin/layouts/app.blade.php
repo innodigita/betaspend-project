@@ -15,9 +15,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <link rel="icon" type="image/png" href="{{ url('../assets/images/icons/betaspend_favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ url('./assets/images/icons/betaspend_favicon.png') }}">
 
     <link rel="stylesheet" href="{{ asset('/admin/vendors/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/admin/vendors/bootstrap-select/css/bootstrap-select.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/admin/vendors/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/admin/vendors/themify-icons/css/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('/admin/vendors/flag-icon-css/css/flag-icon.min.css') }}">
@@ -37,13 +38,10 @@
     <script src="{{ asset('/admin/vendors/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('/admin/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('/admin/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/admin/vendors/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('/admin/vendors/ckeditor5/ckeditor.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/main.js') }}"></script>
-    {{-- <script src="{{ asset('/admin/assets/js/tinymce/tinymce.min.js') }}"></script> --}}
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
-    
-
-
+  
    
     <script src="{{ asset('/admin/vendors/chart.js/dist/Chart.bundle.min.js') }}"></script>
     <script src="{{ asset('/admin/assets/js/dashboard.js') }}"></script>
@@ -54,7 +52,19 @@
     <script src="{{ asset('/admin/vendors/flot/jquery.flot.pie.js') }}"></script>
 
 
+    {{-- <script>
+    // ADD GALLERY IMAGES
 
+     let galleryImage = document.getElementById("GalleryImage");
+     let imageDisplay = document.getElementById("all-imgs");
+     let noOfFiles = document.getElementById("no-of-files");
+
+    function preview() {
+    imageDisplay.innerHTML = "";
+    noOfFiles.textContent = `${ gelleryImage.files.length } Files Selected`;
+    
+    }
+    </script> --}}
 
     <script>
         (function($) {

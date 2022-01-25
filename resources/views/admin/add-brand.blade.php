@@ -52,7 +52,7 @@
                                 
                                 <div class="row">
                                   <div class="col-md-3"></div>
-                                  <div class="col-md-6 border shadow border-5 border-primary">
+                                  <div class="col-md-6 border shadow rounded border-primary">
 
                                     <div id="category">
                                         <div class="card-body"> 

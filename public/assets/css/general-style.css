@@ -18486,6 +18486,19 @@ aside .sp-sidebar-banner span {
 
 
 /*----------------------------------------
+    My Account Page Styles
+----------------------------------------*/
+
+.acco{
+  color: #aa1876;
+  font-weight: 900;
+  font-size: medium;
+  margin-right: 7px;
+  
+}
+
+
+/*----------------------------------------
     Down Arrow Animation
 ----------------------------------------*/
 
