@@ -109,7 +109,7 @@
                                     <td><img src="" width="" height=""></td>
                                     <td>{{$ctgs->Parent_cat_status}}</td>
                                     <td>
-                                        <a href="#"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span></a>
+                                        <a href="#largeModal" type="button" data-toggle="modal" data-target="#largeModal"><span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span></a>
                                         <a href="#"><span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-trash"></i></span></a>
                                     </td>
 
@@ -117,18 +117,7 @@
         {{$n++;}}
     @endforeach
     @endif
-                                <!--tr>
-                                    <td>1</td>
-                                    <td>Women Wears</td>
-                                    <td>wement-wears</td>
-                                    <td>Yes</td>
-                                    <td>Fashion</td>
-                                    <td><img src="" width="" height=""></td>
-                                    <td>Active</td>
-                                    <td>
-                                        <span style="background-color: royalblue; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-pencil-alt"></i></span>
-                                        <span style="background-color: red; color:#fff; padding:5px; margin:5px; border-radius:50%"><i class="menu-icon ti-trash"></i></span>
-                                    </td-->
+   
 
                                 </tr>
                                 
@@ -137,6 +126,7 @@
                         </table>
                     </div>
                 </div>
+                {{-- Card Ends --}}
 
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
@@ -156,9 +146,33 @@
                     </div>
                 </div>
 
+                <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="largeModalLabel">Large Modal</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    There are three species of zebras: the plains zebra, the mountain zebra and the Grévy's zebra. The plains zebra
+                                    and the mountain zebra belong to the subgenus Hippotigris, but Grévy's zebra is the sole species of subgenus
+                                    Dolichohippus. The latter resembles an ass, to which it is closely related, while the former two are more
+                                    horse-like. All three belong to the genus Equus, along with other living equids.
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-
-
+            {{-- Col-md-12 Ends --}}
         </div>
     </div>
 </div>

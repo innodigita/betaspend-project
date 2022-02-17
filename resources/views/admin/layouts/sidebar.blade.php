@@ -35,7 +35,7 @@
                     </a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><a href="{{ url('./administration/view-product') }}">All Products</a></li>
-                        <li><a href="{{ url('./administration/add-product') }}">Add Products</a></li>
+                        <li><a href="{{ url('./administration/product-type') }}">Add Products</a></li>
 
                     </ul>
 

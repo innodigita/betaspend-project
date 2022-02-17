@@ -62,6 +62,10 @@ class AdminController extends Controller
         return view('Admin.config-attribute');
     }
 
+    public function product_type(){
+        return view("admin.product-type");
+    }
+
     public function add_brand(){
         return view('Admin.add-brand');
     }

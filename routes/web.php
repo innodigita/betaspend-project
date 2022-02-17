@@ -42,6 +42,8 @@ Route::middleware(['isAdmin'])->get('/administration/view_category', [AdminContr
 
 Route::middleware(['isAdmin'])->get('/administration/add_category', [AdminController::class, 'add_category']);
 
+Route::get('/administration/product-type', [AdminController::class, 'product_type']);
+
 Route::get('/administration/add-product',  [ ProductsController::class, 'add_product']);
 
 Route::get('/administration/view-product', [ ProductsController::class, 'view_product']);

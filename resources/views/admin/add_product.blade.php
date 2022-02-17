@@ -74,7 +74,7 @@
                                                 <label class="switch switch-3d switch-primary">
                                                     <input type="checkbox" name="virtual" class="switch-input" id="no-shipping"> 
                                                     <span class="switch-label"></span> <span class="switch-handle"></span>
-                                                </label> Virtual
+                                                </label> Virtual Or Digital
                                             </div>
 
                                             <div class="form-group p-2">
@@ -83,7 +83,9 @@
                                                     <span class="switch-label"></span> <span class="switch-handle"></span>
                                                 </label> Downloadable                                                       
                                             </div>
-
+                                    
+                                                {{-- <label class="label-control">Tick the virtual and downloadable if product is a digital product</label> --}}
+                                            
                                             </div>
 
                                             <div id="download-file" >
@@ -190,7 +192,7 @@
 
                                             <div class="form-group bg-white p-4 round-border shadow">
                                                 <label for="product_description " class="font-weight-bold"> Short Product Description</label>
-                                             <textarea name="product_description" class="form-control"  required id="myeditor"></textarea>
+                                             <textarea name="product_description" class="form-control"  required></textarea>
                                             </div>
 
                                             <div class="form-group bg-white p-4 round-border shadow">
@@ -352,7 +354,10 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
                                                             <input  required multiple onchange="preview();" type="file" id="gallery-image" accept="image/png, image/jpeg" name="p_gallery_img" class="form-control p-1">
                                                             <label  for="gallery-image"  class="label-gallery control-label mb-0"><i class="fa fa-upload"></i> Upload Gallery</label>
                                                             <p id="no-of-files" class="mt-2">No File Choosen</p>
-                                                            <div id="all-imgs"></div>
+
+                                                            <div id="all-imgs" class="d-flex justify-content-center position-relative">
+                                                                
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -523,49 +528,43 @@ document.getElementById("cat_parent_s").addEventListener("change", function () {
 
                                                         <div class="row col-md-10">
                                                             <div class="col-md-2">
-                                                                <div class="input-group-prepend float-right">
-                                                                    <label class="font-weight-bold input-group-text" for="Attributes">Attributes</label>
-                                                                </div>
+                                                              <div class="input-group-prepend float-right">
+                                                                <label class="font-weight-bold input-group-text" for="Attributes">Attributes</label>
+                                                              </div>
                                                             </div>
                                                             <div class="select-input col-md-8">
-                                                                   <select class="my-select w-100 selectpicker" name="attribute_select" data-live-search="true" data-actions-box="true"  id="attribute_select">
-                                                                       <option>Nothing Selected</option>
-                                                                       <option value="size"> Size </option>
-                                                                       <option value="fabric"> Fabric </option>
-                                                                   </select>                                                                  
+                                                              <select class="my-select w-100 selectpicker" data-live-search="true" data-actions-box="true" multiple data-selected-text-format="count > 3" id="attribute_select">
+                                                                <option disabled>Nothing Selected</option>
+                                                                <option value="size"> Size </option>
+                                                                <option value="fabric"> Fabric </option>
+                                                                <option value="Shoe"> Shoes </option>
+                                                                <option value="boys"> Boys </option>
+                                                              </select>
                                                             </div>
-                                                        </div>
-                                                        
-                                                           <div class="col-md-8 p-3">
-                                                               <small>Choose the attributes of this product and then input values of each attribute</small>
-                                                           </div>
+                                                          </div>
+                                                    
+                                                          <div class="col-md-8 p-3">
+                                                            <small>Choose the attributes of this product and then input values of each attribute</small>
+                                                          </div>
                                                            
-                                                           <div >
-                                                           <div class="row col-md-10" id="attribute_show">
-                                                               {{-- <div class="class-attribute"></div> --}}
-                                                            <div class="col-md-2">
+                                                            <div class="row col-md-10" id="attribute_show" style="display: none">
+                                                              <div class="col-md-2">
                                                                 <div class="input-group-prepend float-right">
-                                                                    <button type="button" style="background-color: #fcc7e9;" class="btn round-border text-dark" id="confiqure-items"><i class="fa fa-cogs text-danger"></i> Confiqure</button>
+                                                                  <label class="font-weight-bold input-group-text " for="Attributes"><span class="change-me">Items</span></label>
                                                                 </div>
+                                                              </div>
+                                                              <div class="select-input col-md-8">
+                                                                <select class="my-select1 w-100 " data-live-search="true" multiple data-selected-text-format="count > 3">
+                                                                  <option value="0" selected>Nothing Selected</option>
+                                                                  <option value="1"> XXL </option>
+                                                                  <option value="2"> XL </option>
+                                                                  <option value="3">S</option>
+                                                                </select>
+                                                              </div>
                                                             </div>
-                                                            <div class="select-input col-md-6">
-                                                                   <select class="my-select w-100 selectpicker" id="attri-items" name="attri-items" data-actions-box="true" data-live-search="true">
-                                                                       <option selected>Nothing Selected</option>
-                                                                       <option class="size" value="1"> XXL </option>
-                                                                       <option class="size" value="1"> XL </option>
-                                                                       <option class="size" value="1">S</option>
-                                                                       <option class="fabric" value="2">Tafita</option>
-                                                                       <option class="fabric" value="2">white lace</option>
-                                                                   </select>                                                                  
-                                                            </div>
-                                                            
-                                                            <div class="col-md-2">
-                                                                <button type="button" style="background-color: #fcc7e9;" class="btn round-border" id="remove-attribute"><i class="fa fa-trash-o text-danger"></i></button>
-                                                            </div>
-                                                         </div>
-                                                        </div>
-
-                                                         <div class="row col-md-10" id="attribute_append"></div>
+                                                          
+                                                    
+                                                          <div id="attribute_append"></div>
 
                                                         <div class="col-md-10 mt-4 border p-4">
                                                         

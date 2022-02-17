@@ -61,7 +61,7 @@
             <div class="col-lg-10 col-md-10 col-sm-10">
                 
                 {{-- Card Start --}}
-                <div class="card border-primary">
+                <div class="card border rounded">
                     <div class="card-body">{{-- Card Body Start --}}
                  {{-- Start of Page Content --}}
                        <div class="container">{{-- Container Starts --}}
@@ -141,7 +141,7 @@
                                         <h2 class="product-title">Electronics Black Wrist Watch</h2>
                                         <div class="product-bm-wrapper">
                                             <figure class="brand">
-                                                <img src="{{ asset('assets/images/products/brand/brand-1.jpg') }}" alt="Brand"
+                                                <img class="rounded" src="{{ asset('assets/images/products/brand/brand-1.jpg') }}" alt="Brand"
                                                     width="102" height="48" />
                                             </figure>
                                             <div class="product-meta">
@@ -174,31 +174,6 @@
                                         </div>
 
                                         <hr class="product-divider">
-
-                                        <div class="product-form product-variation-form product-color-swatch">
-                                            <label>Color:</label>
-                                            <div class="d-flex align-items-center product-variations">
-                                                <a href="#" class="color" style="background-color: #ffcc01"></a>
-                                                <a href="#" class="color" style="background-color: #ca6d00;"></a>
-                                                <a href="#" class="color" style="background-color: #1c93cb;"></a>
-                                                <a href="#" class="color" style="background-color: #ccc;"></a>
-                                                <a href="#" class="color" style="background-color: #333;"></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-form product-variation-form product-size-swatch">
-                                            <label class="mb-1">Size:</label>
-                                            <div class="flex-wrap d-flex align-items-center product-variations">
-                                                <a href="#" class="size">Small</a>
-                                                <a href="#" class="size">Medium</a>
-                                                <a href="#" class="size">Large</a>
-                                                <a href="#" class="size">Extra Large</a>
-                                            </div>
-                                            <a href="#" class="product-variation-clean">Clean All</a>
-                                        </div>
-
-                                        <div class="product-variation-price">
-                                            <span></span>
-                                        </div>
 
                                         <div class="fix-bottom product-sticky-content sticky-content">
                                             <div class="product-form container">
@@ -242,7 +217,7 @@
                             </div>
 
                             <div class="frequently-bought-together mt-5">
-                                <h2 class="title title-underline">Product Description</h2>                               
+                                <h2 class="title title-underline text-center">Product Description</h2>                               
                             </div>
 
                             <div class="">
@@ -295,11 +270,30 @@
                                 </div>
                                 <div class="col"></div>
                             </div>
-                            <div class="product-form container text-center mt-5 border-5">                           
+                            {{-- <div class="product-form container text-center mt-5 border-5">                           
                                 <button class="btn btn-primary btn-cart">
                                     <i class="w-icon-cart"></i>
                                     <span>Buy Now</span>
                                 </button>
+                            </div> --}}
+                            <div class="frequently-bought-together mt-5">
+                                <h2 class="title title-underline text-center">Project Requirements</h2>                               
+                            </div>
+
+                            <div class="">
+                                <table>
+                                    <tbody>
+                                        {{-- <thead>
+                                            <tr>
+                                                <th></th>
+                                            </tr>
+                                        </thead> --}}
+                                        <tr>
+                                            <td>gggg</td>
+                                            <td>gggg</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         
                  </div>{{-- Container Starts --}}

@@ -146,7 +146,7 @@ jQuery(document).ready(function ($) {
 
     // For Attribute Color and Size Addition
 
-    $(".attr-type").change(function () {
+    $(".attr-type").on("change", function () {
         var option = $(".attr-type").val();
         $(".attr-hidden").hide();
         $("." + option).show();
@@ -168,31 +168,50 @@ jQuery(document).ready(function ($) {
     });
 
     // BOOTSTRAP SELECT JS CODE CONFIQURATION
-    $(function () {
-        $(".my-select").selectpicker();
-    });
+
+    $(".my-select").selectpicker();
 
     // FOR ATTRIBUTE SELECT OPTION JQUERY CODE START
-    var attributesItems = $("[name=attri-items] option").detach();
-    $("#attribute_select")
-        .on("change", function () {
-            var val = $(this).val();
-            $("[name=attri-items] option").detach();
-            attributesItems
-                .filter("." + val)
-                .clone()
-                .appendTo("#attri-items");
-            $("#attri-items").show;
-            $("#attri-items").hide;
-        }).change();
-        
+
+    //SELECT CODE
+    var count = 1;
+    $("#attribute_select").on(
+        "changed.bs.select",
+        function (e, clickedIndex, isSelected, previousValue) {
+            var selectedD = $(this).find("option").eq(clickedIndex).text();
+
+            if (isSelected) {
+                var el = $("#attribute_show").clone();
+                var newAttr = "#attribute_show" + count;
+                var html = $(el).appendTo("#attribute_append");
+                $(html).removeAttr("id").attr("id", newAttr); // give the cloned div a new ID
+                $(html).find(".change-me").text(selectedD);
+                count++;
+                $(html).find("select.my-select1").selectpicker(); //I have give a new class to
+                //the second selectpicker so that it will not initialize for the first time. It will be initialized after it is cloned.
+            } else {
+                var selectedItems = $(this).val(); //array of selected items from selectpicker
+
+                //check if each cloned item exist in the selectedItems array, if not exist, remove the div
+                $("#attribute_append")
+                    .find("span.change-me")
+                    .each(function (i, e) {
+                        //var item = $.trim($(e).text().toLowerCase());
+                        var item = $(e).text().toLowerCase().trim();
+                        if (jQuery.inArray(item, selectedItems) == -1) {
+                            $(e).parent().parent().parent().parent().remove();
+                        }
+                    });
+            }
+        }
+    );
+
     // PRODUCT TYPE SELECT OPTIONS
 
     $("#Product_type").change(function () {
         // $("#Product_type").val()
         alert("Am Clicked");
     });
-
 });
 
 // Add product Tag code section
@@ -275,7 +294,9 @@ function preview() {
     for (i of galleryImage.files) {
         let reader = new FileReader();
         let fiqure = document.createElement("figure");
-        let fiqCap = document.createElement("span");
+        let fiqCap = document.createElement("figcaption");
+        let removeImg = document.createElement("span");
+
         fiqCap.innerText = i.name;
         fiqure.appendChild(fiqCap);
         reader.onload = () => {

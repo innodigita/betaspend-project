@@ -6493,9 +6493,10 @@ header .form-inline .search-form.close {
 .select_attribute {
     width: 60px;
 }
-#attri-items{
+
+/* #attribute_show {
     display: none;
-}
+} */
 
 /* Add Gallery Image */
 .gallery {
@@ -6519,44 +6520,69 @@ header .form-inline .search-form.close {
     padding: 8px;
     cursor: pointer;
     align-items: left;
-    
 }
 #all-imgs {
+    height: 120px;
     width: 100%;
-    position: relative;
-    /* margin: auto; */
-    border: 1px solid lightgray;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+    border-radius: 6px;
+    gap: 20px !important;
     overflow: hidden;
-    padding: 20px;
-   
-
 }
 
-#all-imgs fiqure {
-    width: 30%;
-    margin: 0 !important;
+#all-imgs figure {
+    display: block !important;
 }
+
 #all-imgs img {
-    width: 30%;
-    border: 1px solid hotpink;
-    margin: 20px;
-    border-radius: 5px;
-    overflow: hidden;
-
+    height: 100px;
+    width: auto;
+    object-fit: cover;
+    text-align: justify;
+    border-radius: 6px;
 }
 
-#all-imgs span {
+#all-imgs figcaption {
     display: block;
     text-align: center;
     font-size: 12px;
     margin-top: 2px;
 }
 
-.round-border{
+/* #all-imgs .can {
+    top: -6px;
+    right: 8px;
+    color: red;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+} */
+.round-border {
     border-radius: 10px;
+}
+
+/* For product type mouse hover */
+
+.py-mouse {
+    cursor: pointer;
+}
+
+.py-mouse a {
+    font-size: 18px;
+}
+
+.py-icon {
+    width: 60px;
+    padding: 18px;
+    margin: auto;
+    background-color: #aa1876;
+}
+
+.py-icon i {
+    font-size: 20px;
+}
+
+.visit-site {
+    margin-bottom: -30px;
 }
 
 /* Downloadable File  Section*/

@@ -52,20 +52,6 @@
     <script src="{{ asset('/admin/vendors/flot/jquery.flot.pie.js') }}"></script>
 
 
-    {{-- <script>
-    // ADD GALLERY IMAGES
-
-     let galleryImage = document.getElementById("GalleryImage");
-     let imageDisplay = document.getElementById("all-imgs");
-     let noOfFiles = document.getElementById("no-of-files");
-
-    function preview() {
-    imageDisplay.innerHTML = "";
-    noOfFiles.textContent = `${ gelleryImage.files.length } Files Selected`;
-    
-    }
-    </script> --}}
-
     <script>
         (function($) {
             "use strict";

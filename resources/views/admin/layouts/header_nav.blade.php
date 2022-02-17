@@ -63,7 +63,7 @@
                             </span>
                         </a>
                         <a class="dropdown-item media bg-flat-color-5" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
+                            <span class="photo media-left"><img alt="avatar" src="{{ asset('images/avatar/3.jpg') }}"></span>
                             <span class="message media-body">
                                 <span class="name float-left">Cheryl Wheeler</span>
                                 <span class="time float-right">10 minutes ago</span>
@@ -71,7 +71,7 @@
                             </span>
                         </a>
                         <a class="dropdown-item media bg-flat-color-3" href="#">
-                            <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
+                            <span class="photo media-left"><img alt="avatar" src="{{ asset('images/avatar/4.jpg') }}"></span>
                             <span class="message media-body">
                                 <span class="name float-left">Rachel Santos</span>
                                 <span class="time float-right">15 minutes ago</span>
@@ -83,7 +83,12 @@
             </div>
         </div>
 
+        <div class="col-sm-4 visit-site">
+            <a href="{{ asset("/") }}" target="_blank" class="btn btn-outline-success rounded font-weight-bold">Visit Site</a>
+        </div>
+
         <div class="col-sm-5">
+
             <div class="user-area dropdown float-right">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="user-avatar rounded-circle" src="{{ asset('/admin/images/admin.jpg') }}" alt="User Avatar">
